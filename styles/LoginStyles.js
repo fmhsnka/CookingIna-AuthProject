@@ -8,33 +8,38 @@ const loginStyles = StyleSheet.create({
         backgroundColor: '#ffffff',
     },
     logo: {
-        width: 100,
-        height: 100,
+        width: 250,
+        height: 120,
         marginBottom: 20,
     },
     input: {
         width: 300,
         height: 40,
         borderBottomWidth: 1,
-        marginBottom: 10,
+        marginBottom: 15,
         padding: 10,
     },
     button: {
         backgroundColor: 'blue',
         width: 300,
-        height: 40,
+        height: 50,
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 5,
+        borderRadius: 20,
     },
     buttonText: {
         color: 'white',
-        fontSize: 16,
+        fontSize: 20,
+        textAlign: 'center',
+        fontWeight: 'bold',
     },
     pressableText: {
+        color: 'blue',
         marginTop: 10,
-        color: 'blue', // Set the color to your desired hyperlink color
     },
+    text: {
+        marginTop: 10,
+    }
 });
 
 export default loginStyles;
