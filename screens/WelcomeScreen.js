@@ -35,7 +35,7 @@ const WelcomeScreen = () => {
 
             <CustomButton
                 title="Register"
-                onPress={() => { navigation.navigate('Register') }}
+                onPress={() => { console.log("register") }}
                 style={{ backgroundColor: 'red', width: 300 }}
                 textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
             />
