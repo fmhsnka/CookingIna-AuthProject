@@ -7,9 +7,14 @@ const loginStyles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#ffffff',
     },
-    logo: {
-        width: 250,
-        height: 120,
+    loginText: {
+        fontSize: 60,
+        margin: 0,
+        letterSpacing: 3,
+        textAlign: 'left',
+    },
+    descriptionText: {
+        fontSize: 16,
         marginBottom: 20,
     },
     input: {
@@ -18,6 +23,32 @@ const loginStyles = StyleSheet.create({
         borderBottomWidth: 1,
         marginBottom: 15,
         padding: 10,
+        fontSize: 16,
+    },
+    passwordContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    passwordInput: {
+        width: 255,
+    },
+    togglePassword: {
+        fontSize: 12,
+        color: 'red',
+        margin: 5,
+        width: 35,
+        textAlign: 'center',
+        textTransform: 'uppercase',
+    },
+    forgotPassword: {
+        fontSize: 18,
+        color: 'blue',
+        marginBottom: 10,
+    },
+    noacc: {
+        fontSize: 18,
+        color: 'blue',
+        margin: 0,
     },
     button: {
         backgroundColor: 'blue',
@@ -31,15 +62,7 @@ const loginStyles = StyleSheet.create({
         color: 'white',
         fontSize: 20,
         textAlign: 'center',
-        fontWeight: 'bold',
     },
-    pressableText: {
-        color: 'blue',
-        marginTop: 10,
-    },
-    text: {
-        marginTop: 10,
-    }
 });
 
 export default loginStyles;
