@@ -1,34 +1,44 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
 import welcomeStyles from '../styles/welcomeStyles';
+import { useFonts, Poppins_400Regular, Poppins_900Black } from '@expo-google-fonts/poppins';
+import CustomButton from '../components/CustomButton';
+
 
 const WelcomeScreen = () => {
     const navigation = useNavigation();
 
-    const [loaded] = useFonts({
-        Poppins: require('../fonts/Poppins/Poppins-Regular.ttf')
+    let [fontsLoaded, fontError] = useFonts({
+        Poppins_900Black, Poppins_400Regular,
     });
 
+    if (!fontsLoaded && !fontError) {
+        return null;
+    }
+
+
     return (
+
         <View style={welcomeStyles.container}>
             <Image source={require('../img/Logo/app.png')} style={welcomeStyles.logo} />
-            <Text style={[welcomeStyles.welcomeText, loaded && { fontFamily: 'Poppins' }]}>
-                <Text style={{ fontWeight: 'bold' }}>Ambatu</Text>
-                <Text style={{ fontWeight: '400' }}>Study</Text>
+            <Text style={welcomeStyles.welcomeText}>
+                <Text style={[{ fontFamily: 'Poppins_900Black' }]}>Ambatu</Text>
+                <Text style={[{ fontFamily: 'Poppins_400Regular' }]}>Study</Text>
             </Text>
-            <TouchableOpacity style={welcomeStyles.button} onPress={() => navigation.navigate('Login')}>
-                <Text style={[welcomeStyles.buttonText, loaded && { fontFamily: 'Poppins' }]}>
-                    Login
-                </Text>
-            </TouchableOpacity>
+            <CustomButton
+                title="Login"
+                onPress={() => { navigation.navigate('Login') }}
+                style={{ backgroundColor: 'red', width: 300 }}
+                textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
+            />
 
-            <TouchableOpacity style={[welcomeStyles.button, { fontFamily: 'Poppins' }]} onPress={() => navigation.navigate('Register')}>
-                <Text style={[welcomeStyles.buttonText]}>
-                    Register
-                </Text>
-            </TouchableOpacity>
+            <CustomButton
+                title="Register"
+                onPress={() => { navigation.navigate('Register') }}
+                style={{ backgroundColor: 'red', width: 300 }}
+                textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
+            />
         </View>
     );
 };

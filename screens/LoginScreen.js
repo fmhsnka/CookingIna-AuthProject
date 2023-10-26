@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import loginStyles from '../styles/LoginStyles';
 import { useFonts } from 'expo-font';
 
 
+
 const LoginScreen = () => {
+    const navigation = useNavigation();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -37,7 +40,7 @@ const LoginScreen = () => {
                 <TouchableOpacity onPress={() => { }}>
                     <Text style={[loginStyles.pressableText, loaded && { fontFamily: 'Poppins' }]}>
                         <Text >Don't have an Account? </Text>
-                        <Text style={[loginStyles.pressableText, { fontWeight: '400' }]}>Create</Text>
+                        <Text style={[loginStyles.pressableText, { fontWeight: '400' }]} onPress={() => { navigation.navigate('Register') }}>Create</Text>
                     </Text>
                 </TouchableOpacity>
             </Text>
