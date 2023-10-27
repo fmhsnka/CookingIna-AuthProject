@@ -74,6 +74,11 @@ const RegisterScreen = () => {
                     console.log('User registered:', user);
                     sendVerificationEmail(user);
                     Alert.alert('Check Your Email', 'Please check your email for verification.');
+                    setFirstName('');
+                    setLastName('');
+                    setEmail('');
+                    setPassword('');
+                    setConfirmPassword('');
                     navigation.navigate('Login');
                 })
                 .catch((error) => {

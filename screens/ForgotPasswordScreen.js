@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, Alert } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import forgotPasswordStyles from '../styles/ForgotPasswordStyles';
 import CustomButton from '../components/CustomButton';
 import { isEmailValid } from '../components/validation';
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
 
 const ForgotPasswordScreen = () => {
+
+    const navigation = useNavigation()
     const [email, setEmail] = useState('');
 
     const handleResetPassword = () => {
@@ -20,6 +23,8 @@ const ForgotPasswordScreen = () => {
             .then(() => {
                 // Password reset email sent successfully
                 Alert.alert('Password Reset Email Sent', 'Please check your email for the password reset link.');
+                setEmail('');
+                navigation.navigate('Login');
             })
             .catch((error) => {
                 console.error('Password reset error:', error);

@@ -49,6 +49,9 @@ const LoginScreen = () => {
             const user = userCredential.user;
             if (isEmailVerified(user)) {
                 console.log('User signed in:', user);
+                Alert.alert('Login Success', 'Gwapa arlyn.');
+                setEmail('');
+                setPassword('');
                 // navigation.navigate('UserProfile');
             } else {
                 Alert.alert('Email Not Verified', 'Please verify your email to log in.');
