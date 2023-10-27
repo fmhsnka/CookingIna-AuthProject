@@ -7,6 +7,7 @@ import { isEmailValid } from '../components/validation';
 import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth'
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from '../firebase';
+import { getFirestore, setDoc, doc } from 'firebase/firestore';
 
 const RegisterScreen = () => {
 
@@ -15,6 +16,8 @@ const RegisterScreen = () => {
     const [lastName, setLastName] = useState('');
     // const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [address, setAddress] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -23,8 +26,8 @@ const RegisterScreen = () => {
 
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
+    const db = getFirestore(app);
 
-    // Function to send a verification email
     const sendVerificationEmail = (user) => {
         sendEmailVerification(user)
             .then(() => {
@@ -39,7 +42,7 @@ const RegisterScreen = () => {
 
     const handleRegister = () => {
 
-        if (!firstName || !lastName || !email || !password || !confirmPassword) {
+        if (!firstName || !lastName || !email || !phoneNumber || !address || !password || !confirmPassword) {
             Alert.alert('Empty Fields', 'Please fill in all the required input fields.');
             return;
         }
@@ -72,10 +75,33 @@ const RegisterScreen = () => {
                 .then((userCredential) => {
                     const user = userCredential.user;
                     console.log('User registered:', user);
+
+                    const userRef = doc(db, 'users', user.uid);
+                    setDoc(
+                        userRef,
+                        {
+                            firstName,
+                            lastName,
+                            email,
+                            phoneNumber,
+                            address,
+                            password,
+                        },
+                        { merge: true }
+                    )
+                        .then(() => {
+                            console.log('User information stored in Firestore');
+                        })
+                        .catch((error) => {
+                            console.error('Firestore error:', error);
+                        });
+
                     sendVerificationEmail(user);
                     Alert.alert('Check Your Email', 'Please check your email for verification.');
                     setFirstName('');
                     setLastName('');
+                    setPhoneNumber('');
+                    setAddress('');
                     setEmail('');
                     setPassword('');
                     setConfirmPassword('');
@@ -125,6 +151,18 @@ const RegisterScreen = () => {
                 placeholder="Email"
                 value={email}
                 onChangeText={text => setEmail(text)}
+            />
+            <TextInput
+                style={[registerStyles.input, { fontFamily: 'Poppins_400Regular' }]}
+                placeholder="Phone Number"
+                value={phoneNumber}
+                onChangeText={text => setPhoneNumber(text)}
+            />
+            <TextInput
+                style={[registerStyles.input, { fontFamily: 'Poppins_400Regular' }]}
+                placeholder="Address"
+                value={address}
+                onChangeText={text => setAddress(text)}
             />
 
             <View style={registerStyles.passwordContainer}>

@@ -52,14 +52,14 @@ const LoginScreen = () => {
                 Alert.alert('Login Success', 'Gwapa arlyn.');
                 setEmail('');
                 setPassword('');
-                // navigation.navigate('UserProfile');
+                navigation.navigate('UserProfile');
             } else {
                 Alert.alert('Email Not Verified', 'Please verify your email to log in.');
             }
         })
         .catch(error => {
             console.error('Login failed:', error);
-            Alert.alert('Error', 'There were problem verifying your email.');
+            Alert.alert('Error', 'Wrong credentials.');
         });
     };
 
