@@ -10,7 +10,7 @@ const loginStyles = StyleSheet.create({
     loginText: {
         fontSize: 60,
         margin: 0,
-        letterSpacing: 3,
+        letterSpacing: 0,
         textAlign: 'left',
     },
     descriptionText: {

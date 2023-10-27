@@ -3,14 +3,17 @@ import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import registerStyles from '../styles/RegisterStyles';
 import CustomButton from '../components/CustomButton';
-import { isPasswordValid, isEmailValid } from '../components/validation';
+import { isEmailValid } from '../components/validation';
+import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth'
+import { initializeApp } from 'firebase/app';
+import { firebaseConfig } from '../firebase';
 
 const RegisterScreen = () => {
 
     const navigation = useNavigation()
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    const [username, setUsername] = useState('');
+    // const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -18,7 +21,29 @@ const RegisterScreen = () => {
     const [showPassword1, setShowPassword1] = useState(false);
     const [passwordMismatch, setPasswordMismatch] = useState(false);
 
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Function to send a verification email
+    const sendVerificationEmail = (user) => {
+        sendEmailVerification(user)
+            .then(() => {
+                console.log('Verification email sent');
+            })
+            .catch(error => {
+                console.error('Email verification error:', error);
+            });
+    }
+
+
+
     const handleRegister = () => {
+
+        if (!firstName || !lastName || !email || !password || !confirmPassword) {
+            Alert.alert('Empty Fields', 'Please fill in all the required input fields.');
+            return;
+        }
+
         if (!isEmailValid(email)) {
             Alert.alert('Invalid Email', 'Please enter a valid email address.');
             return;
@@ -42,22 +67,30 @@ const RegisterScreen = () => {
             passwordRequirements.push('between 8 and 15 characters in length');
         }
 
-        if (passwordRequirements.length === 0) {
-            Alert.alert('Password Strength', 'Password strength: Strong');
+        if (passwordRequirements.length === 0 && password === confirmPassword) {
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    console.log('User registered:', user);
+                    sendVerificationEmail(user);
+                    Alert.alert('Check Your Email', 'Please check your email for verification.');
+                    navigation.navigate('Login');
+                })
+                .catch((error) => {
+                    if (error.code === 'auth/email-already-in-use') {
+                        Alert.alert('Email Already in Use', 'The email address is already registered. Please use a different email.');
+                    } else {
+                        console.error('Registration error:', error);
+                    }
+                });
+        } else if (password !== confirmPassword) {
+            setPasswordMismatch(true);
         } else {
             Alert.alert(
                 'Weak Password',
                 `Password should contain ${passwordRequirements.join(', ')}.`
             );
         }
-
-        if (password !== confirmPassword) {
-            setPasswordMismatch(true);
-        } else {
-            setPasswordMismatch(false);
-        }
-
-        console.log('Registering...');
     };
 
     return (
@@ -76,12 +109,12 @@ const RegisterScreen = () => {
                 value={lastName}
                 onChangeText={text => setLastName(text)}
             />
-            <TextInput
+            {/* <TextInput
                 style={[registerStyles.input, { fontFamily: 'Poppins_400Regular' }]}
                 placeholder="Username"
                 value={username}
                 onChangeText={text => setUsername(text)}
-            />
+            /> */}
             <TextInput
                 style={[registerStyles.input, { fontFamily: 'Poppins_400Regular' }]}
                 placeholder="Email"

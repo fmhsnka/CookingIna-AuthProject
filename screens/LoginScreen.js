@@ -1,18 +1,24 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import loginStyles from '../styles/LoginStyles';
 import CustomButton from '../components/CustomButton';
 import { useFonts, Poppins_400Regular, Poppins_900Black, Poppins_700Bold } from '@expo-google-fonts/poppins';
-
+import { isEmailValid } from '../components/validation';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
+import { initializeApp } from 'firebase/app';
+import { firebaseConfig } from '../firebase';
 
 const LoginScreen = () => {
 
     const navigation = useNavigation()
 
-    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
 
     let [fontsLoaded, fontError] = useFonts({
         Poppins_900Black, Poppins_400Regular, Poppins_700Bold
@@ -22,9 +28,36 @@ const LoginScreen = () => {
         return null;
     }
 
+    const isEmailVerified = (user) => {
+        return user.emailVerified;
+    }
+
+
     const handleLogin = () => {
-        // LOGIC
-        console.log('Logging in...');
+        if (!email || !password) {
+            Alert.alert('Empty Fields', 'Please fill in all the required input fields.');
+            return;
+        }
+
+        if (!isEmailValid(email)) {
+            Alert.alert('Invalid Email', 'Please enter a valid email address.');
+            return;
+        }
+
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            if (isEmailVerified(user)) {
+                console.log('User signed in:', user);
+                // navigation.navigate('UserProfile');
+            } else {
+                Alert.alert('Email Not Verified', 'Please verify your email to log in.');
+            }
+        })
+        .catch(error => {
+            console.error('Login failed:', error);
+            Alert.alert('Error', 'There were problem verifying your email.');
+        });
     };
 
     return (
@@ -32,11 +65,18 @@ const LoginScreen = () => {
             <Text style={[loginStyles.loginText, { fontFamily: 'Poppins_900Black' }]}>LOGIN</Text>
             <Text style={[loginStyles.descriptionText, { fontFamily: 'Poppins_400Regular' }]}>Login to continue using this app</Text>
 
-            <TextInput
+            {/* <TextInput
                 style={[loginStyles.input, { fontFamily: 'Poppins_400Regular' }]}
                 placeholder="Username"
                 value={username}
                 onChangeText={text => setUsername(text)}
+            /> */}
+
+            <TextInput
+                style={[loginStyles.input, { fontFamily: 'Poppins_400Regular' }]}
+                placeholder="Email"
+                value={email}
+                onChangeText={text => setEmail(text)}
             />
 
             <View style={loginStyles.passwordContainer}>
@@ -54,7 +94,7 @@ const LoginScreen = () => {
                 </TouchableOpacity>
             </View>
 
-            <TouchableOpacity onPress={() => console.log('Forgot Password?')}>
+            <TouchableOpacity onPress={() => navigation.navigate('Forgot')}>
                 <Text style={[loginStyles.forgotPassword, { fontFamily: 'Poppins_400Regular', color: '#FF4732' }]}>Forgot Password?</Text>
             </TouchableOpacity>
 

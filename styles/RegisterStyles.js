@@ -10,7 +10,7 @@ const registerStyles = StyleSheet.create({
     registerText: {
         fontSize: 60,
         margin: 0,
-        letterSpacing: 3,
+        letterSpacing: 0,
         textAlign: 'left',
     },
     descriptionText: {
