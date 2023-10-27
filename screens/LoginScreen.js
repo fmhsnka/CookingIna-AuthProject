@@ -29,45 +29,45 @@ const LoginScreen = () => {
 
     return (
         <View style={loginStyles.container}>
-            <Text style={[loginStyles.loginText, { fontFamily: 'Poppins_900Black' }]}>LOGIN</Text>
-            <Text style={[loginStyles.descriptionText, { fontFamily: 'Poppins_400Regular' }]}>Login to continue using this app</Text>
+                <Text style={[loginStyles.loginText, { fontFamily: 'Poppins_900Black' }]}>LOGIN</Text>
+                <Text style={[loginStyles.descriptionText, { fontFamily: 'Poppins_400Regular' }]}>Login to continue using this app</Text>
 
-            <TextInput
-                style={[loginStyles.input, { fontFamily: 'Poppins_400Regular' }]}
-                placeholder="Username"
-                value={username}
-                onChangeText={text => setUsername(text)}
-            />
-
-            <View style={loginStyles.passwordContainer}>
                 <TextInput
-                    style={[loginStyles.input, loginStyles.passwordInput, { fontFamily: 'Poppins_400Regular' }]}
-                    placeholder="Password"
-                    secureTextEntry={!showPassword}
-                    value={password}
-                    onChangeText={text => setPassword(text)}
+                    style={[loginStyles.input, { fontFamily: 'Poppins_400Regular' }]}
+                    placeholder="Username"
+                    value={username}
+                    onChangeText={text => setUsername(text)}
                 />
-                <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
-                    <Text style={[loginStyles.togglePassword, { fontFamily: 'Poppins_400Regular' }]}>
-                        {showPassword ? 'Hide' : 'Show'}
-                    </Text>
+
+                <View style={loginStyles.passwordContainer}>
+                    <TextInput
+                        style={[loginStyles.input, loginStyles.passwordInput, { fontFamily: 'Poppins_400Regular' }]}
+                        placeholder="Password"
+                        secureTextEntry={!showPassword}
+                        value={password}
+                        onChangeText={text => setPassword(text)}
+                    />
+                    <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
+                        <Text style={[loginStyles.togglePassword, { fontFamily: 'Poppins_400Regular' }]}>
+                            {showPassword ? 'Hide' : 'Show'}
+                        </Text>
+                    </TouchableOpacity>
+                </View>
+
+                <TouchableOpacity onPress={() => console.log('Forgot Password?')}>
+                    <Text style={[loginStyles.forgotPassword, { fontFamily: 'Poppins_400Regular' }]}>Forgot Password?</Text>
                 </TouchableOpacity>
-            </View>
 
-            <TouchableOpacity onPress={() => console.log('Forgot Password?')}>
-                <Text style={[loginStyles.forgotPassword, { fontFamily: 'Poppins_400Regular' }]}>Forgot Password?</Text>
-            </TouchableOpacity>
+                <CustomButton
+                    title="Login"
+                    onPress={handleLogin}
+                    style={{ backgroundColor: 'red', width: 300 }}
+                    textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
+                />
 
-            <CustomButton
-                title="Login"
-                onPress={handleLogin}
-                style={{ backgroundColor: 'red', width: 300 }}
-                textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
-            />
-
-            <TouchableOpacity onPress={() => console.log('Create acc')}>
-                <Text style={[loginStyles.noacc, { fontFamily: 'Poppins_400Regular' }]}>Don't have an account?</Text>
-            </TouchableOpacity>
+                <TouchableOpacity onPress={() => console.log('Create acc')}>
+                    <Text style={[loginStyles.noacc, { fontFamily: 'Poppins_400Regular' }]}>Don't have an account?</Text>
+                </TouchableOpacity>
         </View>
     );
 };
