@@ -38,6 +38,23 @@ const userProfileStyles = StyleSheet.create({
         fontSize: 18,
         color: 'blue',
     },
+    emailContainer: {
+        width: 300,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        borderBottomWidth: 0,
+        borderBottomColor: '#ccc',
+        paddingBottom: 10,
+    },
+    changeButton: {
+        color: 'white',
+        margin: 5,
+        padding: 5,
+        backgroundColor: '#FF4732',
+        borderRadius: 20,
+        fontSize: 12,
+    },
 });
 
 export default userProfileStyles;

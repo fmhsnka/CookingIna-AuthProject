@@ -178,22 +178,27 @@ const UserProfileScreen = () => {
             </Text>
             <TextInput
                 style={[userProfileStyles.input, { fontFamily: 'Poppins_400Regular' }]}
-                placeholder="Name"
+                placeholder="First Name"
                 value={firstName}
                 onChangeText={(text) => setFirstName(text)}
             />
             <TextInput
                 style={[userProfileStyles.input, { fontFamily: 'Poppins_400Regular' }]}
-                placeholder="Name"
+                placeholder="Last Name"
                 value={lastName}
                 onChangeText={(text) => setLastName(text)}
             />
             <Text style={[userProfileStyles.label, { fontFamily: 'Poppins_400Regular' }]}>
                 Email:
             </Text>
-            <Text style={[userProfileStyles.text, { fontFamily: 'Poppins_400Regular' }]}>
-                {email}
-            </Text>
+            <View style={userProfileStyles.emailContainer}>
+                <Text style={[userProfileStyles.emailText, { fontFamily: 'Poppins_400Regular' }]}>
+                    {email}
+                </Text>
+                <TouchableOpacity onPress={() => { console.log('PADUNG CHANGE EMAIL')}}>
+                    <Text style={[userProfileStyles.changeButton, { fontFamily: 'Poppins_400Regular' }]}>Change</Text>
+                </TouchableOpacity>
+            </View>
             <Text style={[userProfileStyles.label, { fontFamily: 'Poppins_400Regular' }]}>
                 Phone Number:
             </Text>
