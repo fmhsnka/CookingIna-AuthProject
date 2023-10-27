@@ -19,7 +19,6 @@ function App() {
         <Stack.Screen name="Register" component={RegisterScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Forgot" component={ForgotPasswordScreen} options={{ headerShown: false }} />
         <Stack.Screen name="UserProfile" component={UserProfileScreen} options={{ headerShown: false }} />
-
       </Stack.Navigator>
     </NavigationContainer>
   );

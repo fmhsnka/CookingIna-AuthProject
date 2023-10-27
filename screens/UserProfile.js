@@ -173,7 +173,7 @@ const UserProfileScreen = () => {
                 onChangeText={(text) => setStatus(text)}
                 placeholder="Your status goes here"
             />
-            <Text style={[userProfileStyles.label, { fontFamily: 'Poppins_400Regular' }]}>
+            <Text style={[userProfileStyles.label, { fontFamily: 'Poppins_900Black' }]}>
                 Name:
             </Text>
             <TextInput
@@ -188,18 +188,13 @@ const UserProfileScreen = () => {
                 value={lastName}
                 onChangeText={(text) => setLastName(text)}
             />
-            <Text style={[userProfileStyles.label, { fontFamily: 'Poppins_400Regular' }]}>
+            <Text style={[userProfileStyles.label, { fontFamily: 'Poppins_900Black' }]}>
                 Email:
             </Text>
-            <View style={userProfileStyles.emailContainer}>
-                <Text style={[userProfileStyles.emailText, { fontFamily: 'Poppins_400Regular' }]}>
-                    {email}
-                </Text>
-                <TouchableOpacity onPress={() => { console.log('PADUNG CHANGE EMAIL')}}>
-                    <Text style={[userProfileStyles.changeButton, { fontFamily: 'Poppins_400Regular' }]}>Change</Text>
-                </TouchableOpacity>
-            </View>
-            <Text style={[userProfileStyles.label, { fontFamily: 'Poppins_400Regular' }]}>
+            <Text style={[userProfileStyles.emailText, { fontFamily: 'Poppins_400Regular' }]}>
+                {email}
+            </Text>
+            <Text style={[userProfileStyles.label, { fontFamily: 'Poppins_900Black' }]}>
                 Phone Number:
             </Text>
             <TextInput
@@ -208,7 +203,7 @@ const UserProfileScreen = () => {
                 value={phoneNumber}
                 onChangeText={(text) => setPhoneNumber(text)}
             />
-            <Text style={[userProfileStyles.label, { fontFamily: 'Poppins_400Regular' }]}>
+            <Text style={[userProfileStyles.label, { fontFamily: 'Poppins_900Black' }]}>
                 Address:
             </Text>
             <TextInput

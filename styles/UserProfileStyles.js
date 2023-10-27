@@ -11,16 +11,16 @@ const userProfileStyles = StyleSheet.create({
         width: 150,
         height: 150,
         borderRadius: 75,
-        marginBottom: 20,
+        marginBottom: 0,
     },
     statusText: {
         fontSize: 16,
-        marginBottom: 20,
+        margin: 10,
         textAlign: 'center',
     },
     label: {
         fontSize: 16,
-        marginBottom: 5,
+        marginBottom: 0,
     },
     input: {
         width: 300,
@@ -55,6 +55,13 @@ const userProfileStyles = StyleSheet.create({
         borderRadius: 20,
         fontSize: 12,
     },
+    emailText: {
+        margin: 10,
+        marginBottom: 15,
+        fontSize: 16,
+        width: 300,
+        textAlign: 'center',
+    }
 });
 
 export default userProfileStyles;

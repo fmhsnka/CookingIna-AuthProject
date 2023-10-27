@@ -2,6 +2,10 @@ export function isEmailValid(email) {
     const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     return emailRegex.test(email);
 }
+export function isNewEmailValid(newEmail) {
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    return emailRegex.test(newEmail);
+}
 
 export function isPasswordValid(password) {
     // Check if the password has at least one lowercase letter
