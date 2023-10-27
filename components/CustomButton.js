@@ -11,7 +11,7 @@ const CustomButton = ({ title, onPress, style, textStyle }) => {
 
 const styles = {
   button: {
-    backgroundColor: 'blue',
+    backgroundColor: 'blue', //DEFAULT
     padding: 10,
     margin: 10,
     borderRadius: 30,

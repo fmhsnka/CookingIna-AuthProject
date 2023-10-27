@@ -55,19 +55,22 @@ const LoginScreen = () => {
             </View>
 
             <TouchableOpacity onPress={() => console.log('Forgot Password?')}>
-                <Text style={[loginStyles.forgotPassword, { fontFamily: 'Poppins_400Regular' }]}>Forgot Password?</Text>
+                <Text style={[loginStyles.forgotPassword, { fontFamily: 'Poppins_400Regular', color: '#FF4732' }]}>Forgot Password?</Text>
             </TouchableOpacity>
 
             <CustomButton
                 title="Login"
                 onPress={handleLogin}
-                style={{ backgroundColor: 'red', width: 300 }}
+                style={{ backgroundColor: '#FF4732', width: 300 }}
                 textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
             />
 
-            <TouchableOpacity onPress={() => console.log('Create acc')}>
-                <Text style={[loginStyles.noacc, { fontFamily: 'Poppins_400Regular' }]}>Don't have an account?</Text>
-            </TouchableOpacity>
+            <View style={{ flexDirection: 'row' }}>
+                <Text style={[loginStyles.noacc, { fontFamily: 'Poppins_400Regular', color: 'black' }]}>Don't have an account? </Text>
+                <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+                    <Text style={[loginStyles.noacc, { fontFamily: 'Poppins_400Regular', color: 'red' }]}>Register</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     );
 };
