@@ -33,7 +33,7 @@ const loginStyles = StyleSheet.create({
         width: 255,
     },
     togglePassword: {
-        fontSize: 12,
+        fontSize: 11,
         color: 'red',
         margin: 5,
         width: 35,
