@@ -46,7 +46,7 @@ const WelcomeScreen = () => {
                     title="Login"
                     onPress={() => { navigation.navigate('Login') }}
                     style={{ backgroundColor: '#FF4732', width: 300 }}
-                    textStyle={{ color: 'white', fontFamily: ' ' }}
+                    textStyle={{ color: 'white', fontFamily: 'Poppins_600SemiBold' }}
                 />
 
                 <CustomButton
