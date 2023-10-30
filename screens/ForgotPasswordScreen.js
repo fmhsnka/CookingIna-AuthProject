@@ -54,7 +54,7 @@ const ForgotPasswordScreen = () => {
       colors={["#ff8476", "#ffeeec", "#fff4f4", "#ffeeec", "#ff8476"]}
       style={{ flex: 1 }}
     >
-      <View style={forgotPasswordStyles.container}>
+      <View style={forgotPasswordStyles.container}> 
         <Image
           source={require("../img/Logo/app.png")}
           style={forgotPasswordStyles.logo}
