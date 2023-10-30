@@ -49,12 +49,12 @@ const loginStyles = StyleSheet.create({
     textTransform: "uppercase",
   },
   forgotPassword: {
-    fontSize: 18,
+    fontSize: 15,
     color: "blue",
     marginBottom: 10,
   },
   noacc: {
-    fontSize: 18,
+    fontSize: 16,
     color: "blue",
     margin: 0,
   },

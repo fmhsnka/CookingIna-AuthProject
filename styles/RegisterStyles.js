@@ -58,7 +58,7 @@ const registerStyles = StyleSheet.create({
     alignItems: "center",
   },
   noacc: {
-    fontSize: 18,
+    fontSize: 16,
     color: "blue",
     margin: 0,
   },

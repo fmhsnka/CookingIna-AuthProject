@@ -254,7 +254,7 @@ const RegisterScreen = () => {
         {passwordMismatch && (
           <Text
             style={[
-              { color: "red", fontSize: 18, fontFamily: "Poppins_400Regular" },
+              { color: "red", fontSize: 15, fontFamily: "Poppins_400Regular", marginLeft: -115, marginTop: -10, marginBottom: 10, },
             ]}
           >
             Passwords do not match.
@@ -265,7 +265,7 @@ const RegisterScreen = () => {
           title="Register"
           onPress={handleRegister}
           style={{ backgroundColor: "#FF4732", width: 300 }}
-          textStyle={{ color: "white", fontFamily: "Poppins_400Regular" }}
+          textStyle={{ color: "white", fontFamily: "Poppins_600SemiBold" }}
         />
         <View style={{ flexDirection: "row" }}>
           <Text
@@ -280,7 +280,7 @@ const RegisterScreen = () => {
             <Text
               style={[
                 registerStyles.noacc,
-                { fontFamily: "Poppins_400Regular", color: "red" },
+                { fontFamily: "Poppins_600SemiBold", color: "red" },
               ]}
             >
               Login

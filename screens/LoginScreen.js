@@ -137,7 +137,7 @@ const LoginScreen = () => {
             <Text
               style={[
                 loginStyles.forgotPassword,
-                { fontFamily: "Poppins_400Regular", color: "#FF4732" },
+                { fontFamily: "Poppins_400Regular", color: "#FF4732", marginLeft: 160, marginTop: -10, marginBottom: 20, },
               ]}
             >
               Forgot Password?
@@ -148,10 +148,10 @@ const LoginScreen = () => {
             title="Login"
             onPress={handleLogin}
             style={{ backgroundColor: "#FF4732", width: 300 }}
-            textStyle={{ color: "white", fontFamily: "Poppins_400Regular" }}
+            textStyle={{ color: "white", fontFamily: "Poppins_600SemiBold" }}
           />
           <View style={loginStyles.noAccountContainer}>
-            <Text
+            <Text 
               style={[
                 loginStyles.noacc,
                 { fontFamily: "Poppins_400Regular", color: "black" },
@@ -163,7 +163,7 @@ const LoginScreen = () => {
               <Text
                 style={[
                   loginStyles.noacc,
-                  { fontFamily: "Poppins_400Regular", color: "red" },
+                  { fontFamily: "Poppins_600SemiBold", color: "red" },
                 ]}
               >
                 Register

@@ -214,19 +214,19 @@ const UserProfileScreen = () => {
                     title="Save Profile"
                     onPress={handleSaveProfile}
                     style={{ backgroundColor: '#FF4732', width: 300 }}
-                    textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
+                    textStyle={{ color: 'white', fontFamily: 'Poppins_600SemiBold' }}
                 />
-                <CustomButton
+                <CustomButton 
                     title="Logout"
                     onPress={handleLogout}
                     style={{ backgroundColor: '#FF4732', width: 300 }}
-                    textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
+                    textStyle={{ color: 'white', fontFamily: 'Poppins_600SemiBold' }}
                 />
                 <CustomButton
                     title="Delete Account"
                     onPress={handleDeleteAccount}
                     style={{ backgroundColor: '#FF4732', width: 300 }}
-                    textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
+                    textStyle={{ color: 'white', fontFamily: 'Poppins_600SemiBold' }}
                 />
             </ScrollView>
         </LinearGradient>

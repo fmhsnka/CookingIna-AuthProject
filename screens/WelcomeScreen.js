@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 
 // STYLE/COMPO
 import welcomeStyles from '../styles/welcomeStyles';
-import { useFonts, Poppins_400Regular, Poppins_900Black } from '@expo-google-fonts/poppins';
+import { useFonts, Poppins_400Regular, Poppins_900Black, Poppins_600SemiBold } from '@expo-google-fonts/poppins';
 import CustomButton from '../components/CustomButton';
 import * as SplashScreen from 'expo-splash-screen';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -16,7 +16,7 @@ const WelcomeScreen = () => {
 
 
     let [fontsLoaded, fontError] = useFonts({
-        Poppins_900Black, Poppins_400Regular,
+        Poppins_900Black, Poppins_400Regular, Poppins_600SemiBold,
     });
 
     const onLayoutRootView = useCallback(async () => {
@@ -46,14 +46,14 @@ const WelcomeScreen = () => {
                     title="Login"
                     onPress={() => { navigation.navigate('Login') }}
                     style={{ backgroundColor: '#FF4732', width: 300 }}
-                    textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
+                    textStyle={{ color: 'white', fontFamily: ' ' }}
                 />
 
                 <CustomButton
                     title="Register"
                     onPress={() => { navigation.navigate('Register') }}
                     style={{ backgroundColor: '#FF4732', width: 300 }}
-                    textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
+                    textStyle={{ color: 'white', fontFamily: 'Poppins_600SemiBold' }}
                 />
             </View>
         </LinearGradient>

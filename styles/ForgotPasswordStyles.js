@@ -43,7 +43,7 @@ const forgotPasswordStyles = StyleSheet.create({
     fontSize: 20,
   },
   goBack: {
-    fontSize: 20,
+    fontSize: 18,
     color: "#FF4732",
     marginTop: 10,
   },

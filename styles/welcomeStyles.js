@@ -7,7 +7,7 @@ const welcomeStyles = StyleSheet.create({
         alignItems: 'center',
     },
     welcomeText: {
-        fontSize: 50,
+        fontSize: 46,
         marginBottom: 50,
     },
     logo: {
