@@ -33,7 +33,7 @@ const loginStyles = StyleSheet.create({
         width: 255,
     },
     togglePassword: {
-        fontSize: 12,
+        fontSize: 11,
         color: 'red',
         margin: 5,
         width: 35,
@@ -41,12 +41,13 @@ const loginStyles = StyleSheet.create({
         textTransform: 'uppercase',
     },
     forgotPassword: {
-        fontSize: 18,
+        fontSize: 15,
         color: 'blue',
         marginBottom: 10,
+        marginLeft: 160,
     },
     noacc: {
-        fontSize: 18,
+        fontSize: 16,
         color: 'blue',
         margin: 0,
     },

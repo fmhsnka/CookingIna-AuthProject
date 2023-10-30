@@ -22,7 +22,7 @@ const styles = {
   },
   buttonText: {
     color: 'white',
-    fontSize: 22,
+    fontSize: 20,
     textAlign: 'center',
   },
 };

@@ -42,7 +42,7 @@ const registerStyles = StyleSheet.create({
         textAlign: 'center',
     },
     togglePassword: {
-        fontSize: 12,
+        fontSize: 11,
         color: 'red',
         margin: 5,
         width: 35,
@@ -58,7 +58,7 @@ const registerStyles = StyleSheet.create({
         alignItems: 'center',
     },
     noacc: {
-        fontSize: 18,
+        fontSize: 16,
         color: 'blue',
         margin: 0,
     },

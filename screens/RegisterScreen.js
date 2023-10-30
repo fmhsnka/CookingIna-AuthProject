@@ -194,7 +194,7 @@ const RegisterScreen = () => {
                 </TouchableOpacity>
             </View>
             {passwordMismatch && (
-                <Text style={[{ color: 'red', fontSize: 18, fontFamily: 'Poppins_400Regular' }]}>
+                <Text style={[{ color: 'red', fontSize: 15, marginRight: 115, marginTop: -10, marginBottom: 15, fontFamily: 'Poppins_400Regular' }]}>
                     Passwords do not match.
                 </Text>
             )}
@@ -203,12 +203,12 @@ const RegisterScreen = () => {
                 title="Register"
                 onPress={handleRegister}
                 style={{ backgroundColor: '#FF4732', width: 300 }}
-                textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
+                textStyle={{ color: 'white', fontFamily: 'Poppins_600SemiBold' }}
             />
             <View style={{ flexDirection: 'row' }}>
                 <Text style={[registerStyles.noacc, { fontFamily: 'Poppins_400Regular', color: 'black' }]}>Already have an account? </Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-                    <Text style={[registerStyles.noacc, { fontFamily: 'Poppins_400Regular', color: 'red' }]}>Login</Text>
+                    <Text style={[registerStyles.noacc, { fontFamily: 'Poppins_600SemiBold' , color: 'red' }]}>Login</Text>
                 </TouchableOpacity>
             </View>
         </View>

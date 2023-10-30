@@ -51,7 +51,7 @@ const ForgotPasswordScreen = () => {
                 title="Reset Password"
                 onPress={handleResetPassword}
                 style={{ backgroundColor: '#FF4732', width: 300 }}
-                textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
+                textStyle={{ color: 'white', fontFamily: 'Poppins_600SemiBold' }}
             />
         </View>
     );

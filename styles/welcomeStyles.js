@@ -8,7 +8,7 @@ const welcomeStyles = StyleSheet.create({
         backgroundColor: '#ffffff',
     },
     welcomeText: {
-        fontSize: 50,
+        fontSize: 45,
         marginBottom: 50,
     },
     logo: {
@@ -28,7 +28,7 @@ const welcomeStyles = StyleSheet.create({
         alignItems: 'center',
     },
     buttonText: {
-        color: 'white',
+        color: 'black',
         fontSize: 22,
         textAlign: 'center',
     },

@@ -3,7 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import loginStyles from '../styles/LoginStyles';
 import CustomButton from '../components/CustomButton';
-import { useFonts, Poppins_400Regular, Poppins_900Black, Poppins_700Bold } from '@expo-google-fonts/poppins';
+import { useFonts, Poppins_400Regular, Poppins_900Black, Poppins_700Bold, Poppins_600SemiBold } from '@expo-google-fonts/poppins';
 import { isEmailValid } from '../components/validation';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 import { initializeApp } from 'firebase/app';
@@ -21,7 +21,7 @@ const LoginScreen = () => {
     const auth = getAuth(app);
 
     let [fontsLoaded, fontError] = useFonts({
-        Poppins_900Black, Poppins_400Regular, Poppins_700Bold
+        Poppins_900Black, Poppins_400Regular, Poppins_700Bold, Poppins_600SemiBold
     });
 
     if (!fontsLoaded && !fontError) {
@@ -98,20 +98,20 @@ const LoginScreen = () => {
             </View>
 
             <TouchableOpacity onPress={() => navigation.navigate('Forgot')}>
-                <Text style={[loginStyles.forgotPassword, { fontFamily: 'Poppins_400Regular', color: '#FF4732' }]}>Forgot Password?</Text>
+                <Text style={[loginStyles.forgotPassword, { fontFamily: 'Poppins_400Regular', color: '#FF4732', marginTop: -5, marginBottom: 15 }]}>Forgot Password?</Text>
             </TouchableOpacity>
 
             <CustomButton
                 title="Login"
                 onPress={handleLogin}
                 style={{ backgroundColor: '#FF4732', width: 300 }}
-                textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
+                textStyle={{ color: 'white', fontFamily: 'Poppins_600SemiBold' }}
             />
 
             <View style={{ flexDirection: 'row' }}>
                 <Text style={[loginStyles.noacc, { fontFamily: 'Poppins_400Regular', color: 'black' }]}>Don't have an account? </Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-                    <Text style={[loginStyles.noacc, { fontFamily: 'Poppins_400Regular', color: 'red' }]}>Register</Text>
+                    <Text style={[loginStyles.noacc, { fontFamily: 'Poppins_600SemiBold', color: 'red' }]}>Register</Text>
                 </TouchableOpacity>
             </View>
         </View>
