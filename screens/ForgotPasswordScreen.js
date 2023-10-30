@@ -38,7 +38,7 @@ const ForgotPasswordScreen = () => {
           "Please check your email for the password reset link."
         );
         setEmail("");
-        navigation.navigate("Login"); // Navigating back to the 'Login' screen
+        navigation.navigate("Login");
       })
       .catch((error) => {
         console.error("Password reset error:", error);

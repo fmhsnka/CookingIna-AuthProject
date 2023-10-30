@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, Alert } from 'react-native';
+import { View, Text, TextInput, Image, Alert, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+
+// STYLE/COMPO
 import userProfileStyles from '../styles/UserProfileStyles';
 import CustomButton from '../components/CustomButton';
+import { LinearGradient } from 'expo-linear-gradient';
+
+// FIREBASE
 import { getAuth, signOut, deleteUser } from 'firebase/auth';
 import {
     collection,
@@ -19,6 +24,7 @@ import {
     getStorage,
 } from 'firebase/storage';
 
+// SCREEN
 const UserProfileScreen = () => {
     const auth = getAuth();
     const navigation = useNavigation();
@@ -72,19 +78,15 @@ const UserProfileScreen = () => {
         }
     };
 
-
     useEffect(() => {
         loadUserData();
     }, [user]);
 
-
     const handleSaveProfile = async () => {
-
         if (user) {
             const userDocRef = doc(db, 'users', user.uid);
 
             try {
-
                 await updateDoc(userDocRef, {
                     firstName,
                     lastName,
@@ -93,21 +95,15 @@ const UserProfileScreen = () => {
                     status,
                 });
 
-
                 Alert.alert('Profile Updated', 'Your profile has been updated successfully.');
-
             } catch (error) {
                 console.error('Profile update error:', error);
-
-
                 Alert.alert('Error', 'An error occurred while updating your profile.');
             }
         } else {
-
             Alert.alert('User Not Logged In', 'Please log in to save your profile changes.');
         }
     };
-
 
     const handleLogout = () => {
         signOut(auth)
@@ -136,9 +132,7 @@ const UserProfileScreen = () => {
                             const userDocRef = doc(db, 'users', user.uid);
 
                             try {
-
                                 await deleteDoc(userDocRef);
-
                                 await deleteUser(user);
 
                                 console.log('Account and document data deleted successfully');
@@ -158,79 +152,84 @@ const UserProfileScreen = () => {
     };
 
     return (
-        <View style={userProfileStyles.container}>
-            <Image
-                source={
-                    profilePicture
-                        ? { uri: profilePicture }
-                        : require('../img/Profile/power.png')
-                }
-                style={userProfileStyles.profilePic}
-            />
-            <TextInput
-                style={userProfileStyles.statusText}
-                value={status}
-                onChangeText={(text) => setStatus(text)}
-                placeholder="Your status goes here"
-            />
-            <Text style={[userProfileStyles.label, { fontFamily: 'Poppins_900Black' }]}>
-                Name:
-            </Text>
-            <TextInput
-                style={[userProfileStyles.input, { fontFamily: 'Poppins_400Regular' }]}
-                placeholder="First Name"
-                value={firstName}
-                onChangeText={(text) => setFirstName(text)}
-            />
-            <TextInput
-                style={[userProfileStyles.input, { fontFamily: 'Poppins_400Regular' }]}
-                placeholder="Last Name"
-                value={lastName}
-                onChangeText={(text) => setLastName(text)}
-            />
-            <Text style={[userProfileStyles.label, { fontFamily: 'Poppins_900Black' }]}>
-                Email:
-            </Text>
-            <Text style={[userProfileStyles.emailText, { fontFamily: 'Poppins_400Regular' }]}>
-                {email}
-            </Text>
-            <Text style={[userProfileStyles.label, { fontFamily: 'Poppins_900Black' }]}>
-                Phone Number:
-            </Text>
-            <TextInput
-                style={[userProfileStyles.input, { fontFamily: 'Poppins_400Regular' }]}
-                placeholder="Phone Number"
-                value={phoneNumber}
-                onChangeText={(text) => setPhoneNumber(text)}
-            />
-            <Text style={[userProfileStyles.label, { fontFamily: 'Poppins_900Black' }]}>
-                Address:
-            </Text>
-            <TextInput
-                style={[userProfileStyles.input, { fontFamily: 'Poppins_400Regular' }]}
-                placeholder="Address"
-                value={address}
-                onChangeText={(text) => setAddress(text)}
-            />
-            <CustomButton
-                title="Save Profile"
-                onPress={handleSaveProfile}
-                style={{ backgroundColor: '#FF4732', width: 300 }}
-                textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
-            />
-            <CustomButton
-                title="Logout"
-                onPress={handleLogout}
-                style={{ backgroundColor: '#FF4732', width: 300 }}
-                textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
-            />
-            <CustomButton
-                title="Delete Account"
-                onPress={handleDeleteAccount}
-                style={{ backgroundColor: '#FF4732', width: 300 }}
-                textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
-            />
-        </View>
+        <LinearGradient
+            colors={['#ff8476', '#ffebe9', '#ffebe9', '#ffebe9', '#ffebe9', '#ffebe9', '#ff8476']}
+            style={{ flex: 1 }}
+        >
+            <ScrollView contentContainerStyle={userProfileStyles.container}>
+                <Image
+                    source={
+                        profilePicture
+                            ? { uri: profilePicture }
+                            : require('../img/Profile/power.png')
+                    }
+                    style={userProfileStyles.profilePic}
+                />
+                <TextInput
+                    style={userProfileStyles.statusText}
+                    value={status}
+                    onChangeText={(text) => setStatus(text)}
+                    placeholder="Your status goes here"
+                />
+                <Text style={[userProfileStyles.label, { fontFamily: 'Poppins_900Black' }]}>
+                    Name:
+                </Text>
+                <TextInput
+                    style={[userProfileStyles.input, { fontFamily: 'Poppins_400Regular' }]}
+                    placeholder="First Name"
+                    value={firstName}
+                    onChangeText={(text) => setFirstName(text)}
+                />
+                <TextInput
+                    style={[userProfileStyles.input, { fontFamily: 'Poppins_400Regular' }]}
+                    placeholder="Last Name"
+                    value={lastName}
+                    onChangeText={(text) => setLastName(text)}
+                />
+                <Text style={[userProfileStyles.label, { fontFamily: 'Poppins_900Black' }]}>
+                    Email:
+                </Text>
+                <Text style={[userProfileStyles.emailText, { fontFamily: 'Poppins_400Regular' }]}>
+                    {email}
+                </Text>
+                <Text style={[userProfileStyles.label, { fontFamily: 'Poppins_900Black' }]}>
+                    Phone Number:
+                </Text>
+                <TextInput
+                    style={[userProfileStyles.input, { fontFamily: 'Poppins_400Regular' }]}
+                    placeholder="Phone Number"
+                    value={phoneNumber}
+                    onChangeText={(text) => setPhoneNumber(text)}
+                />
+                <Text style={[userProfileStyles.label, { fontFamily: 'Poppins_900Black' }]}>
+                    Address:
+                </Text>
+                <TextInput
+                    style={[userProfileStyles.input, { fontFamily: 'Poppins_400Regular' }]}
+                    placeholder="Address"
+                    value={address}
+                    onChangeText={(text) => setAddress(text)}
+                />
+                <CustomButton
+                    title="Save Profile"
+                    onPress={handleSaveProfile}
+                    style={{ backgroundColor: '#FF4732', width: 300 }}
+                    textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
+                />
+                <CustomButton
+                    title="Logout"
+                    onPress={handleLogout}
+                    style={{ backgroundColor: '#FF4732', width: 300 }}
+                    textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
+                />
+                <CustomButton
+                    title="Delete Account"
+                    onPress={handleDeleteAccount}
+                    style={{ backgroundColor: '#FF4732', width: 300 }}
+                    textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
+                />
+            </ScrollView>
+        </LinearGradient>
     );
 };
 

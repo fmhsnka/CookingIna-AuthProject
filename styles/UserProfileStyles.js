@@ -5,7 +5,7 @@ const userProfileStyles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#ffffff',
+        // backgroundColor: '#ffffff',
     },
     profilePic: {
         width: 150,
