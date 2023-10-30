@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+
+// STYLE/COMPO
 import registerStyles from '../styles/RegisterStyles';
 import CustomButton from '../components/CustomButton';
 import { isEmailValid } from '../components/validation';
+import { LinearGradient } from 'expo-linear-gradient';
+
+// FIREBASE
 import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth'
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from '../firebase';
@@ -125,93 +130,98 @@ const RegisterScreen = () => {
     };
 
     return (
-        <View style={registerStyles.container}>
-            <Text style={[registerStyles.registerText, { fontFamily: 'Poppins_900Black' }]}>REGISTER</Text>
-            <Text style={[registerStyles.descriptionText, { fontFamily: 'Poppins_400Regular' }]}>Enter your personal information</Text>
-            <TextInput
-                style={[registerStyles.input, { fontFamily: 'Poppins_400Regular' }]}
-                placeholder="First Name"
-                value={firstName}
-                onChangeText={text => setFirstName(text)}
-            />
-            <TextInput
-                style={[registerStyles.input, { fontFamily: 'Poppins_400Regular' }]}
-                placeholder="Last Name"
-                value={lastName}
-                onChangeText={text => setLastName(text)}
-            />
-            {/* <TextInput
+        <LinearGradient
+            colors={['#ffebe9','#ffebe9', '#ffebe9', '#ff8476']}
+            style={{ flex: 1 }}
+        >
+            <View style={registerStyles.container}>
+                <Text style={[registerStyles.registerText, { fontFamily: 'Poppins_900Black' }]}>REGISTER</Text>
+                <Text style={[registerStyles.descriptionText, { fontFamily: 'Poppins_400Regular' }]}>Enter your personal information</Text>
+                <TextInput
+                    style={[registerStyles.input, { fontFamily: 'Poppins_400Regular' }]}
+                    placeholder="First Name"
+                    value={firstName}
+                    onChangeText={text => setFirstName(text)}
+                />
+                <TextInput
+                    style={[registerStyles.input, { fontFamily: 'Poppins_400Regular' }]}
+                    placeholder="Last Name"
+                    value={lastName}
+                    onChangeText={text => setLastName(text)}
+                />
+                {/* <TextInput
                 style={[registerStyles.input, { fontFamily: 'Poppins_400Regular' }]}
                 placeholder="Username"
                 value={username}
                 onChangeText={text => setUsername(text)}
             /> */}
-            <TextInput
-                style={[registerStyles.input, { fontFamily: 'Poppins_400Regular' }]}
-                placeholder="Email"
-                value={email}
-                onChangeText={text => setEmail(text)}
-            />
-            <TextInput
-                style={[registerStyles.input, { fontFamily: 'Poppins_400Regular' }]}
-                placeholder="Phone Number"
-                value={phoneNumber}
-                onChangeText={text => setPhoneNumber(text)}
-            />
-            <TextInput
-                style={[registerStyles.input, { fontFamily: 'Poppins_400Regular' }]}
-                placeholder="Address"
-                value={address}
-                onChangeText={text => setAddress(text)}
-            />
-
-            <View style={registerStyles.passwordContainer}>
                 <TextInput
-                    style={[registerStyles.input, registerStyles.passwordInput, { fontFamily: 'Poppins_400Regular' }]}
-                    placeholder="Password"
-                    secureTextEntry={!showPassword}
-                    value={password}
-                    onChangeText={text => setPassword(text)}
+                    style={[registerStyles.input, { fontFamily: 'Poppins_400Regular' }]}
+                    placeholder="Email"
+                    value={email}
+                    onChangeText={text => setEmail(text)}
                 />
-                <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
-                    <Text style={[registerStyles.togglePassword, { fontFamily: 'Poppins_400Regular' }]}>
-                        {showPassword ? 'Hide' : 'Show'}
-                    </Text>
-                </TouchableOpacity>
-            </View>
-            <View style={registerStyles.passwordContainer2}>
                 <TextInput
-                    style={[registerStyles.input, registerStyles.passwordInput, { fontFamily: 'Poppins_400Regular' }]}
-                    placeholder="Confirm Password"
-                    secureTextEntry={!showPassword1}
-                    value={confirmPassword}
-                    onChangeText={text => setConfirmPassword(text)}
+                    style={[registerStyles.input, { fontFamily: 'Poppins_400Regular' }]}
+                    placeholder="Phone Number"
+                    value={phoneNumber}
+                    onChangeText={text => setPhoneNumber(text)}
                 />
-                <TouchableOpacity onPress={() => setShowPassword1(!showPassword1)}>
-                    <Text style={[registerStyles.togglePassword, { fontFamily: 'Poppins_400Regular' }]}>
-                        {showPassword1 ? 'Hide' : 'Show'}
-                    </Text>
-                </TouchableOpacity>
-            </View>
-            {passwordMismatch && (
-                <Text style={[{ color: 'red', fontSize: 18, fontFamily: 'Poppins_400Regular' }]}>
-                    Passwords do not match.
-                </Text>
-            )}
+                <TextInput
+                    style={[registerStyles.input, { fontFamily: 'Poppins_400Regular' }]}
+                    placeholder="Address"
+                    value={address}
+                    onChangeText={text => setAddress(text)}
+                />
 
-            <CustomButton
-                title="Register"
-                onPress={handleRegister}
-                style={{ backgroundColor: '#FF4732', width: 300 }}
-                textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
-            />
-            <View style={{ flexDirection: 'row' }}>
-                <Text style={[registerStyles.noacc, { fontFamily: 'Poppins_400Regular', color: 'black' }]}>Already have an account? </Text>
-                <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-                    <Text style={[registerStyles.noacc, { fontFamily: 'Poppins_400Regular', color: 'red' }]}>Login</Text>
-                </TouchableOpacity>
+                <View style={registerStyles.passwordContainer}>
+                    <TextInput
+                        style={[registerStyles.input, registerStyles.passwordInput, { fontFamily: 'Poppins_400Regular' }]}
+                        placeholder="Password"
+                        secureTextEntry={!showPassword}
+                        value={password}
+                        onChangeText={text => setPassword(text)}
+                    />
+                    <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
+                        <Text style={[registerStyles.togglePassword, { fontFamily: 'Poppins_400Regular' }]}>
+                            {showPassword ? 'Hide' : 'Show'}
+                        </Text>
+                    </TouchableOpacity>
+                </View>
+                <View style={registerStyles.passwordContainer2}>
+                    <TextInput
+                        style={[registerStyles.input, registerStyles.passwordInput, { fontFamily: 'Poppins_400Regular' }]}
+                        placeholder="Confirm Password"
+                        secureTextEntry={!showPassword1}
+                        value={confirmPassword}
+                        onChangeText={text => setConfirmPassword(text)}
+                    />
+                    <TouchableOpacity onPress={() => setShowPassword1(!showPassword1)}>
+                        <Text style={[registerStyles.togglePassword, { fontFamily: 'Poppins_400Regular' }]}>
+                            {showPassword1 ? 'Hide' : 'Show'}
+                        </Text>
+                    </TouchableOpacity>
+                </View>
+                {passwordMismatch && (
+                    <Text style={[{ color: 'red', fontSize: 18, fontFamily: 'Poppins_400Regular' }]}>
+                        Passwords do not match.
+                    </Text>
+                )}
+
+                <CustomButton
+                    title="Register"
+                    onPress={handleRegister}
+                    style={{ backgroundColor: '#FF4732', width: 300 }}
+                    textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
+                />
+                <View style={{ flexDirection: 'row' }}>
+                    <Text style={[registerStyles.noacc, { fontFamily: 'Poppins_400Regular', color: 'black' }]}>Already have an account? </Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+                        <Text style={[registerStyles.noacc, { fontFamily: 'Poppins_400Regular', color: 'red' }]}>Login</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
-        </View>
+        </LinearGradient>
     );
 };
 

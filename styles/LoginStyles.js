@@ -5,7 +5,15 @@ const loginStyles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#ffffff',
+    },
+    formContainer: {
+        alignItems: 'center',
+        padding: 15,
+        // borderRadius: 30,
+        // borderWidth: 3,
+    },
+    noAccountContainer: {
+        flexDirection: 'row',
     },
     loginText: {
         fontSize: 60,

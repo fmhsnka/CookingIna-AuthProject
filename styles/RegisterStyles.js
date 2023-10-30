@@ -5,7 +5,7 @@ const registerStyles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#ffffff',
+        // backgroundColor: '#ffffff',
     },
     registerText: {
         fontSize: 60,

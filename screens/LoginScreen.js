@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+
+// STYLES AND COMPONENTS
 import loginStyles from '../styles/LoginStyles';
 import CustomButton from '../components/CustomButton';
-import { useFonts, Poppins_400Regular, Poppins_900Black, Poppins_700Bold } from '@expo-google-fonts/poppins';
 import { isEmailValid } from '../components/validation';
+import { LinearGradient } from 'expo-linear-gradient';
+
+// FONT
+import { useFonts, Poppins_400Regular, Poppins_900Black, Poppins_700Bold } from '@expo-google-fonts/poppins';
+
+// FIREBASE
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from '../firebase';
@@ -45,76 +52,75 @@ const LoginScreen = () => {
         }
 
         signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            const user = userCredential.user;
-            if (isEmailVerified(user)) {
-                console.log('User signed in:', user);
-                Alert.alert('Login Success', 'Gwapa arlyn.');
-                setEmail('');
-                setPassword('');
-                navigation.navigate('UserProfile');
-            } else {
-                Alert.alert('Email Not Verified', 'Please verify your email to log in.');
-            }
-        })
-        .catch(error => {
-            console.error('Login failed:', error);
-            Alert.alert('Error', 'Wrong credentials.');
-        });
+            .then((userCredential) => {
+                const user = userCredential.user;
+                if (isEmailVerified(user)) {
+                    console.log('User signed in:', user);
+                    Alert.alert('Login Success', 'You have successfully logged in.');
+                    setEmail('');
+                    setPassword('');
+                    navigation.navigate('UserProfile');
+                } else {
+                    Alert.alert('Email Not Verified', 'Please verify your email to log in.');
+                }
+            })
+            .catch(error => {
+                console.error('Login failed:', error);
+                Alert.alert('Error', 'Wrong credentials.');
+            });
     };
 
     return (
-        <View style={loginStyles.container}>
-            <Text style={[loginStyles.loginText, { fontFamily: 'Poppins_900Black' }]}>LOGIN</Text>
-            <Text style={[loginStyles.descriptionText, { fontFamily: 'Poppins_400Regular' }]}>Login to continue using this app</Text>
+        <LinearGradient
+            colors={['#ff8476', '#ffeeec', '#fff4f4','#ffeeec','#ff8476']}
+            style={{ flex: 1 }}
+        >
+            <View style={loginStyles.container}>
+                <View style={loginStyles.formContainer}>
+                    <Text style={[loginStyles.loginText, { fontFamily: 'Poppins_900Black' }]}>LOGIN</Text>
+                    <Text style={[loginStyles.descriptionText, { fontFamily: 'Poppins_400Regular' }]}>Login to continue using this app</Text>
 
-            {/* <TextInput
-                style={[loginStyles.input, { fontFamily: 'Poppins_400Regular' }]}
-                placeholder="Username"
-                value={username}
-                onChangeText={text => setUsername(text)}
-            /> */}
+                    <TextInput
+                        style={[loginStyles.input, { fontFamily: 'Poppins_400Regular' }]}
+                        placeholder="Email"
+                        value={email}
+                        onChangeText={text => setEmail(text)}
+                    />
 
-            <TextInput
-                style={[loginStyles.input, { fontFamily: 'Poppins_400Regular' }]}
-                placeholder="Email"
-                value={email}
-                onChangeText={text => setEmail(text)}
-            />
+                    <View style={loginStyles.passwordContainer}>
+                        <TextInput
+                            style={[loginStyles.input, loginStyles.passwordInput, { fontFamily: 'Poppins_400Regular' }]}
+                            placeholder="Password"
+                            secureTextEntry={!showPassword}
+                            value={password}
+                            onChangeText={text => setPassword(text)}
+                        />
+                        <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
+                            <Text style={[loginStyles.togglePassword, { fontFamily: 'Poppins_400Regular' }]}>
+                                {showPassword ? 'Hide' : 'Show'}
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
 
-            <View style={loginStyles.passwordContainer}>
-                <TextInput
-                    style={[loginStyles.input, loginStyles.passwordInput, { fontFamily: 'Poppins_400Regular' }]}
-                    placeholder="Password"
-                    secureTextEntry={!showPassword}
-                    value={password}
-                    onChangeText={text => setPassword(text)}
-                />
-                <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
-                    <Text style={[loginStyles.togglePassword, { fontFamily: 'Poppins_400Regular' }]}>
-                        {showPassword ? 'Hide' : 'Show'}
-                    </Text>
-                </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Forgot')}>
+                        <Text style={[loginStyles.forgotPassword, { fontFamily: 'Poppins_400Regular', color: '#FF4732' }]}>Forgot Password?</Text>
+                    </TouchableOpacity>
+
+                    <CustomButton
+                        title="Login"
+                        onPress={handleLogin}
+                        style={{ backgroundColor: '#FF4732', width: 300 }}
+                        textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
+                    />
+                    <View style={loginStyles.noAccountContainer}>
+                        <Text style={[loginStyles.noacc, { fontFamily: 'Poppins_400Regular', color: 'black' }]}>Don't have an account? </Text>
+                        <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+                            <Text style={[loginStyles.noacc, { fontFamily: 'Poppins_400Regular', color: 'red' }]}>Register</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
             </View>
-
-            <TouchableOpacity onPress={() => navigation.navigate('Forgot')}>
-                <Text style={[loginStyles.forgotPassword, { fontFamily: 'Poppins_400Regular', color: '#FF4732' }]}>Forgot Password?</Text>
-            </TouchableOpacity>
-
-            <CustomButton
-                title="Login"
-                onPress={handleLogin}
-                style={{ backgroundColor: '#FF4732', width: 300 }}
-                textStyle={{ color: 'white', fontFamily: 'Poppins_400Regular' }}
-            />
-
-            <View style={{ flexDirection: 'row' }}>
-                <Text style={[loginStyles.noacc, { fontFamily: 'Poppins_400Regular', color: 'black' }]}>Don't have an account? </Text>
-                <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-                    <Text style={[loginStyles.noacc, { fontFamily: 'Poppins_400Regular', color: 'red' }]}>Register</Text>
-                </TouchableOpacity>
-            </View>
-        </View>
+        </LinearGradient>
     );
 };
 

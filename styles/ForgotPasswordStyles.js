@@ -5,7 +5,7 @@ const forgotPasswordStyles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#ffffff',
+        // backgroundColor: '#ffffff',
     },
     logo: {
         width: 250,
@@ -41,6 +41,11 @@ const forgotPasswordStyles = StyleSheet.create({
     resetButtonText: {
         color: 'white',
         fontSize: 20,
+    },
+    goBack: {
+        fontSize: 20,
+        color: '#FF4732',
+        marginTop: 10,
     },
 });
 
