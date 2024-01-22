@@ -8,10 +8,14 @@ const loginStyles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: '#E5E8E1',
-    height: 820,
+    height: 780,
     width: 'auto',
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
+  },
+  scrollContainer: {
+    flexGrow: 1,
+    justifyContent: 'flex-end',
   },
   formContainer: {
     alignItems: "center",
