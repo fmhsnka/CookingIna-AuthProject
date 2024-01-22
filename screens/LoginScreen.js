@@ -82,10 +82,7 @@ const LoginScreen = () => {
   };
 
   return (
-    <LinearGradient
-      colors={["#ff8476", "#ffeeec", "#fff4f4", "#ffeeec", "#ff8476"]}
-      style={{ flex: 1 }}
-    >
+    <View style={{ flex: 1, backgroundColor: '#E5E8E1' }} >
       <View style={loginStyles.container}>
         <View style={loginStyles.formContainer}>
           <Text
@@ -151,7 +148,7 @@ const LoginScreen = () => {
             textStyle={{ color: "white", fontFamily: "Poppins_600SemiBold" }}
           />
           <View style={loginStyles.noAccountContainer}>
-            <Text 
+            <Text
               style={[
                 loginStyles.noacc,
                 { fontFamily: "Poppins_400Regular", color: "black" },
@@ -163,7 +160,7 @@ const LoginScreen = () => {
               <Text
                 style={[
                   loginStyles.noacc,
-                  { fontFamily: "Poppins_600SemiBold", color: "red" },
+                  { fontFamily: "Poppins_600SemiBold", color: "#BB8A52" },
                 ]}
               >
                 Register
@@ -172,7 +169,7 @@ const LoginScreen = () => {
           </View>
         </View>
       </View>
-    </LinearGradient>
+    </View>
   );
 };
 

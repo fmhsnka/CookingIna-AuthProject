@@ -2,10 +2,10 @@
 
 // Your web app's Firebase configuration
 export const firebaseConfig = {
-    apiKey: "AIzaSyAMiZBRqwrKm-vmTnjJc2BicDPi5yj9n3w",
-    authDomain: "projectlogin-da233.firebaseapp.com",
-    projectId: "projectlogin-da233",
-    storageBucket: "projectlogin-da233.appspot.com",
-    messagingSenderId: "737455882588",
-    appId: "1:737455882588:web:f5c5d3723521dd42d3c199"
+    apiKey: "AIzaSyCW7W43zrdrBrF50yG2S6szorhMiWU2060",
+    authDomain: "cooking-ina-mo.firebaseapp.com",
+    projectId: "cooking-ina-mo",
+    storageBucket: "cooking-ina-mo.appspot.com",
+    messagingSenderId: "151249945282",
+    appId: "1:151249945282:web:f5f7031dc3e1261489315b"
 };

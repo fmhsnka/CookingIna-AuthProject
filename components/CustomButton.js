@@ -11,19 +11,20 @@ const CustomButton = ({ title, onPress, style, textStyle }) => {
 
 const styles = {
   button: {
-    backgroundColor: 'blue',
-    padding: 5,
-    margin: 5,
-    borderRadius: 30,
-    width: 250,
-    height: 40,
+    backgroundColor: '#6D9773',
+    padding: 8,
+    margin: 8,
+    borderRadius: 11,
+    width: 289,
+    height: 55,
     justifyContent: 'center',
     alignItems: 'center',
   },
   buttonText: {
     color: 'white',
-    fontSize: 20,
+    fontSize: 25,
     textAlign: 'center',
+    fontFamily: 'Poppins_600SemiBold'
   },
 };
 

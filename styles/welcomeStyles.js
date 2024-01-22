@@ -7,29 +7,14 @@ const welcomeStyles = StyleSheet.create({
         alignItems: 'center',
     },
     welcomeText: {
-        fontSize: 46,
-        marginBottom: 50,
+        fontSize: 43,
+        marginBottom: 100,
     },
     logo: {
-        width: 350,
+        width: 430,
         height: 180,
         marginBottom: 10,
-    },
-    button: {
-        backgroundColor: '#007bff',
-        padding: 10,
-        margin: 12,
-        borderRadius: 20,
-        width: 300,
-        height: 60,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    buttonText: {
-        color: 'white',
-        fontSize: 22,
-        textAlign: 'center',
+        padding: 30,
     },
 });
 
