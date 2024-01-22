@@ -6,6 +6,10 @@ import {
   TouchableOpacity,
   Image,
   Alert,
+  KeyboardAvoidingView,
+  Platform,
+  SafeAreaView,
+  ScrollView,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
@@ -14,6 +18,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import forgotPasswordStyles from "../styles/ForgotPasswordStyles";
 import CustomButton from "../components/CustomButton";
 import { isEmailValid } from "../components/validation";
+import { Feather, Fontisto, Entypo, AntDesign } from 'react-native-vector-icons';
 
 // FIREBASE
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
@@ -50,58 +55,54 @@ const ForgotPasswordScreen = () => {
   };
 
   return (
-    <LinearGradient
-      colors={["#ff8476", "#ffeeec", "#fff4f4", "#ffeeec", "#ff8476"]}
-      style={{ flex: 1 }}
-    >
-      <View style={forgotPasswordStyles.container}> 
-        <Image
-          source={require("../img/Logo/app.png")}
-          style={forgotPasswordStyles.logo}
-        />
-        <Text
-          style={[
-            forgotPasswordStyles.title,
-            { fontFamily: "Poppins_900Black" },
-          ]}
-        >
-          Forgot Your Password?
-        </Text>
-        <Text
-          style={[
-            forgotPasswordStyles.description,
-            { fontFamily: "Poppins_400Regular" },
-          ]}
-        >
-          Enter your email address, and we'll send you a password reset link.
-        </Text>
-        <TextInput
-          style={[
-            forgotPasswordStyles.input,
-            { fontFamily: "Poppins_400Regular" },
-          ]}
-          placeholder="Email"
-          value={email}
-          onChangeText={(text) => setEmail(text)}
-        />
-        <CustomButton
-          title="Reset Password"
-          onPress={handleResetPassword}
-          style={{ backgroundColor: "#FF4732", width: 300 }}
-          textStyle={{ color: "white", fontFamily: "Poppins_600SemiBold" }}
-        />
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-          <Text
-            style={[
-              forgotPasswordStyles.goBack,
-              { fontFamily: "Poppins_600SemiBold", color: "#FF4732" },
-            ]}
-          >
-            Go Back
-          </Text>
-        </TouchableOpacity>
-      </View>
-    </LinearGradient>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#0C3B2E' }}>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : null}
+        style={{ flex: 1 }}
+        keyboardVerticalOffset={Platform.OS === 'ios' ? -120 : 0}
+      >
+        <ScrollView contentContainerStyle={forgotPasswordStyles.scrollContainer}>
+          <View style={forgotPasswordStyles.container}>
+            <Image
+              source={require("../img/Logo/cooking-ina.png")}
+              style={forgotPasswordStyles.logo}
+            />
+            <Text
+              style={[
+                forgotPasswordStyles.title,
+                { fontFamily: "Poppins_900Black" },
+              ]}
+            >
+              Forgot Your Password?
+            </Text>
+            <Text
+              style={[
+                forgotPasswordStyles.description,
+                { fontFamily: "Poppins_400Regular" },
+              ]}
+            >
+              Enter your email address, and we'll send you a password reset link.
+            </Text>
+            <TextInput
+              style={[
+                forgotPasswordStyles.input,
+                { fontFamily: "Poppins_400Regular" },
+              ]}
+              placeholder="Email"
+              value={email}
+              onChangeText={(text) => setEmail(text)}
+            />
+            <CustomButton
+              title="Reset Password"
+              onPress={handleResetPassword} style={forgotPasswordStyles.resetButton}
+            />
+            <TouchableOpacity onPress={() => navigation.goBack()} style={forgotPasswordStyles.goBackButton}>
+              <AntDesign name="leftcircle" size={46} color="#6D9773" />
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
+      </KeyboardAvoidingView>
+    </SafeAreaView>
   );
 };
 
