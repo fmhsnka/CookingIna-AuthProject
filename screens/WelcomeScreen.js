@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 
 // STYLE/COMPO
 import welcomeStyles from '../styles/welcomeStyles';
-import { useFonts, Poppins_400Regular, Poppins_900Black, Poppins_600SemiBold } from '@expo-google-fonts/poppins';
+import { useFonts, Poppins_400Regular, Poppins_900Black, Poppins_600SemiBold, Poppins_800ExtraBold } from '@expo-google-fonts/poppins';
 import CustomButton from '../components/CustomButton';
 import * as SplashScreen from 'expo-splash-screen';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -16,7 +16,7 @@ const WelcomeScreen = () => {
 
 
     let [fontsLoaded, fontError] = useFonts({
-        Poppins_900Black, Poppins_400Regular, Poppins_600SemiBold,
+        Poppins_900Black, Poppins_400Regular, Poppins_600SemiBold, Poppins_800ExtraBold,
     });
 
     const onLayoutRootView = useCallback(async () => {
@@ -31,32 +31,25 @@ const WelcomeScreen = () => {
 
 
     return (
-        <LinearGradient
-            colors={['#fff8f8', '#ffe9e7', '#ff8476']}
-            style={{ flex: 1 }}
-        >
+        <View style={{ flex: 1, backgroundColor: '#E5E8E1' }} >
 
             <View style={welcomeStyles.container} onLayout={onLayoutRootView}>
-                <Image source={require('../img/Logo/app.png')} style={welcomeStyles.logo} />
+                <Image source={require('../img/Logo/cooking-ina.png')} style={welcomeStyles.logo} />
                 <Text style={welcomeStyles.welcomeText}>
-                    <Text style={[{ fontFamily: 'Poppins_900Black' }]}>Ambatu</Text>
-                    <Text style={[{ fontFamily: 'Poppins_400Regular' }]}>Study</Text>
+                    <Text style={[{ fontFamily: 'Poppins_900Black' }]}>Cooking</Text>
+                    <Text style={[{ fontFamily: 'Poppins_400Regular' }]}>Ina</Text>
                 </Text>
                 <CustomButton
                     title="Login"
                     onPress={() => { navigation.navigate('Login') }}
-                    style={{ backgroundColor: '#FF4732', width: 300 }}
-                    textStyle={{ color: 'white', fontFamily: 'Poppins_600SemiBold' }}
                 />
 
                 <CustomButton
                     title="Register"
                     onPress={() => { navigation.navigate('Register') }}
-                    style={{ backgroundColor: '#FF4732', width: 300 }}
-                    textStyle={{ color: 'white', fontFamily: 'Poppins_600SemiBold' }}
                 />
             </View>
-        </LinearGradient>
+        </View>
     );
 };
 

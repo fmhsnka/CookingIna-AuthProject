@@ -1,0 +1,150 @@
+import { StyleSheet } from "react-native";
+
+const menuStyles = StyleSheet.create({
+    backgroundContainer: {
+        flex: 1,
+        position: 'relative',
+        backgroundColor: '#E5E8E1',
+    },
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 25,
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+    },
+    circle: {
+        position: 'absolute',
+        backgroundColor: 'rgba(255, 0, 0, 0.3)', // Adjust color and opacity as needed
+        borderRadius: 50,
+        width: 100,
+        height: 100,
+    },
+    circle1: {
+        top: 60,
+        right: -5,
+        backgroundColor: '#FFBA00',
+    },
+    circle2: {
+        top: 115,
+        right: -40,
+        backgroundColor: '#0C3B2E',
+    },
+    circle3: {
+        top: 160,
+        left: -40,
+        backgroundColor: '#0C3B2E',
+    },
+    circle4: {
+        top: 210,
+        left: -15,
+        backgroundColor: '#FFBA00',
+    },
+    circle5: {
+        top: 400,
+        right: 10,
+        backgroundColor: '#FFBA00',
+    },
+    circle6: {
+        bottom: 300,
+        right: 10,
+        backgroundColor: '#0C3B2E',
+    },
+    circle7: {
+        bottom: 200,
+        left: 10,
+        backgroundColor: '#FFBA00',
+        height: 180,
+        width: 180,
+        borderRadius: 140,
+    },
+    circle8: {
+        bottom: -20,
+        right: -20,
+        backgroundColor: '#0C3B2E',
+        height: 180,
+        width: 180,
+        borderRadius: 140,
+    },
+    profileContainer: {
+        alignItems: 'center',
+        marginBottom: 30,
+    },
+    profilePic: {
+        width: 130,
+        height: 130,
+        borderRadius: 80,
+        marginBottom: 10,
+    },
+    name: {
+        fontSize: 23,
+        marginBottom: 0,
+        color: '#0C3B2E',
+        fontFamily: "Poppins_700Bold",
+        height: 35,
+    },
+    email: {
+        fontStyle: 'italic',
+        color: 'black',
+        opacity: .44,
+        fontFamily: "Poppins_400Regular",
+    },
+    buttonsContainer: {
+        width: '100%',
+        paddingTop: 0,
+    },
+    button: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        borderWidth: 0,
+        width: '100%',
+        marginTop: 18,
+        padding: 15,
+        borderRadius: 14,
+        backgroundColor: 'white',
+    },
+    icon: {
+        marginRight: 10,
+        color: '#0C3B2E',
+    },
+    title: {
+        flex: 1,
+        fontSize: 18,
+        fontFamily: "Poppins_400Regular",
+        marginLeft: 10,
+    },
+    arrow: {
+        marginLeft: 10,
+        color: '#0C3B2E',
+    },
+    DeleteButton: {
+        backgroundColor: '#ff7575',
+        marginTop: 45,
+        color: 'black',
+    },
+    blackIcon: {
+        color: 'black',
+    },
+    LogoutButton: {
+        marginTop: 15,
+    },
+    closeButton: {
+        position: 'absolute',
+        top: 40,
+        right: 20,
+    },
+    bottomImage: {
+        position: 'absolute',
+        bottom: 5,
+        left: 15,
+        width: 94,
+        height: 70,
+    },
+});
+
+export default menuStyles;

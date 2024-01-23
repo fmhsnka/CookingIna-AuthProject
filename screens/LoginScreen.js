@@ -1,19 +1,30 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Alert,
+  KeyboardAvoidingView,
+  Platform,
+  SafeAreaView,
+  ScrollView,
+} from "react-native";
 
-// STYLES AND COMPONENTS
+// COMPONENTS
+import { useNavigation } from "@react-navigation/native";
+import { Feather, Fontisto, Entypo, AntDesign } from 'react-native-vector-icons';
 import loginStyles from "../styles/LoginStyles";
 import CustomButton from "../components/CustomButton";
 import { isEmailValid } from "../components/validation";
-import { LinearGradient } from "expo-linear-gradient";
 
-// FONT
+// FONTS
 import {
   useFonts,
   Poppins_400Regular,
   Poppins_900Black,
   Poppins_700Bold,
+  Poppins_600SemiBold,
 } from "@expo-google-fonts/poppins";
 
 // FIREBASE
@@ -23,7 +34,6 @@ import { firebaseConfig } from "../firebase";
 
 const LoginScreen = () => {
   const navigation = useNavigation();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -35,6 +45,7 @@ const LoginScreen = () => {
     Poppins_900Black,
     Poppins_400Regular,
     Poppins_700Bold,
+    Poppins_600SemiBold,
   });
 
   if (!fontsLoaded && !fontError) {
@@ -67,7 +78,7 @@ const LoginScreen = () => {
           Alert.alert("Login Success", "You have successfully logged in.");
           setEmail("");
           setPassword("");
-          navigation.navigate("UserProfile");
+          navigation.navigate("Menu");
         } else {
           Alert.alert(
             "Email Not Verified",
@@ -82,97 +93,133 @@ const LoginScreen = () => {
   };
 
   return (
-    <LinearGradient
-      colors={["#ff8476", "#ffeeec", "#fff4f4", "#ffeeec", "#ff8476"]}
-      style={{ flex: 1 }}
-    >
-      <View style={loginStyles.container}>
-        <View style={loginStyles.formContainer}>
-          <Text
-            style={[loginStyles.loginText, { fontFamily: "Poppins_900Black" }]}
-          >
-            LOGIN
-          </Text>
-          <Text
-            style={[
-              loginStyles.descriptionText,
-              { fontFamily: "Poppins_400Regular" },
-            ]}
-          >
-            Login to continue using this app
-          </Text>
-
-          <TextInput
-            style={[loginStyles.input, { fontFamily: "Poppins_400Regular" }]}
-            placeholder="Email"
-            value={email}
-            onChangeText={(text) => setEmail(text)}
-          />
-
-          <View style={loginStyles.passwordContainer}>
-            <TextInput
-              style={[
-                loginStyles.input,
-                loginStyles.passwordInput,
-                { fontFamily: "Poppins_400Regular" },
-              ]}
-              placeholder="Password"
-              secureTextEntry={!showPassword}
-              value={password}
-              onChangeText={(text) => setPassword(text)}
-            />
-            <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
-              <Text
-                style={[
-                  loginStyles.togglePassword,
-                  { fontFamily: "Poppins_400Regular" },
-                ]}
-              >
-                {showPassword ? "Hide" : "Show"}
-              </Text>
-            </TouchableOpacity>
-          </View>
-
-          <TouchableOpacity onPress={() => navigation.navigate("Forgot")}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#0C3B2E' }}>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : null}
+        style={{ flex: 1 }}
+        keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 0}
+      >
+        <ScrollView
+          contentContainerStyle={loginStyles.scrollContainer}
+          keyboardShouldPersistTaps="handled"
+        >
+          <View style={loginStyles.container}>
+            <Text
+              style={[loginStyles.loginText, { fontFamily: "Poppins_900Black" }]}
+            >
+              LOGIN
+            </Text>
             <Text
               style={[
-                loginStyles.forgotPassword,
-                { fontFamily: "Poppins_400Regular", color: "#FF4732", marginLeft: 160, marginTop: -10, marginBottom: 20, },
+                loginStyles.descriptionText,
+                { fontFamily: "Poppins_400Regular" },
               ]}
             >
-              Forgot Password?
+              Login to continue using this app
             </Text>
-          </TouchableOpacity>
 
-          <CustomButton
-            title="Login"
-            onPress={handleLogin}
-            style={{ backgroundColor: "#FF4732", width: 300 }}
-            textStyle={{ color: "white", fontFamily: "Poppins_600SemiBold" }}
-          />
-          <View style={loginStyles.noAccountContainer}>
-            <Text 
-              style={[
-                loginStyles.noacc,
-                { fontFamily: "Poppins_400Regular", color: "black" },
-              ]}
-            >
-              Don't have an account?{" "}
-            </Text>
-            <TouchableOpacity onPress={() => navigation.navigate("Register")}>
+            <TextInput
+              style={[loginStyles.input, { fontFamily: "Poppins_400Regular" }]}
+              placeholder="Email"
+              value={email}
+              onChangeText={(text) => setEmail(text)}
+            />
+
+            <View style={loginStyles.passwordContainer}>
+              <TextInput
+                style={[
+                  loginStyles.input,
+                  loginStyles.passwordInput,
+                  { fontFamily: "Poppins_400Regular" }
+                ]}
+                placeholder="Password"
+                secureTextEntry={!showPassword}
+                value={password}
+                onChangeText={(text) => setPassword(text)}
+              />
+              <TouchableOpacity
+                style={loginStyles.showPasswordButton}
+                onPress={() => setShowPassword(!showPassword)}
+              >
+                <Entypo
+                  name={showPassword ? "eye-with-line" : "eye"}
+                  size={24}
+                  color="black"
+                />
+              </TouchableOpacity>
+            </View>
+
+            <CustomButton
+              title="Login"
+              onPress={handleLogin} style={loginStyles.button}
+            />
+
+            <View style={loginStyles.noAccountContainer}>
               <Text
                 style={[
                   loginStyles.noacc,
-                  { fontFamily: "Poppins_600SemiBold", color: "red" },
+                  { fontFamily: "Poppins_400Regular", color: "black" },
                 ]}
               >
-                Register
+                Forgot your password?{" "}
               </Text>
-            </TouchableOpacity>
+              <TouchableOpacity onPress={() => navigation.navigate("Menu")}>
+                <Text
+                  style={[
+                    loginStyles.noacc,
+                    { fontFamily: "Poppins_600SemiBold", color: "#BB8A52" },
+                  ]}
+                >
+                  Reset
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={loginStyles.orContainer}>
+              <Fontisto name="minus-a" size={24} />
+              <Text style={loginStyles.orText}>OR</Text>
+              <Fontisto name="minus-a" size={24} />
+            </View>
+
+            <View style={loginStyles.socialButtonsContainer}>
+              <TouchableOpacity style={[loginStyles.socialButton, loginStyles.facebookButton]}>
+                <View style={loginStyles.socialButtonIcon}>
+                  <AntDesign name="facebook-square" size={24} color="#3b5998" />
+                </View>
+                <Text style={loginStyles.socialButtonText}>Login with Facebook</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={[loginStyles.socialButton, loginStyles.googleButton]}>
+                <View style={loginStyles.socialButtonIcon}>
+                  <AntDesign name="google" size={24} color="#dd4b39" />
+                </View>
+                <Text style={loginStyles.socialButtonText}>Login with Google</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={loginStyles.noAccountContainer}>
+              <Text
+                style={[
+                  loginStyles.noacc,
+                  { fontFamily: "Poppins_400Regular", color: "black" },
+                ]}
+              >
+                Don't have an account?{" "}
+              </Text>
+              <TouchableOpacity onPress={() => navigation.navigate("Register")}>
+                <Text
+                  style={[
+                    loginStyles.noacc,
+                    { fontFamily: "Poppins_600SemiBold", color: "#BB8A52" },
+                  ]}
+                >
+                  Register
+                </Text>
+              </TouchableOpacity>
+            </View>
           </View>
-        </View>
-      </View>
-    </LinearGradient>
+        </ScrollView>
+      </KeyboardAvoidingView>
+    </SafeAreaView>
   );
 };
 
