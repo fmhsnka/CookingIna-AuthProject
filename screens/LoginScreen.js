@@ -78,7 +78,7 @@ const LoginScreen = () => {
           Alert.alert("Login Success", "You have successfully logged in.");
           setEmail("");
           setPassword("");
-          navigation.navigate("UserProfile");
+          navigation.navigate("Menu");
         } else {
           Alert.alert(
             "Email Not Verified",
@@ -163,7 +163,7 @@ const LoginScreen = () => {
               >
                 Forgot your password?{" "}
               </Text>
-              <TouchableOpacity onPress={() => navigation.navigate("Forgot")}>
+              <TouchableOpacity onPress={() => navigation.navigate("Menu")}>
                 <Text
                   style={[
                     loginStyles.noacc,
