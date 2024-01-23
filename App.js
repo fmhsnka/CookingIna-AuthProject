@@ -10,7 +10,7 @@ import ForgotPasswordScreen from "./screens/ForgotPasswordScreen";
 import UserProfileScreen from "./screens/UserProfile";
 import Menu from "./screens/Menu";
 
-// iris test
+// mamads test
 const Stack = createNativeStackNavigator();
 
 function App() {
