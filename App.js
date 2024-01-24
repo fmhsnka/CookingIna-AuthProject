@@ -9,6 +9,7 @@ import RegisterScreen from "./screens/RegisterScreen";
 import ForgotPasswordScreen from "./screens/ForgotPasswordScreen";
 import UserProfileScreen from "./screens/UserProfile";
 import Menu from "./screens/Menu";
+import AboutScreen from "./screens/About";
 
 // iris test
 const Stack = createNativeStackNavigator();
@@ -43,10 +44,16 @@ function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
+          name="About"
+          component={AboutScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="Menu"
           component={Menu}
           options={{ headerShown: false }}
         />
+        
       </Stack.Navigator>
     </NavigationContainer>
   );

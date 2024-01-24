@@ -126,9 +126,8 @@ const Menu = () => {
     };
 
     const handleHelpPress = () => {
-        // Replace 'HelpScreen' with the name of the screen you want to navigate to
-        console.log('Navigate to Help Screen');
-        // navigation.navigate('HelpScreen');
+        // console.log('Navigate to Help Screen');
+        navigation.navigate('About');
     };
 
     let [fontsLoaded, fontError] = useFonts({
@@ -164,8 +163,12 @@ const Menu = () => {
                 {/* Profile Pic, Name, and Email */}
                 <View style={menuStyles.profileContainer}>
                     <Image source={require('../img/Profile/power.png')} style={menuStyles.profilePic} />
-                    <Text style={menuStyles.name}>{userData.firstName} {userData.lastName}</Text>
-                    <Text style={menuStyles.email}>{userData.email}</Text>
+                    <Text style={menuStyles.name}>
+                        {user ? `${userData.firstName} ${userData.lastName}` : 'No user logged'}
+                    </Text>
+                    <Text style={menuStyles.email}>
+                        {user ? userData.email : 'No user logged'}
+                    </Text>
                 </View>
 
                 {/* Buttons */}
@@ -189,7 +192,7 @@ const Menu = () => {
                                     handleFavoritesPress();
                                 } else if (item.title === 'Settings & Privacy') {
                                     handleSettingsPress();
-                                } else if (item.title === 'Help & About') {
+                                } else if (item.title === 'About') {
                                     handleHelpPress();
                                 } else {
                                     // Handle other button clicks
@@ -216,7 +219,7 @@ const menuItems = [
     { title: 'Profile', icon: 'user' },
     { title: 'Favorites', icon: 'heart' },
     { title: 'Settings & Privacy', icon: 'cog' },
-    { title: 'Help & About', icon: 'question-circle' },
+    { title: 'About', icon: 'question-circle' },
     { title: 'Delete Account', icon: 'trash-alt' },
     { title: 'Log Out', icon: 'sign-out-alt' },
 ];
