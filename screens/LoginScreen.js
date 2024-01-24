@@ -75,10 +75,22 @@ const LoginScreen = () => {
         const user = userCredential.user;
         if (isEmailVerified(user)) {
           console.log("User signed in:", user);
-          Alert.alert("Login Success", "You have successfully logged in.");
-          setEmail("");
-          setPassword("");
-          navigation.navigate("Menu");
+
+          // Display success alert with "OK" button
+          Alert.alert(
+            "Login Successful",
+            "You have successfully logged in.",
+            [
+              {
+                text: "OK",
+                onPress: () => {
+                  setEmail("");
+                  setPassword("");
+                  navigation.navigate("Menu");
+                },
+              },
+            ]
+          );
         } else {
           Alert.alert(
             "Email Not Verified",

@@ -52,20 +52,31 @@ const SettingsScreen = () => {
             return;
         }
 
-        // Update the password
         try {
             await updatePassword(currentUser, newPassword);
 
             // Password successfully changed
-            Alert.alert('Success', 'Password changed successfully!');
+            Alert.alert(
+                'Success',
+                'Password changed successfully! Please login again.',
+                [
+                    {
+                        text: 'OK',
+                        onPress: () => {
+                            // Log out the user
+                            signOut(auth);
 
-            // Log out the user
-            await signOut(auth);
+                            // Clear input fields
+                            setOldPassword('');
+                            setNewPassword('');
+                            setConfirmPassword('');
 
-            // Clear input fields
-            setOldPassword('');
-            setNewPassword('');
-            setConfirmPassword('');
+                            // Navigate to the login screen or any other screen as needed
+                            navigation.navigate('Login');
+                        },
+                    },
+                ]
+            );
         } catch (error) {
             Alert.alert('Error', 'Password change failed. Please try again.');
         }

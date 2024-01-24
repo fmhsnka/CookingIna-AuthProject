@@ -111,7 +111,6 @@ const RegisterScreen = () => {
               email,
               phoneNumber: phoneNumber || "",
               address: address || "",
-              password,
             },
             { merge: true }
           )
