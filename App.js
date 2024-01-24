@@ -11,7 +11,7 @@ import UserProfileScreen from "./screens/UserProfile";
 import Menu from "./screens/Menu";
 import AboutScreen from "./screens/About";
 
-// iris test
+// mamads test
 const Stack = createNativeStackNavigator();
 
 function App() {
