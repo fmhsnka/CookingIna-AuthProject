@@ -10,6 +10,7 @@ import ForgotPasswordScreen from "./screens/ForgotPasswordScreen";
 import UserProfileScreen from "./screens/UserProfile";
 import Menu from "./screens/Menu";
 import AboutScreen from "./screens/About";
+import SettingsScreen from "./screens/Settings";
 
 // mamads test
 const Stack = createNativeStackNavigator();
@@ -44,6 +45,11 @@ function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
+          name="Settings"
+          component={SettingsScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="About"
           component={AboutScreen}
           options={{ headerShown: false }}
@@ -53,7 +59,7 @@ function App() {
           component={Menu}
           options={{ headerShown: false }}
         />
-        
+
       </Stack.Navigator>
     </NavigationContainer>
   );

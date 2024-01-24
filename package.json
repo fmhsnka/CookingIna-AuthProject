@@ -36,6 +36,7 @@
     "react-native-heroicons": "^4.0.0",
     "react-native-iconify": "^0.2.11",
     "react-native-image-cache-hoc": "^2.0.0",
+    "react-native-modal": "^13.0.1",
     "react-native-reanimated": "~3.3.0",
     "react-native-responsive-screen": "^1.4.2",
     "react-native-safe-area-context": "4.6.3",

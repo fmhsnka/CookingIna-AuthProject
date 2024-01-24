@@ -88,6 +88,15 @@ const aboutStyles = StyleSheet.create({
         borderRadius: 50,
         width: 100,
         height: 100,
+
+        // Android shadow
+        elevation: 5,
+
+        // iOS shadow
+        shadowColor: 'black',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.3,
+        shadowRadius: 3,
     },
     circle1: {
         top: -80,
@@ -150,12 +159,24 @@ const aboutStyles = StyleSheet.create({
         borderRadius: 140,
     },
     circle6: {
-        bottom: -75,
+        bottom: -110,
         right: -70,
         backgroundColor: '#FFBA00',
         height: 180,
         width: 180,
         borderRadius: 140,
+    },
+    copyrightContainer: {
+        position: 'absolute',
+        bottom: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+    },
+    copyrightText: {
+        fontSize: 12,
+        color: '#333',
+        fontFamily: 'Poppins_400Regular',
     },
 });
 
