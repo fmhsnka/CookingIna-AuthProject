@@ -208,7 +208,7 @@ const Menu = () => {
                         </TouchableOpacity>
                     ))}
                 </View>
-                <Image source={require('../img/Logo/splash-ina.png')} style={menuStyles.bottomImage} />
+                {/* <Image source={require('../img/Logo/splash-ina.png')} style={menuStyles.bottomImage} /> */}
             </View>
         </View>
     );

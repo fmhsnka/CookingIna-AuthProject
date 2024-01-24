@@ -11,6 +11,7 @@ import UserProfileScreen from "./screens/UserProfile";
 import Menu from "./screens/Menu";
 import AboutScreen from "./screens/About";
 import SettingsScreen from "./screens/Settings";
+import HomeScreen from "./screens/HomeScreen";
 
 // mamads test
 const Stack = createNativeStackNavigator();
@@ -52,6 +53,11 @@ function App() {
         <Stack.Screen
           name="About"
           component={AboutScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen
