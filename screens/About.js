@@ -29,6 +29,11 @@ const AboutScreen = () => {
                 </Text>
                 <Text style={aboutStyles.title2}>Ready to embark on a delicious journey?</Text>
             </View>
+
+            {/* Copyright Notice */}
+            <View style={aboutStyles.copyrightContainer}>
+                <Text style={aboutStyles.copyrightText}>&#169; 2024 Cooking Ina & AmbatuCooks | All Rights Reserved</Text>
+            </View>
             <TouchableOpacity onPress={() => navigation.goBack()} style={aboutStyles.goBackButton}>
                 <AntDesign name="leftcircle" size={46} color="#6D9773" />
             </TouchableOpacity>

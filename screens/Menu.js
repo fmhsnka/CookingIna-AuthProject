@@ -120,9 +120,8 @@ const Menu = () => {
     };
 
     const handleSettingsPress = () => {
-        // Replace 'SettingsScreen' with the name of the screen you want to navigate to
-        console.log('Navigate to Settings Screen');
-        // navigation.navigate('SettingsScreen');
+        // console.log('Navigate to Settings Screen');
+        navigation.navigate('Settings');
     };
 
     const handleHelpPress = () => {
