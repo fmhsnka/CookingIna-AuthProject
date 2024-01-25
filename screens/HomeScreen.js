@@ -89,13 +89,16 @@ const HomeScreen = ({ navigation }) => {
             <ScrollView contentContainerStyle={homeStyles.scrollView}>
                 <View style={homeStyles.container}>
                     <View style={homeStyles.headerIcons}>
-                        <Ionicons
-                            name="menu"
-                            size={35}
-                            color="black"
-                            onPress={() => navigation.navigate('Menu')}
-                        />
-                        <Ionicons name="search" size={35} color="#1E1E1E" />
+                        <TouchableOpacity onPress={() => navigation.navigate('Menu')}>
+                            <Ionicons
+                                name="menu"
+                                size={35}
+                                color="black"
+                            />
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <Ionicons name="search" size={35} color="#1E1E1E" />
+                        </TouchableOpacity>
                     </View>
                     <Text style={homeStyles.greetingText}>Hello, {firstName}!</Text>
                     <Text style={[homeStyles.whatdoyou]}>What do you want to cook today?</Text>

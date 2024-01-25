@@ -86,7 +86,7 @@ const LoginScreen = () => {
                 onPress: () => {
                   setEmail("");
                   setPassword("");
-                  navigation.navigate("Menu");
+                  navigation.navigate("Home");
                 },
               },
             ]
