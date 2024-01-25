@@ -23,7 +23,7 @@ const homeStyles = StyleSheet.create({
         marginBottom: 8,
         fontFamily: 'Poppins_600SemiBold',
     },
-    whatdoyou:{
+    whatdoyou: {
         fontSize: 16,
         marginBottom: 26,
         fontFamily: 'Poppins_400Regular',
@@ -79,7 +79,7 @@ const homeStyles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         // backgroundColor: '#294B29',
-        width: 72,
+        width: 76,
         height: 72,
     },
     categoryIconContainer: {
@@ -109,7 +109,7 @@ const homeStyles = StyleSheet.create({
         marginTop: 10,
     },
     recipeInfoContainer: {
-        width: '60%',
+        width: '80%',
         flexDirection: 'column',
         alignItems: 'flex-start',
         marginBottom: 10,
@@ -153,16 +153,19 @@ const homeStyles = StyleSheet.create({
         marginRight: 0,
     },
     heartIcon: {
-        position: 'absolute',
-        fontSize: 30,
-        color: 'black',
+        // position: 'absolute',
+        fontSize: 36,
+        color: 'red',
         right: 15,
-        top: 13,
+        top: -5,
         opacity: .6,
     },
-    caticon:{
+    caticon: {
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    arrowButton: {
+        paddingHorizontal: 10,
     },
 });
 

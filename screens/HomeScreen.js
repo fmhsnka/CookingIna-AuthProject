@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
 import homeStyles from '../styles/HomeStyles';
 import { Ionicons } from 'react-native-vector-icons';
+import { MaterialCommunityIcons } from 'react-native-vector-icons';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { doc, getFirestore, getDoc } from 'firebase/firestore';
 
@@ -10,6 +11,8 @@ const HomeScreen = ({ navigation }) => {
     const db = getFirestore();
 
     const [firstName, setFirstName] = useState('');
+    const [currentSet, setCurrentSet] = useState(1);
+    const [pressedRecipes, setPressedRecipes] = useState([]); // New state
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -37,11 +40,17 @@ const HomeScreen = ({ navigation }) => {
         }
     };
 
-    const categories = [
-        { name: 'Breakfast', icon: 'ios-sunny' },
-        { name: 'Dinner', icon: 'ios-restaurant' },
-        { name: 'Lunch', icon: 'ios-pizza' },
-        { name: 'Appetizer', icon: 'ios-egg' },
+    const categoriesSets = [
+        [
+            { name: 'Breakfast', icon: require('../img/categories/croissant.png') },
+            { name: 'Dinner', icon: require('../img/categories/cover.png') },
+            { name: 'Lunch', icon: require('../img/categories/tom-yum.png') },
+            { name: 'Appetizer', icon: require('../img/categories/appetizer.png') },
+        ],
+        [
+            { name: 'Dessert', icon: require('../img/categories/cake.png') },
+            { name: 'Bread', icon: require('../img/categories/bread.png') },
+        ],
     ];
 
     const recommendedRecipes = [
@@ -54,6 +63,27 @@ const HomeScreen = ({ navigation }) => {
 
     ];
 
+
+    const handleNextSet = () => {
+        setCurrentSet((prevSet) => (prevSet === categoriesSets.length ? 1 : prevSet + 1));
+    };
+
+    const handlePrevSet = () => {
+        setCurrentSet((prevSet) => (prevSet === 1 ? categoriesSets.length : prevSet - 1));
+    };
+
+    const handleHeartPress = (recipeName) => {
+        setPressedRecipes((prevPressedRecipes) => {
+            if (prevPressedRecipes.includes(recipeName)) {
+                // Recipe is already pressed, remove it
+                return prevPressedRecipes.filter((name) => name !== recipeName);
+            } else {
+                // Recipe is not pressed, add it
+                return [...prevPressedRecipes, recipeName];
+            }
+        });
+    };
+
     return (
         <View style={homeStyles.backgroundContainer}>
             <ScrollView contentContainerStyle={homeStyles.scrollView}>
@@ -63,7 +93,7 @@ const HomeScreen = ({ navigation }) => {
                             name="menu"
                             size={35}
                             color="black"
-                            onPress={() => navigation.openDrawer()}
+                            onPress={() => navigation.navigate('Menu')}
                         />
                         <Ionicons name="search" size={35} color="#1E1E1E" />
                     </View>
@@ -71,15 +101,18 @@ const HomeScreen = ({ navigation }) => {
                     <Text style={[homeStyles.whatdoyou]}>What do you want to cook today?</Text>
                     <View style={homeStyles.categoriesContainer}>
                         <Text style={homeStyles.categoriesTitle}>Categories</Text>
-                        <TouchableOpacity onPress={() => navigation.navigate('ViewAllCategories')}>
-                            <Text style={homeStyles.viewAllText}>View All ></Text>
+                        <TouchableOpacity onPress={handlePrevSet}>
+                            <Ionicons name="arrow-back" size={25} color="#1E1E1E" style={homeStyles.arrowButton} />
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={handleNextSet}>
+                            <Ionicons name="arrow-forward" size={25} color="#1E1E1E" />
                         </TouchableOpacity>
                     </View>
                     <View style={homeStyles.categories1Container}>
-                        {categories.map((category) => (
+                        {categoriesSets[currentSet - 1].map((category) => (
                             <TouchableOpacity key={category.name} style={homeStyles.categoryButton}>
                                 <View style={homeStyles.categoryIconContainer}>
-                                    <Ionicons name={category.icon} size={42} color="white" />
+                                    <Image source={category.icon} style={{ width: 42, height: 42, tintColor: 'white' }} />
                                 </View>
                                 <Text style={homeStyles.categoryText}>{category.name}</Text>
                             </TouchableOpacity>
@@ -109,7 +142,13 @@ const HomeScreen = ({ navigation }) => {
                                         </View>
                                     </View>
                                 </View>
-                                <Ionicons name="heart-outline" style={[homeStyles.recipeIcon, homeStyles.heartIcon]} />
+                                <TouchableOpacity onPress={() => handleHeartPress(recipe.name)}>
+                                    <Ionicons
+                                        name={pressedRecipes.includes(recipe.name) ? 'heart' : 'heart-outline'}
+                                        style={[homeStyles.recipeIcon, homeStyles.heartIcon]}
+                                        color={pressedRecipes.includes(recipe.name) ? '#FFBA00' : 'black'}
+                                    />
+                                </TouchableOpacity>
                             </View>
                         </TouchableOpacity>
                     ))}

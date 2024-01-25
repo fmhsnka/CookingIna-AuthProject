@@ -156,7 +156,7 @@ const Menu = () => {
                     style={menuStyles.closeButton}
                     onPress={() => navigation.goBack()}
                 >
-                    <Ionicons name="close" size={40} color="#0C3B2E" />
+                    <Ionicons name="close-circle" size={46} color="#6D9773" />
                 </TouchableOpacity>
 
                 {/* Profile Pic, Name, and Email */}
