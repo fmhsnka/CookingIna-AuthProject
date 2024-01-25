@@ -23,6 +23,7 @@ const menuStyles = StyleSheet.create({
         borderRadius: 50,
         width: 100,
         height: 100,
+        elevation: 5,
     },
     circle1: {
         top: 60,
@@ -107,6 +108,7 @@ const menuStyles = StyleSheet.create({
         padding: 15,
         borderRadius: 14,
         backgroundColor: 'white',
+        elevation: 5,
     },
     icon: {
         marginRight: 10,
