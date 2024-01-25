@@ -1,5 +1,3 @@
-// HomeScreen.jsx
-
 import React, { useEffect, useState } from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
 import homeStyles from '../styles/HomeStyles';
@@ -47,9 +45,13 @@ const HomeScreen = ({ navigation }) => {
     ];
 
     const recommendedRecipes = [
-        { name: 'Chicken Adobo', time: '30 min', calories: 200, image: require('../img/recipes/adobo.jpg') },
-        { name: 'Lumpiang Shanghai', time: '45 min', calories: 300, image: require('../img/recipes/lumpia.jpg') },
-        // Add more recipes as needed
+        { name: 'Chicken Adobo', time: '35 min', calories: 608, image: require('../img/recipes/adobo.jpg') },
+        { name: 'Lumpiang Shanghai', time: '8 min', calories: 619, image: require('../img/recipes/lumpia.jpg') },
+        { name: 'Filipino Style Beef Steak', time: '1 hr', calories: 729, image: require('../img/recipes/bistek.jpg') },
+        { name: 'Tortang Talong', time: '12 min', calories: 187, image: require('../img/recipes/talong.png') },
+        { name: 'Sweet Macaroni Salad', time: '10 min', calories: 738, image: require('../img/recipes/macaroni.jpg') },
+        { name: 'Pandesal', time: '15 min', calories: 73, image: require('../img/recipes/pandesal.jpg') },
+
     ];
 
     return (
@@ -60,10 +62,10 @@ const HomeScreen = ({ navigation }) => {
                         <Ionicons
                             name="menu"
                             size={35}
-                            color="#BB8A52"
+                            color="black"
                             onPress={() => navigation.openDrawer()}
                         />
-                        <Ionicons name="search" size={35} color="#BB8A52" />
+                        <Ionicons name="search" size={35} color="#1E1E1E" />
                     </View>
                     <Text style={homeStyles.greetingText}>Hello, {firstName}!</Text>
                     <Text style={[homeStyles.whatdoyou]}>What do you want to cook today?</Text>
@@ -73,10 +75,12 @@ const HomeScreen = ({ navigation }) => {
                             <Text style={homeStyles.viewAllText}>View All ></Text>
                         </TouchableOpacity>
                     </View>
-                    <View style={homeStyles.categoriesContainer}>
+                    <View style={homeStyles.categories1Container}>
                         {categories.map((category) => (
                             <TouchableOpacity key={category.name} style={homeStyles.categoryButton}>
-                                <Ionicons name={category.icon} size={24} color="#BB8A52" />
+                                <View style={homeStyles.categoryIconContainer}>
+                                    <Ionicons name={category.icon} size={42} color="white" />
+                                </View>
                                 <Text style={homeStyles.categoryText}>{category.name}</Text>
                             </TouchableOpacity>
                         ))}
@@ -101,7 +105,7 @@ const HomeScreen = ({ navigation }) => {
                                         </View>
                                         <View style={homeStyles.recipeInfoItem}>
                                             <Ionicons name="flame-outline" style={homeStyles.recipeIcon} />
-                                            <Text style={homeStyles.recipeCalories}>{recipe.calories} cal</Text>
+                                            <Text style={homeStyles.recipeCalories}>{recipe.calories}kcal</Text>
                                         </View>
                                     </View>
                                 </View>

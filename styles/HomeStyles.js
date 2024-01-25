@@ -1,5 +1,3 @@
-// HomeStyles.jsx
-
 import { StyleSheet } from 'react-native';
 
 const homeStyles = StyleSheet.create({
@@ -31,7 +29,10 @@ const homeStyles = StyleSheet.create({
         fontFamily: 'Poppins_400Regular',
     },
     categoryText: {
-        fontSize: 16,
+        marginTop: 15,
+        fontSize: 15,
+        fontFamily: 'Poppins_400Regular',
+        alignItems: 'center',
     },
     categoriesTitle: {
         fontSize: 20,
@@ -60,6 +61,13 @@ const homeStyles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 20,
     },
+    categories1Container: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 40,
+        marginTop: 10,
+    },
     recommendedRecipesContainer: {
         flexDirection: 'row',
         justifyContent: 'center',
@@ -70,22 +78,21 @@ const homeStyles = StyleSheet.create({
         marginHorizontal: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#294B29',
-        width: 70,
-        height: 70,
+        // backgroundColor: '#294B29',
+        width: 72,
+        height: 72,
     },
     categoryIconContainer: {
         backgroundColor: '#BB8A52',
-        borderRadius: 25,
+        borderRadius: 50,
         padding: 10,
-        marginBottom: 5,
     },
     recommendedRecipesText: {
         fontSize: 18,
         marginBottom: 10,
     },
     recipeContainer: {
-        marginBottom: 20,
+        marginBottom: 25,
         backgroundColor: '#d9bea0',
         borderRadius: 10,
     },
@@ -150,8 +157,12 @@ const homeStyles = StyleSheet.create({
         fontSize: 30,
         color: 'black',
         right: 15,
-        top: 8,
+        top: 13,
         opacity: .6,
+    },
+    caticon:{
+        alignItems: 'center',
+        justifyContent: 'center',
     },
 });
 
