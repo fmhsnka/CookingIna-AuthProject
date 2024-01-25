@@ -125,7 +125,7 @@ const userProfileStyles = StyleSheet.create({
     },
     goBackButton: {
         position: 'absolute',
-        top: 54,
+        top: 60,
         left: 25,
         width: 48,
         height: 48,

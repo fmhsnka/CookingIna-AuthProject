@@ -112,7 +112,7 @@ const UserProfileScreen = () => {
 
                 {/* Container for Edit Profile Elements */}
                 <View style={userProfileStyles.editProfileContainer}>
-                    <Text style={userProfileStyles.screenTitle}>EDIT PROFILE</Text>
+                    <Text style={userProfileStyles.screenTitle}>Edit Profile</Text>
                     <Image
                         source={require('../img/Profile/power.png')}
                         style={userProfileStyles.profilePic}

@@ -168,7 +168,7 @@ const aboutStyles = StyleSheet.create({
     },
     copyrightContainer: {
         position: 'absolute',
-        bottom: 20,
+        bottom: 5,
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',

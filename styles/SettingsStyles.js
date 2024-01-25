@@ -101,7 +101,7 @@ const settingsStyles = StyleSheet.create({
         alignItems: 'center',
     },
     title: {
-        fontSize: 25,
+        fontSize: 23,
         marginTop: 60,
         marginBottom: 30,
         fontFamily: 'Poppins_600SemiBold',
@@ -190,12 +190,12 @@ const settingsStyles = StyleSheet.create({
     goBackButton: {
         position: 'absolute',
         top: 54,
-        left: 25,
-        width: 48,
-        height: 48,
+        left: 20,
+        width: 50,
+        height: 50,
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 24,
+        borderRadius: 100,
     },
     changepass: {
         marginBottom: 30,
