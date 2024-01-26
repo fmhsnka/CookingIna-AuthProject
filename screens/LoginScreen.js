@@ -194,13 +194,25 @@ const LoginScreen = () => {
             </View>
 
             <View style={loginStyles.socialButtonsContainer}>
-              <TouchableOpacity style={[loginStyles.socialButton, loginStyles.facebookButton]}>
+              <TouchableOpacity
+                style={[loginStyles.socialButton, loginStyles.facebookButton]}
+                onPress={() => {
+                  console.log('Pressed Facebook Login Button');
+                }}
+              >
                 <View style={loginStyles.socialButtonIcon}>
                   <AntDesign name="facebook-square" size={24} color="#3b5998" />
                 </View>
                 <Text style={loginStyles.socialButtonText}>Login with Facebook</Text>
               </TouchableOpacity>
-              <TouchableOpacity style={[loginStyles.socialButton, loginStyles.googleButton]}>
+
+              <TouchableOpacity
+                style={[loginStyles.socialButton, loginStyles.googleButton]}
+                onPress={() => {
+                  console.log('Pressed Google Login Button');
+                  // Add your Google login logic here
+                }}
+              >
                 <View style={loginStyles.socialButtonIcon}>
                   <AntDesign name="google" size={24} color="#dd4b39" />
                 </View>

@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import homeStyles from '../styles/HomeStyles';
 import { Ionicons } from 'react-native-vector-icons';
 import { MaterialCommunityIcons } from 'react-native-vector-icons';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { doc, getFirestore, getDoc } from 'firebase/firestore';
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = () => {
+    const navigation = useNavigation();
     const auth = getAuth();
     const db = getFirestore();
 
@@ -84,6 +86,69 @@ const HomeScreen = ({ navigation }) => {
         });
     };
 
+    const handleCategoryPress = (categoryName) => {
+        // Navigate to the corresponding screen based on the category name
+        switch (categoryName) {
+            case 'Breakfast':
+                // navigation.navigate('BreakfastScreen');
+                console.log('BREAKFAST WORKING')
+                break;
+            case 'Dinner':
+                // navigation.navigate('DinnerScreen');
+                console.log('DINNER WORKING')
+                break;
+            case 'Lunch':
+                // navigation.navigate('DinnerScreen');
+                console.log('LUNCH WORKING')
+                break;
+            case 'Appetizer':
+                // navigation.navigate('DinnerScreen');
+                console.log('APPETIZER WORKING')
+                break;
+            case 'Dessert':
+                // navigation.navigate('DinnerScreen');
+                console.log('DESSERT WORKING')
+                break;
+            case 'Bread':
+                // navigation.navigate('DinnerScreen');
+                console.log('BREAD WORKING')
+                break;
+            default:
+                break;
+        }
+    };
+
+    const handleRecipePress = (recipeName) => {
+        switch (recipeName) {
+            case 'Chicken Adobo':
+                navigation.navigate('AdoboScreen');
+                // console.log('WORKING')
+                break;
+            case 'Lumpiang Shanghai':
+                // navigation.navigate('LumpiangShanghaiScreen');
+                console.log('WORKING')
+                break;
+            case 'Filipino Style Beef Steak':
+                // navigation.navigate('BeefSteakScreen');
+                console.log('WORKING')
+                break;
+            case 'Tortang Talong':
+                // navigation.navigate('BeefSteakScreen');
+                console.log('WORKING')
+                break;
+            case 'Sweet Macaroni Salad':
+                // navigation.navigate('BeefSteakScreen');
+                console.log('WORKING')
+                break;
+            case 'Pandesal':
+                // navigation.navigate('BeefSteakScreen');
+                console.log('WORKING')
+                break;
+            default:
+                break;
+        }
+    };
+
     return (
         <View style={homeStyles.backgroundContainer}>
             <ScrollView contentContainerStyle={homeStyles.scrollView}>
@@ -113,7 +178,11 @@ const HomeScreen = ({ navigation }) => {
                     </View>
                     <View style={homeStyles.categories1Container}>
                         {categoriesSets[currentSet - 1].map((category) => (
-                            <TouchableOpacity key={category.name} style={homeStyles.categoryButton}>
+                            <TouchableOpacity
+                                key={category.name}
+                                style={homeStyles.categoryButton}
+                                onPress={() => handleCategoryPress(category.name)}  // Pass the category name to the handler
+                            >
                                 <View style={homeStyles.categoryIconContainer}>
                                     <Image source={category.icon} style={{ width: 42, height: 42, tintColor: 'white' }} />
                                 </View>
@@ -128,7 +197,11 @@ const HomeScreen = ({ navigation }) => {
                         </TouchableOpacity>
                     </View>
                     {recommendedRecipes.map((recipe) => (
-                        <TouchableOpacity key={recipe.name} style={homeStyles.recipeContainer}>
+                        <TouchableOpacity
+                            key={recipe.name}
+                            style={homeStyles.recipeContainer}
+                            onPress={() => handleRecipePress(recipe.name)}  // Pass the recipe name to the handler
+                        >
                             <Image source={recipe.image} style={homeStyles.recipeImage} />
                             <View style={homeStyles.recipeDetailsContainer}>
                                 <View style={homeStyles.recipeInfoContainer}>

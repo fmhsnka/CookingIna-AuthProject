@@ -12,6 +12,7 @@ import Menu from "./screens/Menu";
 import AboutScreen from "./screens/About";
 import SettingsScreen from "./screens/Settings";
 import HomeScreen from "./screens/HomeScreen";
+import RecipeScreen from "./screens/RecipeScreen1";
 
 // mamads test
 const Stack = createNativeStackNavigator();
@@ -58,6 +59,11 @@ function App() {
         <Stack.Screen
           name="Home"
           component={HomeScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="AdoboScreen"
+          component={RecipeScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen
