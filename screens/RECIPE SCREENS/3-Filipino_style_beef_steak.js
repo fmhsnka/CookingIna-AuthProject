@@ -27,21 +27,21 @@ const BISTEK = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Chicken Adobo</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../img/recipes/bistek.jpg')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="time-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>36 mins</Text>
+                                <Text style={recipeStyles.detailText}>1hr</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="flame-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>607kcal</Text>
+                                <Text style={recipeStyles.detailText}>729kcal</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="person-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>6 Servings</Text>
+                                <Text style={recipeStyles.detailText}>4 Servings</Text>
                             </View>
                         </View>
                     </View>
@@ -53,25 +53,37 @@ const BISTEK = ({ navigation }) => {
                         </View>
                         <View style={recipeStyles.listingreContainer}>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 lbs. Chicken
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 lbs. beef (note 1)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 piece Knorr Chicken Cube
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 Knorr Beef Cube
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 head garlic
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 onions (note 2)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 piece onion
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 4 cloves garlic (note 3)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 6 pieces dried bay leaves
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 teaspoon peppercorns (note 4)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 tablespoon whole peppercorn
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 teaspoons cornstarch
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> ½ cup soy sauce
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 ½ teaspoons brown sugar
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 6 tablespoons soy sauce
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> ½ lemon
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 ½ cups water
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 tablespoons cooking oil
                             </Text>
                         </View>
 
@@ -84,43 +96,61 @@ const BISTEK = ({ navigation }) => {
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>1</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Heat oil in a cooking pot. Saute garlic and onion until the garlic turns light brown and the onion softens.
+                                    Combine beef, soy sauce, juice from ½ lemon, and ½ teaspoon cracked peppercorn in a bowl. Mix well. Refrigerate for at least 1 hour.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>2</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add chicken pieces. Cook until the chicken turns light brown.
+                                    Heat cooking oil in a pan. Fry each side of the marinated beef for 1 minute. Remove and set aside.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>3</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Pour water, soy sauce, and vinegar. Let boil.
+                                    Using the remaining oil (you can add more if needed), sauté half of the onion and add the garlic.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>4</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add Knorr Chicken Cube, whole peppercorn, and dried bay leaves. Stir. Cover the pot and cook in medium heat for 15 minutes.
+                                    Put the beef in the pan once the onion softens. Sauté for 1 minute.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>5</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Turn the chicken pieces over. Cover and continue to cook for another 15 minutes.
+                                    Pour 1 ½ cups of water into the pan. Cover and let the liquid boil.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>6</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add dark brown sugar and season with salt.
+                                    Add Knorr Beef Cube. Cover the pan and then adjust the heat to a low setting. Cook for up to 40 minutes. Note: add more water as needed.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>7</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Transfer to a serving bowl. Serve. Share and enjoy!
+                                    Add remaining onion and season with cracked peppercorn and add brown sugar.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>7</Text>
+                                <Text style={recipeStyles.stepText}>
+                                    Make the sauce thicker by pouring-in the slurry. Do this by mixing cornstarch with 3 tablespoons of water.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>7</Text>
+                                <Text style={recipeStyles.stepText}>
+                                    Once the sauce gets thick enough, you may turn the heat off and transfer your Filipino Style Beef Steak to a serving bowl.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>7</Text>
+                                <Text style={recipeStyles.stepText}>
+                                    Serve with warm rice. Share and enjoy!
                                 </Text>
                             </View>
                         </View>

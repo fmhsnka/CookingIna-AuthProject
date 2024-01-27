@@ -4,7 +4,7 @@ import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
 import recipeStyles from '../../styles/RecipeScreenStyles';
 
-const Pandesal = ({ navigation }) => {
+const Hotsilog = ({ navigation }) => {
     return (
         <View style={recipeStyles.backgroundContainer}>
             <ScrollView contentContainerStyle={recipeStyles.scrollView}>
@@ -25,7 +25,7 @@ const Pandesal = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <Text style={recipeStyles.recipeName}>Chicken Adobo</Text>
+                            <Text style={recipeStyles.recipeName}>Hotsiloh</Text>
                             <View style={recipeStyles.recipeImageContainer}>
                                 <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
                             </View>
@@ -33,15 +33,15 @@ const Pandesal = ({ navigation }) => {
                         <View style={recipeStyles.detailsContainer}>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="time-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>36 mins</Text>
+                                <Text style={recipeStyles.detailText}>25 mins</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="flame-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>607kcal</Text>
+                                <Text style={recipeStyles.detailText}>364kcal</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="person-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>6 Servings</Text>
+                                <Text style={recipeStyles.detailText}>1 Servings</Text>
                             </View>
                         </View>
                     </View>
@@ -53,25 +53,19 @@ const Pandesal = ({ navigation }) => {
                         </View>
                         <View style={recipeStyles.listingreContainer}>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 lbs. Chicken
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 pieces red hotdogs
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 piece Knorr Chicken Cube
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 eggs
+                            </Text>xt
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 cup garlic fried rice 
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 head garlic
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 medium tomato (sliced)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 piece onion
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 6 pieces dried bay leaves
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 tablespoon whole peppercorn
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> ½ cup soy sauce
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 6 tbsp cooking oil
                             </Text>
                         </View>
 
@@ -84,43 +78,43 @@ const Pandesal = ({ navigation }) => {
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>1</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Heat oil in a cooking pot. Saute garlic and onion until the garlic turns light brown and the onion softens.
+                                    Pour water in a small cooking pot. Let boil.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>2</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add chicken pieces. Cook until the chicken turns light brown.
+                                    Add hotdogs and then pour 2 tablespoons cooking oil. Continue to cook until the water evaporates.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>3</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Pour water, soy sauce, and vinegar. Let boil.
+                                     Once the water is gone, fry the hotdogs in the remaining oil for 1 to 2 minutes while slowly rolling it back and forth to prevent it from getting burnt. Set aside.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>4</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add Knorr Chicken Cube, whole peppercorn, and dried bay leaves. Stir. Cover the pot and cook in medium heat for 15 minutes.
+                                    Prepare the eggs by heating 4 tablespoons of cooking oil in a pan.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>5</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Turn the chicken pieces over. Cover and continue to cook for another 15 minutes.
+                                    Once the oil gets hot, crack a piece of egg and start to fry it. As the egg is frying, grab a spoon and scoop the oil from the bottom of the pot. Pour the oil over the egg. Do this until the yolk gets a white covering. Remove the egg and set aside. Do the same step on the other piece of egg.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>6</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add dark brown sugar and season with salt.
+                                    Arrange the garlic fried rice, hotdogs, and fried eggs in a plate. Put the slices of tomato on the side.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>7</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Transfer to a serving bowl. Serve. Share and enjoy!
+                                    Serve with ketchup. Share and enjoy!
                                 </Text>
                             </View>
                         </View>
@@ -131,4 +125,4 @@ const Pandesal = ({ navigation }) => {
     );
 };
 
-export default Pandesal;
+export default Hotsilog;
