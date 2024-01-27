@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "AuthProject",
-    "slug": "AuthProject",
-    "version": "1.0.0",
+    "name": "Cooking Ina",
+    "slug": "rnRecipeDog",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.yotsuchi.AuthProject"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6aab7a66-db54-42a3-a8db-75637a19d85f"
+      }
     }
   }
 }
