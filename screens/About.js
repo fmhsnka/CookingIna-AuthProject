@@ -13,7 +13,15 @@ const AboutScreen = () => {
             <View style={[aboutStyles.circle, aboutStyles.circle3]}></View>
             <View style={[aboutStyles.circle, aboutStyles.circle5]}></View>
 
-            <Text style={aboutStyles.header}>About</Text>
+            <View style={aboutStyles.headerContainer}>
+                <TouchableOpacity
+                    onPress={() => navigation.goBack()}
+                    style={aboutStyles.goBackButton}
+                >
+                    <AntDesign name="leftcircle" size={46} color="#6D9773" style={{ zIndex: 1 }} />
+                </TouchableOpacity>
+                <Text style={aboutStyles.header}>About</Text>
+            </View>
             <View style={aboutStyles.titleContainer}>
                 <Text style={aboutStyles.headercont}>About</Text>
             </View>
@@ -34,9 +42,6 @@ const AboutScreen = () => {
             <View style={aboutStyles.copyrightContainer}>
                 <Text style={aboutStyles.copyrightText}>&#169; 2024 Cooking Ina & AmbatuCooks | All Rights Reserved</Text>
             </View>
-            <TouchableOpacity onPress={() => navigation.goBack()} style={aboutStyles.goBackButton}>
-                <AntDesign name="leftcircle" size={46} color="#6D9773" />
-            </TouchableOpacity>
         </View>
     );
 };

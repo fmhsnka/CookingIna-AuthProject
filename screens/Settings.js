@@ -116,82 +116,90 @@ const SettingsScreen = () => {
             </View>
 
             <View style={settingsStyles.container}>
-                <Text style={settingsStyles.title}>Settings & Privacy</Text>
 
-                {/* Change Password Container */}
                 <View style={settingsStyles.sectionContainer}>
+                    <View style={settingsStyles.titleContainer}>
+                        <TouchableOpacity onPress={() => navigation.goBack()} style={settingsStyles.goBackButton}>
+                            <AntDesign name="leftcircle" size={46} color="#6D9773" />
+                        </TouchableOpacity>
+                        <Text style={settingsStyles.screenTitle}>Settings & Privacy</Text>
+                    </View>
                     <View style={[settingsStyles.sectionTitleContainer, settingsStyles.changepass]}>
                         <FontAwesome5 name="lock" size={24} style={settingsStyles.sectionIcon} />
                         <Text style={settingsStyles.sectionTitle}>Change Password</Text>
                     </View>
-                    {/* Old Password */}
-                    <View style={settingsStyles.inputContainer}>
-                        <TextInput
-                            style={settingsStyles.input}
-                            placeholder="Old Password"
-                            secureTextEntry={!showPassword}
-                            value={oldPassword}
-                            onChangeText={setOldPassword}
-                        />
-                        <TouchableOpacity
-                            style={settingsStyles.showPasswordButton}
-                            onPress={() => setShowPassword(!showPassword)}
-                        >
-                            <Entypo
-                                name={showPassword ? "eye-with-line" : "eye"}
-                                size={24}
-                                color="black"
-                            />
-                        </TouchableOpacity>
-                    </View>
 
-                    {/* New Password */}
-                    <View style={settingsStyles.inputContainer}>
-                        <TextInput
-                            style={settingsStyles.input}
-                            placeholder="New Password"
-                            secureTextEntry={!showPassword1}
-                            value={newPassword}
-                            onChangeText={setNewPassword}
-                        />
-                        <TouchableOpacity
-                            style={settingsStyles.showPasswordButton}
-                            onPress={() => setShowPassword1(!showPassword1)}
-                        >
-                            <Entypo
-                                name={showPassword1 ? "eye-with-line" : "eye"}
-                                size={24}
-                                color="black"
+                    <View style={settingsStyles.AllinputContainer}>
+                        {/* Old Password */}
+                        <View style={settingsStyles.inputContainer}>
+                            <TextInput
+                                style={settingsStyles.input}
+                                placeholder="Old Password"
+                                secureTextEntry={!showPassword}
+                                value={oldPassword}
+                                onChangeText={setOldPassword}
                             />
-                        </TouchableOpacity>
-                    </View>
+                            <TouchableOpacity
+                                style={settingsStyles.showPasswordButton}
+                                onPress={() => setShowPassword(!showPassword)}
+                            >
+                                <Entypo
+                                    name={showPassword ? "eye-with-line" : "eye"}
+                                    size={24}
+                                    color="black"
+                                />
+                            </TouchableOpacity>
+                        </View>
 
-                    {/* Confirm Password */}
-                    <View style={settingsStyles.inputContainer}>
-                        <TextInput
-                            style={settingsStyles.input}
-                            placeholder="Confirm Password"
-                            secureTextEntry={!showPassword2}
-                            value={confirmPassword}
-                            onChangeText={setConfirmPassword}
-                        />
-                        <TouchableOpacity
-                            style={settingsStyles.showPasswordButton}
-                            onPress={() => setShowPassword2(!showPassword2)}
-                        >
-                            <Entypo
-                                name={showPassword2 ? "eye-with-line" : "eye"}
-                                size={24}
-                                color="black"
+                        {/* New Password */}
+                        <View style={settingsStyles.inputContainer}>
+                            <TextInput
+                                style={settingsStyles.input}
+                                placeholder="New Password"
+                                secureTextEntry={!showPassword1}
+                                value={newPassword}
+                                onChangeText={setNewPassword}
                             />
+                            <TouchableOpacity
+                                style={settingsStyles.showPasswordButton}
+                                onPress={() => setShowPassword1(!showPassword1)}
+                            >
+                                <Entypo
+                                    name={showPassword1 ? "eye-with-line" : "eye"}
+                                    size={24}
+                                    color="black"
+                                />
+                            </TouchableOpacity>
+                        </View>
+
+                        {/* Confirm Password */}
+                        <View style={settingsStyles.inputContainer}>
+                            <TextInput
+                                style={settingsStyles.input}
+                                placeholder="Confirm Password"
+                                secureTextEntry={!showPassword2}
+                                value={confirmPassword}
+                                onChangeText={setConfirmPassword}
+                            />
+                            <TouchableOpacity
+                                style={settingsStyles.showPasswordButton}
+                                onPress={() => setShowPassword2(!showPassword2)}
+                            >
+                                <Entypo
+                                    name={showPassword2 ? "eye-with-line" : "eye"}
+                                    size={24}
+                                    color="black"
+                                />
+                            </TouchableOpacity>
+                        </View>
+
+                        <TouchableOpacity
+                            style={settingsStyles.confirmButton}
+                            onPress={handleChangePassword}
+                        >
+                            <Text style={settingsStyles.confirmButtonText}>Confirm</Text>
                         </TouchableOpacity>
                     </View>
-                    <TouchableOpacity
-                        style={settingsStyles.confirmButton}
-                        onPress={handleChangePassword}
-                    >
-                        <Text style={settingsStyles.confirmButtonText}>Confirm</Text>
-                    </TouchableOpacity>
                 </View>
 
                 {/* Privacy Container */}
@@ -217,9 +225,6 @@ const SettingsScreen = () => {
                     <Text style={settingsStyles.privacyMattersText}>safeguard it fiercely, online and off.</Text>
                 </View>
             </View>
-            <TouchableOpacity onPress={() => navigation.goBack()} style={settingsStyles.goBackButton}>
-                <AntDesign name="leftcircle" size={46} color="#0C3B2E" />
-            </TouchableOpacity>
         </ScrollView>
     );
 };

@@ -100,19 +100,13 @@ const settingsStyles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
     },
-    title: {
-        fontSize: 23,
-        marginTop: 60,
-        marginBottom: 30,
-        fontFamily: 'Poppins_600SemiBold',
-    },
     sectionContainer: {
         // backgroundColor: 'white',
         padding: 20,
         borderRadius: 14,
         // marginVertical: 5,
-        width: '90%',
-        justifyContent: 'center',
+        width: '100%',
+        // justifyContent: 'center',
     },
     sectionTitleContainer: {
         flexDirection: 'row',
@@ -187,16 +181,6 @@ const settingsStyles = StyleSheet.create({
         color: 'black',
         fontFamily: 'Poppins_400Regular',
     },
-    goBackButton: {
-        position: 'absolute',
-        top: 54,
-        left: 20,
-        width: 50,
-        height: 50,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 100,
-    },
     changepass: {
         marginBottom: 30,
     },
@@ -208,7 +192,34 @@ const settingsStyles = StyleSheet.create({
         top: 16,
         right: 12,
         opacity: .35,
-      },
+    },
+    titleContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 50,
+        position: 'relative',
+        marginTop: 30,
+    },
+
+    screenTitle: {
+        fontSize: 24,
+        fontFamily: 'Poppins_600SemiBold',
+        textAlign: 'center',
+        flex: 1,
+    },
+
+    goBackButton: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 24,
+        position: 'absolute',
+        left: 0,
+        zIndex: 1,
+    },
+    AllinputContainer:{
+        marginHorizontal: 40,
+    },
 });
 
 export default settingsStyles;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, Image, TouchableOpacity, Alert } from 'react-native';
-import { FontAwesome5, Ionicons } from 'react-native-vector-icons';
+import { View, Text, Image, TouchableOpacity, Alert, ScrollView } from 'react-native';
+import { FontAwesome5, AntDesign } from 'react-native-vector-icons';
 
 
 import menuStyles from '../styles/MenuStyles';
@@ -141,7 +141,10 @@ const Menu = () => {
     }
 
     return (
-        <View style={menuStyles.backgroundContainer}>
+        <ScrollView
+            contentContainerStyle={{ flexGrow: 1 }}
+            style={menuStyles.backgroundContainer}
+        >
             <View style={[menuStyles.circle, menuStyles.circle1]} />
             <View style={[menuStyles.circle, menuStyles.circle2]} />
             <View style={[menuStyles.circle, menuStyles.circle3]} />
@@ -150,14 +153,18 @@ const Menu = () => {
             <View style={[menuStyles.circle, menuStyles.circle6]} />
             <View style={[menuStyles.circle, menuStyles.circle7]} />
             <View style={[menuStyles.circle, menuStyles.circle8]} />
+
             <View style={menuStyles.container}>
                 {/* Close Icon */}
-                <TouchableOpacity
-                    style={menuStyles.closeButton}
-                    onPress={() => navigation.goBack()}
-                >
-                    <Ionicons name="close-circle" size={46} color="#6D9773" />
-                </TouchableOpacity>
+                <View style={menuStyles.closeButtonContainer}>
+                    <Text style={menuStyles.screenTitle}>Menu</Text>
+                    <TouchableOpacity
+                        style={menuStyles.closeButton}
+                        onPress={() => navigation.goBack()}
+                    >
+                        <AntDesign name="closecircle" size={42} color="#6D9773" />
+                    </TouchableOpacity>
+                </View>
 
                 {/* Profile Pic, Name, and Email */}
                 <View style={menuStyles.profileContainer}>
@@ -193,8 +200,10 @@ const Menu = () => {
                                     handleSettingsPress();
                                 } else if (item.title === 'About') {
                                     handleHelpPress();
-                                } else {
-                                    // Handle other button clicks
+                                } else if (item.title === 'Add Recipe') {
+                                    Alert.alert('Feature Not Yet Available', 'Feature will be available in the next update.');
+                                }
+                                else {
                                 }
                             }}
                         >
@@ -210,7 +219,7 @@ const Menu = () => {
                 </View>
                 {/* <Image source={require('../img/Logo/splash-ina.png')} style={menuStyles.bottomImage} /> */}
             </View>
-        </View>
+        </ScrollView>
     );
 };
 
@@ -219,6 +228,7 @@ const menuItems = [
     { title: 'Favorites', icon: 'heart' },
     { title: 'Settings & Privacy', icon: 'cog' },
     { title: 'About', icon: 'question-circle' },
+    { title: 'Add Recipe', icon: 'plus' },
     { title: 'Delete Account', icon: 'trash-alt' },
     { title: 'Log Out', icon: 'sign-out-alt' },
 ];

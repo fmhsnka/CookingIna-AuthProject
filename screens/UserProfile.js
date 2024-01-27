@@ -32,7 +32,7 @@ const UserProfileScreen = () => {
     const [address, setAddress] = useState('');
     const [bio, setBio] = useState('');
 
-    // Local state variables for editing
+
     const [editedFirstName, setEditedFirstName] = useState('');
     const [editedLastName, setEditedLastName] = useState('');
     const [editedBio, setEditedBio] = useState('');
@@ -46,13 +46,12 @@ const UserProfileScreen = () => {
                 if (docSnapshot.exists()) {
                     const userData = docSnapshot.data();
 
-                    // Load data into state
                     setFirstName(userData.firstName || '');
                     setLastName(userData.lastName || '');
                     setEmail(userData.email);
                     setPhoneNumber(userData.phoneNumber);
                     setAddress(userData.address);
-                    setBio(userData.bio || ''); // Added for loading bio
+                    setBio(userData.bio || '');
                     setStatus(userData.status);
                 }
             } catch (error) {
@@ -67,36 +66,86 @@ const UserProfileScreen = () => {
 
     const handleSaveProfile = async () => {
         if (user) {
-            const userDocRef = doc(db, 'users', user.uid);
 
-            try {
-                // Create an object to hold the fields to update
-                const updatedFields = {
-                    firstName: editedFirstName || firstName,
-                    lastName: editedLastName || lastName,
-                    phoneNumber,
-                    address,
-                    bio: editedBio || bio,
-                };
+            if (!firstName.trim() && lastName.trim()) {
+                Alert.alert('Error', 'You forgot to type in your First Name');
+                return;
+            }
 
-                // Check if status is defined before adding it to the update object
-                if (status !== undefined) {
-                    updatedFields.status = status;
+            if (firstName.trim() && !lastName.trim()) {
+                Alert.alert('Error', 'Did you forget your family name???!!');
+                return;
+            }
+
+            if (!firstName.trim() && !lastName.trim()) {
+                Alert.alert('Error', 'Are you a nameless person? PLEASE INPUT YOUR NAME!!');
+                return;
+            }
+
+
+            if (!phoneNumber.trim()) {
+                Alert.alert(
+                    'Phone Number Confirmation',
+                    'Do you have a phone number?',
+                    [
+                        {
+                            text: 'Yes',
+                            onPress: () => {
+                                Alert.alert('ALERT', 'Please input your phone number.');
+                            },
+                        },
+                        {
+                            text: 'No',
+                            onPress: () => {
+                                Alert.alert('SAVING', 'Saving your profile now.');
+
+                                saveProfile();
+                            },
+                        },
+                    ],
+                    { cancelable: false }
+                );
+            } else {
+                if (phoneNumber.length !== 11) {
+                    Alert.alert('Error', 'Phone number must be 11 digits.');
+                    return;
                 }
 
-                // Update the document with the fields
-                await updateDoc(userDocRef, updatedFields);
-
-                Alert.alert('Profile Updated', 'Your profile has been updated successfully.');
-
-                // Reload the screen
-                navigation.goBack();
-            } catch (error) {
-                console.error('Profile update error:', error);
-                Alert.alert('Error', 'An error occurred while updating your profile.');
+                saveProfile();
             }
         } else {
             Alert.alert('User Not Logged In', 'Please log in to save your profile changes.');
+        }
+    };
+
+
+    const saveProfile = async () => {
+        const userDocRef = doc(db, 'users', user.uid);
+
+        try {
+
+            const updatedFields = {
+                firstName: editedFirstName || firstName,
+                lastName: editedLastName || lastName,
+                phoneNumber,
+                address,
+                bio: editedBio || bio,
+            };
+
+
+            if (status !== undefined) {
+                updatedFields.status = status;
+            }
+
+            await updateDoc(userDocRef, updatedFields);
+
+            Alert.alert('Profile Updated', 'Your profile has been updated successfully.');
+
+
+            navigation.goBack();
+        } catch (error) {
+            console.error('Profile update error:', error);
+            Alert.alert('Error', 'An error occurred while updating your profile.');
         }
     };
 
@@ -110,9 +159,13 @@ const UserProfileScreen = () => {
                 <View style={[userProfileStyles.circle, userProfileStyles.circle5]}></View>
                 <View style={[userProfileStyles.circle, userProfileStyles.circle6]}></View>
 
-                {/* Container for Edit Profile Elements */}
                 <View style={userProfileStyles.editProfileContainer}>
-                    <Text style={userProfileStyles.screenTitle}>Edit Profile</Text>
+                    <View style={userProfileStyles.titleContainer}>
+                        <TouchableOpacity onPress={() => navigation.goBack()} style={userProfileStyles.goBackButton}>
+                            <AntDesign name="leftcircle" size={46} color="#6D9773" />
+                        </TouchableOpacity>
+                        <Text style={userProfileStyles.screenTitle}>Edit Profile</Text>
+                    </View>
                     <Image
                         source={require('../img/Profile/power.png')}
                         style={userProfileStyles.profilePic}
@@ -138,16 +191,16 @@ const UserProfileScreen = () => {
                     <Text style={[userProfileStyles.label, userProfileStyles.textName]}>First Name</Text>
                     <TextInput
                         style={[userProfileStyles.input, { fontFamily: 'Poppins_400Regular' }]}
-                        value={editedFirstName || firstName}
-                        onChangeText={(text) => setEditedFirstName(text)}
+                        value={firstName}
+                        onChangeText={(text) => setFirstName(text)} 
                         editable={user ? true : false}
                     />
 
                     <Text style={[userProfileStyles.label, userProfileStyles.textName]}>Last Name</Text>
                     <TextInput
                         style={[userProfileStyles.input, { fontFamily: 'Poppins_400Regular' }]}
-                        value={editedLastName || lastName}
-                        onChangeText={(text) => setEditedLastName(text)}
+                        value={lastName}
+                        onChangeText={(text) => setLastName(text)}
                         editable={user ? true : false}
                     />
                     <Text style={[userProfileStyles.label, userProfileStyles.textEmail]}>Email</Text>
@@ -177,10 +230,6 @@ const UserProfileScreen = () => {
                         style={[userProfileStyles.changeButton]}
                     />
                 </View>
-                <TouchableOpacity onPress={() => navigation.goBack()} style={userProfileStyles.goBackButton}>
-                    <AntDesign name="leftcircle" size={46} color="#6D9773" />
-                </TouchableOpacity>
-                {/* End of Edit Profile Elements */}
             </View>
         </ScrollView>
     );
