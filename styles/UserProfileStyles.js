@@ -54,13 +54,7 @@ const userProfileStyles = StyleSheet.create({
         borderRadius: 20,
         padding: 20,
         width: '100%',
-        marginTop: 20,
-    },
-    screenTitle: {
-        fontSize: 30,
-        fontFamily: 'Poppins_600SemiBold',
-        marginVertical: 20,
-        textAlign: 'center',
+        marginTop: 10,
     },
     profilePic: {
         width: 150,
@@ -121,17 +115,31 @@ const userProfileStyles = StyleSheet.create({
         textAlign: 'left',
         justifyContent: 'center',
         fontFamily: 'Poppins_400Regular',
-        color: 'black', // Ensure text color is visible
+        color: 'black',
     },
+    titleContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 20,
+        position: 'relative',
+        marginTop: 20,
+    },
+
+    screenTitle: {
+        fontSize: 30,
+        fontFamily: 'Poppins_600SemiBold',
+        textAlign: 'center',
+        flex: 1,
+    },
+
     goBackButton: {
-        position: 'absolute',
-        top: 60,
-        left: 25,
-        width: 48,
-        height: 48,
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 24,
+        position: 'absolute',
+        left: 0,
+        zIndex: 1,
     },
 });
 

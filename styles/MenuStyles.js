@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 const menuStyles = StyleSheet.create({
     backgroundContainer: {
-        flex: 1,
+        flexGrow: 1,
         position: 'relative',
         backgroundColor: '#E5E8E1',
     },
@@ -10,16 +10,12 @@ const menuStyles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 25,
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
+        padding: 20,
+        marginBottom: 20,
     },
     circle: {
         position: 'absolute',
-        backgroundColor: 'rgba(255, 0, 0, 0.3)', // Adjust color and opacity as needed
+        backgroundColor: 'rgba(255, 0, 0, 0.3)',
         borderRadius: 50,
         width: 100,
         height: 100,
@@ -135,10 +131,27 @@ const menuStyles = StyleSheet.create({
     LogoutButton: {
         marginTop: 15,
     },
+    closeButtonContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 20,
+        position: 'relative',
+        marginTop: 30,
+    },
+    screenTitle: {
+        fontSize: 30,
+        fontFamily: 'Poppins_600SemiBold',
+        textAlign: 'center',
+        flex: 1,
+    },
     closeButton: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 24,
         position: 'absolute',
-        top: 40,
-        right: 20,
+        right: 0,
+        zIndex: 1,
     },
     bottomImage: {
         position: 'absolute',

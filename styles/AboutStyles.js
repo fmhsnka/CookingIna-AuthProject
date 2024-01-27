@@ -4,16 +4,16 @@ const aboutStyles = StyleSheet.create({
     backgroundContainer: {
         flex: 1,
         backgroundColor: '#E5E8E1',
-        // justifyContent: 'center', // Center vertically
-        alignItems: 'center', // Center horizontally
+        // justifyContent: 'center',
+        alignItems: 'center',
+        padding: 20,
     },
     descriptionContainer: {
-        justifyContent: 'center', // Center vertically
-        alignItems: 'center', // Center horizontally
+        // justifyContent: 'center',
+        alignItems: 'center',
         backgroundColor: 'white',
         padding: 20,
-        borderRadius: 14, // Optional: add borderRadius for a rounded look
-        width: '85%',
+        borderRadius: 14,
         // Android shadow
         elevation: 5,
 
@@ -31,6 +31,7 @@ const aboutStyles = StyleSheet.create({
         marginBottom: 40,
         borderRadius: 14,
         width: 150,
+
         // Android shadow
         elevation: 5,
 
@@ -58,9 +59,10 @@ const aboutStyles = StyleSheet.create({
         textAlign: 'center',
     },
     header: {
-        fontSize: 24,
-        marginVertical: 65,
-        fontFamily: "Poppins_700Bold",
+        fontSize: 30,
+        fontFamily: 'Poppins_600SemiBold',
+        textAlign: 'center',
+        flex: 1,
     },
     headercont: {
         fontSize: 18,
@@ -74,14 +76,12 @@ const aboutStyles = StyleSheet.create({
         marginBottom: 20,
     },
     goBackButton: {
-        position: 'absolute',
-        top: 54,
-        left: 25,
-        width: 48,
-        height: 48,
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 24,
+        position: 'absolute',
+        left: 0,
+        zIndex: 1,
     },
     circle: {
         position: 'absolute',
@@ -99,7 +99,7 @@ const aboutStyles = StyleSheet.create({
         shadowRadius: 3,
     },
     circle1: {
-        top: -80,
+        top: -50,
         left: -40,
         backgroundColor: '#FFBA00',
         // Android shadow
@@ -125,7 +125,7 @@ const aboutStyles = StyleSheet.create({
         shadowRadius: 3,
     },
     circle4: {
-        top: 20,
+        top: 0,
         right: -80,
         backgroundColor: '#0C3B2E',
         // Android shadow
@@ -159,7 +159,7 @@ const aboutStyles = StyleSheet.create({
         borderRadius: 140,
     },
     circle6: {
-        bottom: -110,
+        bottom: -100,
         right: -70,
         backgroundColor: '#FFBA00',
         height: 180,
@@ -177,6 +177,14 @@ const aboutStyles = StyleSheet.create({
         fontSize: 12,
         color: '#333',
         fontFamily: 'Poppins_400Regular',
+    },
+    headerContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 60,
+        position: 'relative',
+        marginTop: 30,
     },
 });
 

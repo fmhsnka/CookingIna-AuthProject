@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView, Image, TouchableOpacity, BackHandler, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import homeStyles from '../styles/HomeStyles';
 import { Ionicons } from 'react-native-vector-icons';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import { doc, getFirestore, getDoc } from 'firebase/firestore';
 
 const HomeScreen = () => {
@@ -24,8 +24,45 @@ const HomeScreen = () => {
             }
         });
 
-        return () => unsubscribe();
+        const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
+            // Handle Android back button press
+            if (navigation.isFocused()) {
+                // Check if the HomeScreen is the focused screen
+                showLogoutAlert();
+                return true; // Prevent default behavior (exit the app)
+            }
+            return false; // Allow default behavior (navigate back)
+        });
+
+        return () => {
+            unsubscribe();
+            backHandler.remove(); // Remove the event listener when the component is unmounted
+        };
     }, []);
+
+    const showLogoutAlert = () => {
+        Alert.alert(
+            'Logout',
+            'Do you want to logout?',
+            [
+                { text: 'Cancel', style: 'cancel' },
+                { text: 'Logout', onPress: handleLogout },
+            ],
+            {
+                cancelable: false,
+            }
+        );
+    };
+
+    const handleLogout = async () => {
+        // Perform logout logic (sign out the user)
+        try {
+            await signOut(auth);
+            navigation.navigate('Login'); // Navigate to the Login screen after logout
+        } catch (error) {
+            console.error('Error logging out:', error);
+        }
+    };
 
     const loadUserData = async (uid) => {
         const userDocRef = doc(db, 'users', uid);
@@ -44,13 +81,15 @@ const HomeScreen = () => {
     const categoriesSets = [
         [
             { name: 'Breakfast', icon: require('../img/categories/croissant.png') },
-            { name: 'Dinner', icon: require('../img/categories/cover.png') },
             { name: 'Lunch', icon: require('../img/categories/tom-yum.png') },
+            { name: 'Dinner', icon: require('../img/categories/cover.png') },
             { name: 'Appetizer', icon: require('../img/categories/appetizer.png') },
         ],
         [
+            { name: 'Main', icon: require('../img/categories/main-course.png') },
             { name: 'Dessert', icon: require('../img/categories/cake.png') },
             { name: 'Bread', icon: require('../img/categories/bread.png') },
+            { name: 'Beverage', icon: require('../img/categories/beverage.png') },
         ],
     ];
 
@@ -111,6 +150,14 @@ const HomeScreen = () => {
             case 'Bread':
                 // navigation.navigate('DinnerScreen');
                 console.log('BREAD WORKING')
+                break;
+            case 'Main':
+                // navigation.navigate('DinnerScreen');
+                console.log('MAIN WORKING')
+                break;
+            case 'Beverage':
+                // navigation.navigate('DinnerScreen');
+                console.log('BEVERAGE WORKING')
                 break;
             default:
                 break;
@@ -191,7 +238,10 @@ const HomeScreen = () => {
                     </View>
                     <View style={homeStyles.recommendedRecipesContainer}>
                         <Text style={homeStyles.recommendedRecipesTitle}>Recommended Recipes</Text>
-                        <TouchableOpacity onPress={() => navigation.navigate('ViewAllRecipes')}>
+                        <TouchableOpacity onPress={() => 
+                        // navigation.navigate('ViewAllRecipes')
+                        console.log('VIEW ALL GOODS')
+                        }>
                             <Text style={homeStyles.viewAllText}>View All ></Text>
                         </TouchableOpacity>
                     </View>

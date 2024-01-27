@@ -82,7 +82,7 @@ const recipeStyles = StyleSheet.create({
         alignItems: 'center',
     },
     detailIcon: {
-        fontSize: 30,
+        fontSize: 20,
         marginRight: 5,
         color: '#FFBA00',
     },
