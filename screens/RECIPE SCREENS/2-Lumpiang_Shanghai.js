@@ -27,17 +27,17 @@ const Lumpiang_Shanghai = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Lumpiang Shanghai</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../img/recipes/lumpia.jpg')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="time-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>36 mins</Text>
+                                <Text style={recipeStyles.detailText}>8 mins</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="flame-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>607kcal</Text>
+                                <Text style={recipeStyles.detailText}>619kcal</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="person-outline" style={recipeStyles.detailIcon} />
@@ -53,25 +53,40 @@ const Lumpiang_Shanghai = ({ navigation }) => {
                         </View>
                         <View style={recipeStyles.listingreContainer}>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 lbs. Chicken
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1.13 kg ground pork
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 piece Knorr Chicken Cube
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 piece Knorr Pork Cube
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 head garlic
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 50 pieces lumpia wrapper
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 piece onion
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 96 g carrot minced
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 6 pieces dried bay leaves
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 piece onions minced
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 tablespoon whole peppercorn
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 pieces eggs
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> ½ cup soy sauce
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 15 g parsley minced
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 0.5 teaspoon ground pepper
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 teaspoon salt
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 teaspoon Sesame oil
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 teaspoon garlic powder
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 448 g cooking oil
                             </Text>
                         </View>
 
@@ -84,43 +99,37 @@ const Lumpiang_Shanghai = ({ navigation }) => {
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>1</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Heat oil in a cooking pot. Saute garlic and onion until the garlic turns light brown and the onion softens.
+                                    Combine ground pork, carrot, onion, and parsley in a bowl. Mic well.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>2</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add chicken pieces. Cook until the chicken turns light brown.
+                                    Add egg, ground black pepper, salt, garlic, powder, and Sesame oil. Continue to mix until the ingredients are well blended.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>3</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Pour water, soy sauce, and vinegar. Let boil.
+                                    Crush the Knorr pork cube and add it into the mixture. Blend the ingredients altogether completely.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>4</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add Knorr Chicken Cube, whole peppercorn, and dried bay leaves. Stir. Cover the pot and cook in medium heat for 15 minutes.
+                                    Put 1 to 1 1/2 tablespoons of meat mixture over a piece of lumpia wrapper. Wrap and roll to secure the mixture. Continue this step until the mixture is completely consumed. Note: watch the video below to see how.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>5</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Turn the chicken pieces over. Cover and continue to cook for another 15 minutes.
+                                    Heat oil in a cooking pot in low to medium heat. Deep fry the lumpia until it turns golden brown. Remove from the pot and place in a plate lined with paper towel.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>6</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add dark brown sugar and season with salt.
-                                </Text>
-                            </View>
-                            <View style={recipeStyles.stepContainer}>
-                                <Text style={recipeStyles.stepNumber}>7</Text>
-                                <Text style={recipeStyles.stepText}>
-                                    Transfer to a serving bowl. Serve. Share and enjoy!
+                                    Transfer to a serving plate. Serve with sweet and sour sauce. Share and enjoy!
                                 </Text>
                             </View>
                         </View>
