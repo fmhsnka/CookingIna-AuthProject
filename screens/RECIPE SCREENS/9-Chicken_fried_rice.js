@@ -4,7 +4,7 @@ import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
 import recipeStyles from '../../styles/RecipeScreenStyles';
 
-const Pandesal = ({ navigation }) => {
+const Chicken_Fried_Rice = ({ navigation }) => {
     return (
         <View style={recipeStyles.backgroundContainer}>
             <ScrollView contentContainerStyle={recipeStyles.scrollView}>
@@ -25,7 +25,7 @@ const Pandesal = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <Text style={recipeStyles.recipeName}>Chicken Adobo</Text>
+                            <Text style={recipeStyles.recipeName}>Chicken Fried Rice</Text>
                             <View style={recipeStyles.recipeImageContainer}>
                                 <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
                             </View>
@@ -33,15 +33,15 @@ const Pandesal = ({ navigation }) => {
                         <View style={recipeStyles.detailsContainer}>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="time-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>36 mins</Text>
+                                <Text style={recipeStyles.detailText}>25 mins</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="flame-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>607kcal</Text>
+                                <Text style={recipeStyles.detailText}>531kcal</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="person-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>6 Servings</Text>
+                                <Text style={recipeStyles.detailText}>3 Servings</Text>
                             </View>
                         </View>
                     </View>
@@ -53,25 +53,42 @@ const Pandesal = ({ navigation }) => {
                         </View>
                         <View style={recipeStyles.listingreContainer}>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 lbs. Chicken
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 cups cooked white rice
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 piece Knorr Chicken Cube
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 eegs beaten
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 head garlic
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 6 ounces chiken breast (boneless)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 piece onion
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 1/2 cups frozen mixed vegetables (carrots, green peas, and corn)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 6 pieces dried bay leaves
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 onion (minced)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 tablespoon whole peppercorn
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 cloves garlic (minced)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> ½ cup soy sauce
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 tbsp cooking oil
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> Salt and ground black paper to taste
+                            </Text>
+                        </View>
+
+                        <View style={recipeStyles.sectionTitleCont}>
+                            <Text style={recipeStyles.sectionTitle}>Sauce Ingredients</Text>
+
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 tbsp oyster sauce
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 tbsp soy sauce
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1/2 tsp sesame oil
                             </Text>
                         </View>
 
@@ -84,43 +101,49 @@ const Pandesal = ({ navigation }) => {
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>1</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Heat oil in a cooking pot. Saute garlic and onion until the garlic turns light brown and the onion softens.
+                                    Cut the chicken into small pieces. Arrange in a bowl and combine with the sauce ingredients. Mix well. Set aside.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>2</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add chicken pieces. Cook until the chicken turns light brown.
+                                    Heat the oil in a pan. Fry the beaten eggs until done. Remove the cooked eggs from the pan. Chop it into pieces, and then set it aside.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>3</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Pour water, soy sauce, and vinegar. Let boil.
+                                    Using the remaining oil (add more if needed), saute the garlic and onion.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>4</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add Knorr Chicken Cube, whole peppercorn, and dried bay leaves. Stir. Cover the pot and cook in medium heat for 15 minutes.
+                                    Add the marinated chicken once the onion softens. Stir-fry for 2 to 3 minutes.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>5</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Turn the chicken pieces over. Cover and continue to cook for another 15 minutes.
+                                    Add the vegetables. Continue stir-frying for 2 minutes.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>6</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add dark brown sugar and season with salt.
+                                    Add the rice. Toss until all the ingredients are well blended. Continue cooking for 3 minutes.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>7</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Transfer to a serving bowl. Serve. Share and enjoy!
+                                    Season with salt and ground black pepper.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>8</Text>
+                                <Text style={recipeStyles.stepText}>
+                                    Transfer to a serving plate. Serve immediately.
                                 </Text>
                             </View>
                         </View>
@@ -131,4 +154,4 @@ const Pandesal = ({ navigation }) => {
     );
 };
 
-export default Pandesal;
+export default Chicken_Fried_Rice;

@@ -4,7 +4,7 @@ import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
 import recipeStyles from '../../styles/RecipeScreenStyles';
 
-const Pandesal = ({ navigation }) => {
+const Corned_Beef_Silog = ({ navigation }) => {
     return (
         <View style={recipeStyles.backgroundContainer}>
             <ScrollView contentContainerStyle={recipeStyles.scrollView}>
@@ -122,4 +122,4 @@ const Pandesal = ({ navigation }) => {
     );
 };
 
-export default Pandesal;
+export default Corned_Beef_Silog;

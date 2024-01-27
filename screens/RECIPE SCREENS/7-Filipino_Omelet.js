@@ -4,7 +4,7 @@ import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
 import recipeStyles from '../../styles/RecipeScreenStyles';
 
-const Pandesal = ({ navigation }) => {
+const Filipino_Omelet = ({ navigation }) => {
     return (
         <View style={recipeStyles.backgroundContainer}>
             <ScrollView contentContainerStyle={recipeStyles.scrollView}>
@@ -135,4 +135,4 @@ const Pandesal = ({ navigation }) => {
     );
 };
 
-export default Pandesal;
+export default Filipino_Omelet;
