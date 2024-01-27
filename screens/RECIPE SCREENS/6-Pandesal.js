@@ -25,7 +25,7 @@ const Pandesal = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <Text style={recipeStyles.recipeName}>Chicken Adobo</Text>
+                            <Text style={recipeStyles.recipeName}>Pandesal</Text>
                             <View style={recipeStyles.recipeImageContainer}>
                                 <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
                             </View>
@@ -33,15 +33,15 @@ const Pandesal = ({ navigation }) => {
                         <View style={recipeStyles.detailsContainer}>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="time-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>36 mins</Text>
+                                <Text style={recipeStyles.detailText}>1 hr & 45 mins</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="flame-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>607kcal</Text>
+                                <Text style={recipeStyles.detailText}>856kcal</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="person-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>6 Servings</Text>
+                                <Text style={recipeStyles.detailText}>8 Servings</Text>
                             </View>
                         </View>
                     </View>
@@ -53,25 +53,37 @@ const Pandesal = ({ navigation }) => {
                         </View>
                         <View style={recipeStyles.listingreContainer}>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 lbs. Chicken
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 cups all purpose flour
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 piece Knorr Chicken Cube
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 cups bread flour
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 head garlic
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1/2 cup white sugar
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 piece onion
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 5 tbsp butter (melted)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 6 pieces dried bay leaves
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 tsp baking powder
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 tablespoon whole peppercorn
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 1/4 cup freesh milk (warm)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> ½ cup soy sauce
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 pouch rapid rise yeast
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 tsp salt
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 cup bread crumbs
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 piece raw egg
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 tbsp cooking oil
                             </Text>
                         </View>
 
@@ -84,43 +96,85 @@ const Pandesal = ({ navigation }) => {
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>1</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Heat oil in a cooking pot. Saute garlic and onion until the garlic turns light brown and the onion softens.
+                                    Combine the yeast, sugar, and warm milk and stir until the yeast and sugar fully dissokved
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>2</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add chicken pieces. Cook until the chicken turns light brown.
+                                In the mixing bowl, combine the dry ingredients starting with the flour then the sugar, salt, and baking powder . Mix well by stirring.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>3</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Pour water, soy sauce, and vinegar. Let boil.
+                                Add the egg, butter, cooking oil, and yeast-sugar-milk mixture in the mixing bowl with the dry ingredients then mix again until a dough is formed. Use your clean hands to effectively mix the ingredients.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>4</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add Knorr Chicken Cube, whole peppercorn, and dried bay leaves. Stir. Cover the pot and cook in medium heat for 15 minutes.
+                                In a flat surface, knead the dough until the texture becomes fine. For faster and easier kneading, you may use a Stand Mixer with dough hook.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>5</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Turn the chicken pieces over. Cover and continue to cook for another 15 minutes.
+                                Mold the dough until shape becomes round then put back in the mixing bowl. Cover the mixing bowl with damp cloth and let the dough rise for at least 1 hour.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>6</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add dark brown sugar and season with salt.
+                                Put the dough back to the flat surface and divide into 4 equal parts using a dough slicer
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>7</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Transfer to a serving bowl. Serve. Share and enjoy!
+                                Roll each part until it forms a cylindrical shape
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>8</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Slice the cylindrical dough diagonally (These slices will be the individual pieces of the pandesal).
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>9</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Roll the sliced dough over the breadcrumbs and place in a baking tray with wax paper (makes sure to provide gaps between dough as this will rise later on).
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>10</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Leave the sliced dough with breadcrumbs in the tray for another 10 to 15 minutes to rise.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>11</Text>
+                                <Text style={recipeStyles.stepText}>
+                                    Pre-hear the oven at 375 degrees Fahrenheit for 10 minutes.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>12</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Leave the sliced dough with breadcrumbs in the tray for another 10 to 15 minutes to rise.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>13</Text>
+                                <Text style={recipeStyles.stepText}>
+                                    Put the tray with dough in the oven and freshly baked pandesal.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>14</Text>
+                                <Text style={recipeStyles.stepText}>
+                                    Serve hot. Share and enjoy!
                                 </Text>
                             </View>
                         </View>
