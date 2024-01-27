@@ -3,7 +3,6 @@ import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import homeStyles from '../styles/HomeStyles';
 import { Ionicons } from 'react-native-vector-icons';
-import { MaterialCommunityIcons } from 'react-native-vector-icons';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { doc, getFirestore, getDoc } from 'firebase/firestore';
 
@@ -125,24 +124,24 @@ const HomeScreen = () => {
                 // console.log('WORKING')
                 break;
             case 'Lumpiang Shanghai':
-                // navigation.navigate('LumpiangShanghaiScreen');
-                console.log('WORKING')
+                navigation.navigate('LumpiaShanghaiScreen');
+                // console.log('WORKING')
                 break;
             case 'Filipino Style Beef Steak':
-                // navigation.navigate('BeefSteakScreen');
-                console.log('WORKING')
+                navigation.navigate('BistekScreen');
+                // console.log('WORKING')
                 break;
             case 'Tortang Talong':
-                // navigation.navigate('BeefSteakScreen');
-                console.log('WORKING')
+                navigation.navigate('TortalongScreen');
+                // console.log('WORKING')
                 break;
             case 'Sweet Macaroni Salad':
-                // navigation.navigate('BeefSteakScreen');
-                console.log('WORKING')
+                navigation.navigate('MacaroniScreen');
+                // console.log('WORKING')
                 break;
             case 'Pandesal':
-                // navigation.navigate('BeefSteakScreen');
-                console.log('WORKING')
+                navigation.navigate('PandesalScreen');
+                // console.log('WORKING')
                 break;
             default:
                 break;

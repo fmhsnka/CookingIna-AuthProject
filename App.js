@@ -12,9 +12,15 @@ import Menu from "./screens/Menu";
 import AboutScreen from "./screens/About";
 import SettingsScreen from "./screens/Settings";
 import HomeScreen from "./screens/HomeScreen";
-import RecipeScreen from "./screens/RecipeScreen1";
 
-// mamads test
+import Chicken_Adobo from "./screens/RECIPE SCREENS/1-Chicken_Adobo";
+import Lumpiang_Shanghai from "./screens/RECIPE SCREENS/2-Lumpiang_Shanghai";
+import BISTEK from "./screens/RECIPE SCREENS/3-Filipino_style_beef_steak";
+import Tortalong from "./screens/RECIPE SCREENS/4-Tortang_talong";
+import Ronimaca from "./screens/RECIPE SCREENS/5-Sweet_macaroni_salad";
+import Pandesal from "./screens/RECIPE SCREENS/6-Pandesal";
+
+
 const Stack = createNativeStackNavigator();
 
 function App() {
@@ -63,7 +69,32 @@ function App() {
         />
         <Stack.Screen
           name="AdoboScreen"
-          component={RecipeScreen}
+          component={Chicken_Adobo}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="LumpiaShanghaiScreen"
+          component={Lumpiang_Shanghai}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="BistekScreen"
+          component={BISTEK}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="TortalongScreen"
+          component={Tortalong}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="MacaroniScreen"
+          component={Ronimaca}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="PandesalScreen"
+          component={Pandesal}
           options={{ headerShown: false }}
         />
         <Stack.Screen

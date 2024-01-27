@@ -2,9 +2,9 @@ import React from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
-import recipeStyles from '../styles/RecipeScreen1Styles';
+import recipeStyles from '../../styles/RecipeScreenStyles';
 
-const RecipeScreen = ({ navigation }) => {
+const Lumpiang_Shanghai = ({ navigation }) => {
     return (
         <View style={recipeStyles.backgroundContainer}>
             <ScrollView contentContainerStyle={recipeStyles.scrollView}>
@@ -25,9 +25,9 @@ const RecipeScreen = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <Text style={recipeStyles.recipeName}>Chicken Adobo</Text>
+                            <Text style={recipeStyles.recipeName}>Lumpiang Shanghai</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
@@ -131,4 +131,4 @@ const RecipeScreen = ({ navigation }) => {
     );
 };
 
-export default RecipeScreen;
+export default Lumpiang_Shanghai;
