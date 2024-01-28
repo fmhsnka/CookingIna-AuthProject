@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Image, Alert, ScrollView, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import ImagePicker from 'react-native-image-picker';
 
 // STYLE/COMPO
 import userProfileStyles from '../styles/UserProfileStyles';
@@ -31,6 +32,7 @@ const UserProfileScreen = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [address, setAddress] = useState('');
     const [bio, setBio] = useState('');
+    const [profilePicture, setProfilePicture] = useState('');
 
 
     const [editedFirstName, setEditedFirstName] = useState('');
@@ -63,6 +65,25 @@ const UserProfileScreen = () => {
     useEffect(() => {
         loadUserData();
     }, [user]);
+
+    const handleChooseProfilePicture = () => {
+        ImagePicker.showImagePicker({ title: 'Select Profile Picture' }, (response) => {
+            if (!response.didCancel && !response.error) {
+                const imageUrl = response.uri;
+                setProfilePicture(imageUrl);
+
+                const userDocRef = doc(db, 'users', user.uid);
+                updateDoc(userDocRef, { profilePicture: imageUrl })
+                    .then(() => {
+                        Alert.alert('Profile Picture Updated', 'Your profile picture has been updated successfully.');
+                    })
+                    .catch((error) => {
+                        console.error('Profile picture update error:', error);
+                        Alert.alert('Error', 'An error occurred while updating your profile picture.');
+                    });
+            }
+        });
+    };
 
     const handleSaveProfile = async () => {
         if (user) {
@@ -192,7 +213,7 @@ const UserProfileScreen = () => {
                     <TextInput
                         style={[userProfileStyles.input, { fontFamily: 'Poppins_400Regular' }]}
                         value={firstName}
-                        onChangeText={(text) => setFirstName(text)} 
+                        onChangeText={(text) => setFirstName(text)}
                         editable={user ? true : false}
                     />
 

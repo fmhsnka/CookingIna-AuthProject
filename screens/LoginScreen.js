@@ -197,7 +197,7 @@ const LoginScreen = () => {
               <TouchableOpacity
                 style={[loginStyles.socialButton, loginStyles.facebookButton]}
                 onPress={() => {
-                  console.log('Pressed Facebook Login Button');
+                  Alert.alert("Feature Unavailable", "This feature will be available soon.");
                 }}
               >
                 <View style={loginStyles.socialButtonIcon}>
@@ -209,8 +209,7 @@ const LoginScreen = () => {
               <TouchableOpacity
                 style={[loginStyles.socialButton, loginStyles.googleButton]}
                 onPress={() => {
-                  console.log('Pressed Google Login Button');
-                  // Add your Google login logic here
+                  Alert.alert("Feature Unavailable", "This feature will be available soon.");
                 }}
               >
                 <View style={loginStyles.socialButtonIcon}>
