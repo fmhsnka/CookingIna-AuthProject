@@ -33,11 +33,11 @@ const FruitFloat = ({ navigation }) => {
                         <View style={recipeStyles.detailsContainer}>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="time-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>20 mins</Text>
+                                <Text style={recipeStyles.detailText}>21 minutes</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="flame-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>738kcal</Text>
+                                <Text style={recipeStyles.detailText}>307kcal</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="person-outline" style={recipeStyles.detailIcon} />
@@ -53,34 +53,28 @@ const FruitFloat = ({ navigation }) => {
                         </View>
                         <View style={recipeStyles.listingreContainer}>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3/4 lb. elbow macaroni
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 16 oz. 473 ml cold heavy whipping cream
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 pack Lady's Choice Mayonnaise 200 ml
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 7.6 oz. 225 ml table cream or all purpose cream
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 can fruit cocktail 15 oz
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 15.25 oz. cans of fruit cocktail
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 12 oz. pineapple chunks
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 9 tablespoons condensed milk
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 can condensed milk 14 oz.
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 teaspoon vanilla extract
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3/4 cup raisins
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 12 pieces Graham crackers
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3/4 cup kaong
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 8 to 10 pieces Maraschino cherries
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3/4 cup nata de coco
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 6 oz. cheddar chees cubed
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 quarts water
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 tablespoons crushed Graham
                             </Text>
                         </View>
 
@@ -93,28 +87,67 @@ const FruitFloat = ({ navigation }) => {
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>1</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Cooking the macaroni by boiling water in a pot. Add the macaroni. Stir and ccok for 7 minustes.
-                                    Drain the water and arrange macaroni in a large bowl.
+                                Drain the fruit cocktail by pouring each can in a strainer. Set aside.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>2</Text>
                                 <Text style={recipeStyles.stepText}>
-                                        Add fruit cocktail, pineapple, kaong, nata de coco, chees, and raisins.
-                                        Gently mix all the ingredients.
+                                Prepare the whipping cream mixture by pouring the heavy whipping cream in a mixing bowl. Whisk in medium speed using an electric mixer. Set to high speed after 2 minutes and continue to whisk until soft peaks form (around 5 more minutes).
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>3</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Pourncondensed milk and then add Lady's Choic Mayonnaisse. 
-                                    Fold unitl all ingredients are well blended. Cover the bowl and refrigrrate for at least 2 hours.
+                                Stir-in the table cream, condensed milk, and vanilla extract. Continue to whisk for 1 to 2 minutes.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>4</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Remove from the fridge. Share and enjoy!
+                                Arrange a layer of Graham crackers at the bottom of a wide 8x8 baking pan.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>5</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Pour-in half of the whipping cream mixture. Spread.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>6</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Create another layer by adding half of the fruit cocktail. Spread.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>7</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Make another layer of Graham crackers. Top with the remaining heavy cream mixture.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>8</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Arrange the remaining fruit cocktail on top and add some cherries.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>9</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Sprinkle the crushed Graham on top.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>10</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Refrigerate for 3 to 5 hours. Serve.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>11</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Share and enjoy!
                                 </Text>
                             </View>
                         </View>
