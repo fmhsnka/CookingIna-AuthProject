@@ -25,7 +25,7 @@ const Chicken_Dynamite_Lumpia = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <Text style={recipeStyles.recipeName}>Filipino Style Escabeche</Text>
+                            <Text style={recipeStyles.recipeName}>Chicken Dynamite Lumpia</Text>
                             <View style={recipeStyles.recipeImageContainer}>
                                 <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
                             </View>
