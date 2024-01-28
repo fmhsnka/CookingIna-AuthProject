@@ -4,7 +4,7 @@ import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
 import recipeStyles from '../../../styles/RecipeScreenStyles';
 
-const Filipino_Style_Escabeche = ({ navigation }) => {
+const Chicken_Dynamite_Lumpia = ({ navigation }) => {
     return (
         <View style={recipeStyles.backgroundContainer}>
             <ScrollView contentContainerStyle={recipeStyles.scrollView}>
@@ -33,15 +33,15 @@ const Filipino_Style_Escabeche = ({ navigation }) => {
                         <View style={recipeStyles.detailsContainer}>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="time-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>30 mins</Text>
+                                <Text style={recipeStyles.detailText}>28 mins</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="flame-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>598kcal</Text>
+                                <Text style={recipeStyles.detailText}>563kcal</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="person-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>5 Servings</Text>
+                                <Text style={recipeStyles.detailText}>3 Servings</Text>
                             </View>
                         </View>
                     </View>
@@ -53,61 +53,44 @@ const Filipino_Style_Escabeche = ({ navigation }) => {
                         </View>
                         <View style={recipeStyles.listingreContainer}>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 lbs fish (large) sliced into serving pieces
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 8 pieces long green pepper
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3/4 cup cooking oil
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 4 ounces cheddar cheese
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 tbsp salt
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 8 pieces lumpia wrapper
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 cups cooking oil
                             </Text>
 
                         </View>
 
                         <View style={recipeStyles.sectionTitleCont}>
-                            <Text style={recipeStyles.sectionTitle}> Sauce Ingredients</Text>
+                            <Text style={recipeStyles.sectionTitle}> Ground Pork Stuffing</Text>
                         </View>
                         
                             <View style={recipeStyles.listingreContainer}>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 onion (thinly sliced)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 6 ounces ground pork
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 cloves garlic (chopped)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 piece onion (minced)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 thumbs ginger (julienne)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 cloves garlic (crushed and minced)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 red bell pepper (julienne)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 piece egg
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 green bell pepper (julienne)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 tablespoons cooking oil
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 carrot (julienne)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> salt and ground black pepper to taste
                             </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 tbsp white vinegar
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 4 tbsp banana ketchup
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 tbsp white sugar
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 cup water
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 tbsp cornstarch
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 tbsp cooking oil
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> Salt and ground black peeperto taste
-                            </Text>
+            
 
                         </View>
 
@@ -120,55 +103,44 @@ const Filipino_Style_Escabeche = ({ navigation }) => {
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>1</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Rub salt all over the fish slices. Let it stand for 5 minutes.
+                                Prepare the ground pork stuffing by heating 3 tablespoons oil in a pan. Saute garlic and onion until the latter softens. Add ground pork. Saute until medium brown. Season with salt and ground black pepper. Remove from the pan and put on a large bowl. Let it cool down. Beat 1 piece of egg and pour into the cooked ground pork. Mix well. Set aside.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>2</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Heat cooking oil. Fry both sides of the fish until it turns golden brown in color. Remove the fish from the pan and arrange on a serving plate.
+                                Slice one side of the peppers lengthwise all the way to the bottom. Remove the seeds by gently scraping using a small spoon or a butter knife. Set aside.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>3</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Make the escabeche sauce by heating 2 tablespoons of oil in a pan. Sauté garlic and onion until the latter softens.
+                                Slice the cheddar cheese into long pieces. Stuff individual slices of cheese into each pepper. Sccop the cooked meat mixture and stuff into the chili peppers. Make sure that there is enough meat.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>4</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add tomato ketchup, vinegar, sugar, and water. Stir and let boil.
+                                Wrap the stuffed peppers in lumpia wrapper.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>5</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Put the bell peppers and carrots into the pan. Cook for 3 minutes.
+                                Heat 2 cups of oil in a pan. Fry each piece of dynamite lumpia in medium heat for 2 minutes per side or until lumpia wrapper turns golden brown. Note: you may fry longer if needed.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>6</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Season with salt and pepper.
+                                Remove from pan and place over a wire rack. Let it cool down. Arrange in a serving plate and then serve with your favorite condiment.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>7</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Combine cornstarch with 2 tablespoons of water. Mix well. Pour the mixture into the pan. Stir until the sauce thickens to your desired consistency.
-                                </Text>
-                            </View>
-                            <View style={recipeStyles.stepContainer}>
-                                <Text style={recipeStyles.stepNumber}>7</Text>
-                                <Text style={recipeStyles.stepText}>
-                                    Pour the escabeche sauce over the fried fish. Serve warm.
-                                </Text>
-                            </View>
-                            <View style={recipeStyles.stepContainer}>
-                                <Text style={recipeStyles.stepNumber}>7</Text>
-                                <Text style={recipeStyles.stepText}>
-                                    Share and enjoy!
+                                Share and enjoy!
+                        
                                 </Text>
                             </View>
                         </View>
@@ -179,4 +151,4 @@ const Filipino_Style_Escabeche = ({ navigation }) => {
     );
 };
 
-export default Filipino_Style_Escabeche;
+export default Chicken_Dynamite_Lumpia;
