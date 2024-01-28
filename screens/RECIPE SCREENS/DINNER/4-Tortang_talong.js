@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView, Image, TouchableOpacity, Alert } from 'react-native';
 import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
 import recipeStyles from '../../../styles/RecipeScreenStyles';
@@ -18,7 +18,7 @@ const Tortalong = ({ navigation }) => {
                                 </TouchableOpacity>
                                 <TouchableOpacity onPress={() =>
                                     // navigation.goBack()
-                                    console.log('PERFECT')
+                                    Alert.alert('Feature Not Available', 'Feature will be available soon.')
                                 }>
                                     <View style={recipeStyles.heartIconBackground}>
                                         <Ionicons name="heart" size={25} color="black" />
