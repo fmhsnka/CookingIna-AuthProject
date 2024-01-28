@@ -27,7 +27,7 @@ const Chicken_Adobo = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Grilled Tuna Belly</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../img/category-recipe/MAIN/GrilledTunaBelly.png')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
