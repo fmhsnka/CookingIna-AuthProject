@@ -25,7 +25,7 @@ const Calamansi_Juice = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <Text style={recipeStyles.recipeName}>Chicken Adobo</Text>
+                            <Text style={recipeStyles.recipeName}>Buko Shake</Text>
                             <View style={recipeStyles.recipeImageContainer}>
                                 <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
                             </View>
