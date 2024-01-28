@@ -10,6 +10,8 @@ import DessertsScreen from "../Categories/Dessert";
 import DinnerScreen from "../Categories/Dinner";
 import LunchScreen from "../Categories/Lunch";
 import MainCourseScreen from "../Categories/MainCourse";
+import AllBreakfastScreen from "./BreakfastNavigator";
+import AllDinnerScreen from "./DinnerNavigator";
 
 
 const Stack = createNativeStackNavigator();
@@ -56,6 +58,18 @@ const CategoriesScreen = () => {
             <Stack.Screen
                 name="Beverage"
                 component={BeverageScreen}
+                options={{ headerShown: false }}
+            />
+
+            
+            <Stack.Screen
+                name="BreakfastNav"
+                component={AllBreakfastScreen}
+                options={{ headerShown: false }}
+            />
+            <Stack.Screen
+                name="DinnerNav"
+                component={AllDinnerScreen}
                 options={{ headerShown: false }}
             />
 

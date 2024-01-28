@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
-import recipeStyles from '../../styles/RecipeScreenStyles';
+import recipeStyles from '../../../styles/RecipeScreenStyles';
 
 const Hotsilog = ({ navigation }) => {
     return (
@@ -25,9 +25,9 @@ const Hotsilog = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <Text style={recipeStyles.recipeName}>Hotsiloh</Text>
+                            <Text style={recipeStyles.recipeName}>Hotsilog</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../../img/category-recipe/BREAKFAST/hotsilog.jpg')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
@@ -57,7 +57,7 @@ const Hotsilog = ({ navigation }) => {
                             </Text>
                             <Text style={recipeStyles.listItem}>
                                 <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 eggs
-                            </Text>xt
+                            </Text>
                             <Text style={recipeStyles.listItem}>
                                 <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 cup garlic fried rice 
                             </Text>
