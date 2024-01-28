@@ -10,6 +10,7 @@ import ForgotPasswordScreen from "./screens/ForgotPasswordScreen";
 
 import HomeScreen from "./screens/HomeScreen";
 import HomeRecipeNavigator from "./screens/Navigations/HomeRecipeNavigator";
+import AppetizerScreen from "./screens/Categories/Appetizer";
 
 
 const Stack = createNativeStackNavigator();
@@ -36,6 +37,11 @@ function App() {
         <Stack.Screen
           name="Forgot"
           component={ForgotPasswordScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Appetizer"
+          component={AppetizerScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen
