@@ -4,7 +4,7 @@ import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
 import recipeStyles from '../../../styles/RecipeScreenStyles';
 
-const Filipino_Style_Escabeche = ({ navigation }) => {
+const Bam_I = ({ navigation }) => {
     return (
         <View style={recipeStyles.backgroundContainer}>
             <ScrollView contentContainerStyle={recipeStyles.scrollView}>
@@ -25,7 +25,7 @@ const Filipino_Style_Escabeche = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <Text style={recipeStyles.recipeName}>Filipino Style Escabeche</Text>
+                            <Text style={recipeStyles.recipeName}>Bam-I</Text>
                             <View style={recipeStyles.recipeImageContainer}>
                                 <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
                             </View>
@@ -33,15 +33,15 @@ const Filipino_Style_Escabeche = ({ navigation }) => {
                         <View style={recipeStyles.detailsContainer}>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="time-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>30 mins</Text>
+                                <Text style={recipeStyles.detailText}>50 mins</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="flame-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>598kcal</Text>
+                                <Text style={recipeStyles.detailText}>496kcal</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="person-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>5 Servings</Text>
+                                <Text style={recipeStyles.detailText}>6 Servings</Text>
                             </View>
                         </View>
                     </View>
@@ -53,62 +53,59 @@ const Filipino_Style_Escabeche = ({ navigation }) => {
                         </View>
                         <View style={recipeStyles.listingreContainer}>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 lbs fish (large) sliced into serving pieces
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1/2 lb pork (sliced)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3/4 cup cooking oil
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1/2 lb checken (boiled and shredded)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 tbsp salt
-                            </Text>
-
-                        </View>
-
-                        <View style={recipeStyles.sectionTitleCont}>
-                            <Text style={recipeStyles.sectionTitle}> Sauce Ingredients</Text>
-                        </View>
-                        
-                            <View style={recipeStyles.listingreContainer}>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 onion (thinly sliced)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 4 pieces Chinese sausage (sliced)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 cloves garlic (chopped)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 lb shrimp (shelled and heads removed)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 thumbs ginger (julienne)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 8 ounces flour sticks (pancit canton noodles)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 red bell pepper (julienne)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 4 to 6 ounces rice noodles (sotanghon soaked in water)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 green bell pepper (julienne)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 1/2 to 2 cups chicken stock
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 carrot (julienne)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 cups cabbage (chopped)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 tbsp white vinegar
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3.4 cup carrots (julienned)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 4 tbsp banana ketchup
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1/2 cup dried wood ear (soake in water and chopped)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 tbsp white sugar
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 medium onion (diced)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 cup water
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1/4 cup parsley (cleaned and chopped)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 tbsp cornstarch
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1/2 cup shrimp juice (derived by pounding the head of the shrimp)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 tbsp cooking oil
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1/2 cup soy sauce
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> Salt and ground black peeperto taste
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 piece chicken cube or bouillon
                             </Text>
-
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 tbsp garlic (minced)
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> Slat and ground black pepper to taste
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 to 3 tbsp cooking oil
+                            </Text>
                         </View>
 
 
@@ -120,55 +117,55 @@ const Filipino_Style_Escabeche = ({ navigation }) => {
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>1</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Rub salt all over the fish slices. Let it stand for 5 minutes.
+                                    Heat a cooking pot then pour-in cooking oil.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>2</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Heat cooking oil. Fry both sides of the fish until it turns golden brown in color. Remove the fish from the pan and arrange on a serving plate.
+                                    Saute garlic adn onions then add the sliced pork and cook for 3 minutes.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>3</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Make the escabeche sauce by heating 2 tablespoons of oil in a pan. Sauté garlic and onion until the latter softens.
+                                    Put-in the Chines sausage and shredded chicken and cook for 3 to 5 minutes.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>4</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add tomato ketchup, vinegar, sugar, and water. Stir and let boil.
+                                    Add soy sauce, shrimp juice, salt, ground black pepper, chicken bouillon, and chicken stock then let boil. Simmer for 5 to 8 minutes.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>5</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Put the bell peppers and carrots into the pan. Cook for 3 minutes.
+                                    Put the shrimps, cabbage, carrots, and wood ears in the cook for 2 minutes.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>6</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Season with salt and pepper.
+                                    Add the soaked noodles then stir. Cook for a minute.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>7</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Combine cornstarch with 2 tablespoons of water. Mix well. Pour the mixture into the pan. Stir until the sauce thickens to your desired consistency.
+                                    Put-in the flour sticks then stir well. Cook for 3 minutes or until the liquid is gone.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>7</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Pour the escabeche sauce over the fried fish. Serve warm.
+                                    Top with green onions and place calamansi on the side.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>7</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Share and enjoy!
+                                    Serve hot. Share and enjoy! Mangaon na ta!
                                 </Text>
                             </View>
                         </View>
@@ -179,4 +176,4 @@ const Filipino_Style_Escabeche = ({ navigation }) => {
     );
 };
 
-export default Filipino_Style_Escabeche;
+export default Bam_I;
