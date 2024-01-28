@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
-import recipeStyles from '../../styles/RecipeScreenStyles';
+import recipeStyles from '../../../styles/RecipeScreenStyles';
 
 const Calamansi_Juice = ({ navigation }) => {
     return (
@@ -25,9 +25,9 @@ const Calamansi_Juice = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <Text style={recipeStyles.recipeName}>Buko Shake</Text>
+                            <Text style={recipeStyles.recipeName}>Calamansi Juice</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../../img/category-recipe/BEVERAGE/CalamansiJuice.png')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>

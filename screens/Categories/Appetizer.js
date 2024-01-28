@@ -10,7 +10,7 @@ const AppetizerScreen = () => {
 
 
     const recommendedRecipes = [
-        { name: 'Chicken Dynamite Lumpia', time: '12 min', calories: 442, image: require('../../img/category-recipe/APPETIZER/Dynamite.png') },
+        { name: 'Chicken Dynamite Lumpia', time: '28 min', calories: 442, image: require('../../img/category-recipe/APPETIZER/Dynamite.png') },
         { name: 'Tuna Kilawin', time: '1 min', calories: 225, image: require('../../img/category-recipe/APPETIZER/Tuna-Kilawin.png') },
         { name: 'Cheesy Onion Rings', time: '7 min', calories: 1388, image: require('../../img/category-recipe/APPETIZER/CheesyOnionRings.png') },
         { name: 'Loaded Nachos', time: '15 min', calories: 729, image: require('../../img/category-recipe/APPETIZER/LoadedNachos.png') },
@@ -30,32 +30,27 @@ const AppetizerScreen = () => {
     };
 
     const navigateToRecipe = (recipeName) => {
-        navigation.navigate('HomeRecipeNavigator', {
-            screen: `${recipeName}`,
+        navigation.navigate('AppetizerNav', {
+            screen: recipeName,
         });
     };
 
     const handleRecipePress = (recipeName) => {
         switch (recipeName) {
             case 'Chicken Dynamite Lumpia':
-                // navigateToRecipe('AdoboScreen');
-                console.log('WORKING')
+                navigateToRecipe('Chicken Dynamite Lumpia');
                 break;
             case 'Tuna Kilawin':
-                // navigateToRecipe('LumpiaShanghaiScreen');
-                console.log('WORKING')
+                navigateToRecipe('Tuna Kilawin');
                 break;
-            case 'Chicken Gising-gising':
-                // navigateToRecipe('BistekScreen');
-                console.log('WORKING')
+            case 'Cheesy Onion Rings':
+                navigateToRecipe('Cheesy Onion Rings');
                 break;
             case 'Loaded Nachos':
-                // navigateToRecipe('TortalongScreen');
-                console.log('WORKING')
+                navigateToRecipe('Loaded Nachos');
                 break;
             case 'Chicken Siomai':
-                // navigateToRecipe('MacaroniScreen');
-                console.log('WORKING')
+                navigateToRecipe('Chicken Siomai');
                 break;
             default:
                 break;

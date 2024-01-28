@@ -27,7 +27,7 @@ const Chicken_Dynamite_Lumpia = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Chicken Dynamite Lumpia</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../../img/category-recipe/APPETIZER/Dynamite.png')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>

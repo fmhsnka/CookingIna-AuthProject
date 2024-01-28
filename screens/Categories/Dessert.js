@@ -30,32 +30,27 @@ const DessertsScreen = () => {
     };
 
     const navigateToRecipe = (recipeName) => {
-        navigation.navigate('HomeRecipeNavigator', {
-            screen: `${recipeName}`,
+        navigation.navigate('DessertNav', {
+            screen: recipeName,
         });
     };
 
     const handleRecipePress = (recipeName) => {
         switch (recipeName) {
             case 'Sweet Macaroni Salad':
-                // navigateToRecipe('AdoboScreen');
-                console.log('WORKING')
+                navigateToRecipe('Sweet Macaroni Salad');
                 break;
             case 'Bibingka':
-                // navigateToRecipe('LumpiaShanghaiScreen');
-                console.log('WORKING')
+                navigateToRecipe('Bibingka');
                 break;
             case 'Banana Bread':
-                // navigateToRecipe('BistekScreen');
-                console.log('WORKING')
+                navigateToRecipe('Banana Bread');
                 break;
             case 'Buko Pandan':
-                // navigateToRecipe('TortalongScreen');
-                console.log('WORKING')
+                navigateToRecipe('Buko Pandan');
                 break;
             case 'Fruit Cocktail Float':
-                // navigateToRecipe('MacaroniScreen');
-                console.log('WORKING')
+                navigateToRecipe('Fruit Cocktail Float');
                 break;
             default:
                 break;

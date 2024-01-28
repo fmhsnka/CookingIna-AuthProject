@@ -27,7 +27,7 @@ const Tuna_Kilawin = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Tuna Kilawin</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../../img/category-recipe/APPETIZER/Tuna-Kilawin.png')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
@@ -37,11 +37,11 @@ const Tuna_Kilawin = ({ navigation }) => {
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="flame-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>93kcal</Text>
+                                <Text style={recipeStyles.detailText}>225kcal</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="person-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>3g</Text>
+                                <Text style={recipeStyles.detailText}>3 Servings</Text>
                             </View>
                         </View>
                     </View>

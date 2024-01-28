@@ -4,7 +4,7 @@ import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
 import recipeStyles from '../../../styles/RecipeScreenStyles';
 
-const Ensaymada = ({ navigation }) => {
+const Ensaymother = ({ navigation }) => {
     return (
         <View style={recipeStyles.backgroundContainer}>
             <ScrollView contentContainerStyle={recipeStyles.scrollView}>
@@ -27,7 +27,7 @@ const Ensaymada = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Ensaymada</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/pandesal.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../../img/category-recipe/BREAD/Ensaymada.png')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
@@ -194,4 +194,4 @@ const Ensaymada = ({ navigation }) => {
     );
 };
 
-export default Ensaymada;
+export default Ensaymother;

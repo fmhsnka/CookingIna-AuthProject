@@ -4,7 +4,7 @@ import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
 import recipeStyles from '../../../styles/RecipeScreenStyles';
 
-const Monay = ({ navigation }) => {
+const Monay_2 = ({ navigation }) => {
     return (
         <View style={recipeStyles.backgroundContainer}>
             <ScrollView contentContainerStyle={recipeStyles.scrollView}>
@@ -27,7 +27,7 @@ const Monay = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Monay</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/pandesal.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../../img/category-recipe/BREAD/Monay.png')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
@@ -176,4 +176,4 @@ const Monay = ({ navigation }) => {
     );
 };
 
-export default Monay;
+export default Monay_2;

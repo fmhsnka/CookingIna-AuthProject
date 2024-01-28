@@ -4,7 +4,7 @@ import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
 import recipeStyles from '../../../styles/RecipeScreenStyles';
 
-const Pandesal = ({ navigation }) => {
+const Pandesal_2 = ({ navigation }) => {
     return (
         <View style={recipeStyles.backgroundContainer}>
             <ScrollView contentContainerStyle={recipeStyles.scrollView}>
@@ -27,7 +27,7 @@ const Pandesal = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Pandesal</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/pandesal.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../../img/category-recipe/BREAD/pandesal.jpg')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
@@ -185,4 +185,4 @@ const Pandesal = ({ navigation }) => {
     );
 };
 
-export default Pandesal;
+export default Pandesal_2;

@@ -27,13 +27,13 @@ const Cheesy_Onion_Rings = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Cheesy Onion Rings</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../../img/category-recipe/APPETIZER/CheesyOnionRings.png')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="time-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>17 minutes</Text>
+                                <Text style={recipeStyles.detailText}>7 minutes</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="flame-outline" style={recipeStyles.detailIcon} />

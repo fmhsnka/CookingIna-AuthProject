@@ -2,9 +2,9 @@ import React from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
-import recipeStyles from '../../styles/RecipeScreenStyles';
+import recipeStyles from '../../../styles/RecipeScreenStyles';
 
-const Ronimaca = ({ navigation }) => {
+const Bibingka = ({ navigation }) => {
     return (
         <View style={recipeStyles.backgroundContainer}>
             <ScrollView contentContainerStyle={recipeStyles.scrollView}>
@@ -27,7 +27,7 @@ const Ronimaca = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Bibingka</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/macaroni.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../../img/category-recipe/DESSERT/Bibingka.png')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
@@ -188,4 +188,4 @@ const Ronimaca = ({ navigation }) => {
     );
 };
 
-export default Ronimaca;
+export default Bibingka;

@@ -30,32 +30,27 @@ const BeverageScreen = () => {
     };
 
     const navigateToRecipe = (recipeName) => {
-        navigation.navigate('HomeRecipeNavigator', {
-            screen: `${recipeName}`,
+        navigation.navigate('BeverageNav', {
+            screen: recipeName,
         });
     };
 
     const handleRecipePress = (recipeName) => {
         switch (recipeName) {
             case 'Calamansi Juice':
-                // navigateToRecipe('AdoboScreen');
-                console.log('WORKING')
+                navigateToRecipe('Calamansi Juice');
                 break;
             case 'Buko Shake':
-                // navigateToRecipe('LumpiaShanghaiScreen');
-                console.log('WORKING')
+                navigateToRecipe('Buko Shake');
                 break;
             case 'Tsokolate':
-                // navigateToRecipe('BistekScreen');
-                console.log('WORKING')
+                navigateToRecipe('Tsokolate');
                 break;
             case 'Melon Juice':
-                // navigateToRecipe('TortalongScreen');
-                console.log('WORKING')
+                navigateToRecipe('Melon Juice');
                 break;
             case 'Mango Juice':
-                // navigateToRecipe('MacaroniScreen');
-                console.log('WORKING')
+                navigateToRecipe('Mango Juice');
                 break;
             default:
                 break;

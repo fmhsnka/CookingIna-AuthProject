@@ -30,32 +30,27 @@ const BreadScreen = () => {
     };
 
     const navigateToRecipe = (recipeName) => {
-        navigation.navigate('HomeRecipeNavigator', {
-            screen: `${recipeName}`,
+        navigation.navigate('BreadNav', {
+            screen: recipeName,
         });
     };
 
     const handleRecipePress = (recipeName) => {
         switch (recipeName) {
             case 'Pandesal':
-                // navigateToRecipe('AdoboScreen');
-                console.log('WORKING')
+                navigateToRecipe('Pandesal');
                 break;
             case 'Ensaymada':
-                // navigateToRecipe('LumpiaShanghaiScreen');
-                console.log('WORKING')
+                navigateToRecipe('Ensaymada');
                 break;
             case 'Monay':
-                // navigateToRecipe('BistekScreen');
-                console.log('WORKING')
+                navigateToRecipe('Monay');
                 break;
             case 'Ube Cheese Pandesal':
-                // navigateToRecipe('TortalongScreen');
-                console.log('WORKING')
+                navigateToRecipe('Ube Cheese Pandesal');
                 break;
             case 'Star Bread':
-                // navigateToRecipe('MacaroniScreen');
-                console.log('WORKING')
+                navigateToRecipe('Star Bread');
                 break;
             default:
                 break;

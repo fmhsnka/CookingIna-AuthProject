@@ -27,7 +27,7 @@ const Ube_Cheese_Pandesal = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Ube Cheese Pandesal</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/pandesal.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../../img/category-recipe/BREAD/UbeCheesePandesal.png')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
