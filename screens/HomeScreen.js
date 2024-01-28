@@ -141,35 +141,27 @@ const HomeScreen = () => {
         switch (categoryName) {
             case 'Breakfast':
                 navigateToCategory('Breakfast');
-                console.log('BREAKFAST WORKING')
                 break;
             case 'Lunch':
                 navigateToCategory('Lunch');
-                console.log('DINNER WORKING')
                 break;
             case 'Dinner':
                 navigateToCategory('Dinner');
-                console.log('LUNCH WORKING')
                 break;
             case 'Appetizer':
                 navigateToCategory('Appetizer');
-                console.log('APPETIZER WORKING')
                 break;
             case 'Dessert':
                 navigateToCategory('Desserts');
-                console.log('DESSERT WORKING')
                 break;
             case 'Bread':
                 navigateToCategory('Bread');
-                console.log('BREAD WORKING')
                 break;
             case 'Main':
                 navigateToCategory('Main');
-                console.log('MAIN WORKING')
                 break;
             case 'Beverage':
                 navigateToCategory('Beverage');
-                console.log('BEVERAGE WORKING')
                 break;
             default:
                 break;
