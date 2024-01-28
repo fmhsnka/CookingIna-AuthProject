@@ -63,11 +63,6 @@ const HomeRecipeNavigator = () => {
                 component={UserProfileScreen}
                 options={{ headerShown: false }}
             />
-            {/* <Stack.Screen
-                name="Favorties"
-                component={SettingsScreen}
-                options={{ headerShown: false }}
-            /> */}
             <Stack.Screen
                 name="Settings"
                 component={SettingsScreen}

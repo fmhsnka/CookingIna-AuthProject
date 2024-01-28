@@ -24,6 +24,7 @@
     "@fortawesome/fontawesome-free": "^6.5.1",
     "@react-native-async-storage/async-storage": "^1.18.2",
     "@react-native-firebase/app": "^18.5.0",
+    "@react-native-firebase/firestore": "^18.8.0",
     "@react-native-seoul/masonry-list": "^1.4.2",
     "@react-navigation/bottom-tabs": "^6.5.11",
     "@react-navigation/drawer": "^6.6.6",

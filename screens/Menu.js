@@ -109,23 +109,18 @@ const Menu = () => {
     };
 
     const handleProfilePress = () => {
-        // console.log('Navigate to Profile Screen');
         navigation.navigate('UserProfile');
     };
 
     const handleFavoritesPress = () => {
-        // Replace 'FavoritesScreen' with the name of the screen you want to navigate to
-        console.log('Navigate to Favorites Screen');
-        // navigation.navigate('FavoritesScreen');
+        Alert.alert('Feature Not Available', 'Feature will be available soon.');
     };
 
     const handleSettingsPress = () => {
-        // console.log('Navigate to Settings Screen');
         navigation.navigate('Settings');
     };
 
     const handleHelpPress = () => {
-        // console.log('Navigate to Help Screen');
         navigation.navigate('About');
     };
 

@@ -211,7 +211,7 @@ const HomeScreen = () => {
                                 color="black"
                             />
                         </TouchableOpacity>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => Alert.alert('Feature Not Available', 'Feature will be available soon.')}>
                             <Ionicons name="search" size={35} color="#1E1E1E" />
                         </TouchableOpacity>
                     </View>
