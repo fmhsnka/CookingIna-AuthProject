@@ -25,7 +25,7 @@ const Ronimaca = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <Text style={recipeStyles.recipeName}>Sweet Macaroni Salad</Text>
+                            <Text style={recipeStyles.recipeName}>Fruit Cocktail Float</Text>
                             <View style={recipeStyles.recipeImageContainer}>
                                 <Image source={require('../../img/recipes/macaroni.jpg')} style={recipeStyles.recipeImage} />
                             </View>
