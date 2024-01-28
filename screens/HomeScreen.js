@@ -144,11 +144,11 @@ const HomeScreen = () => {
                 console.log('BREAKFAST WORKING')
                 break;
             case 'Lunch':
-                navigateToCategory('Dinner');
+                navigateToCategory('Lunch');
                 console.log('DINNER WORKING')
                 break;
             case 'Dinner':
-                navigateToCategory('Lunch');
+                navigateToCategory('Dinner');
                 console.log('LUNCH WORKING')
                 break;
             case 'Appetizer':

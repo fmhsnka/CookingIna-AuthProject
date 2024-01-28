@@ -39,23 +39,18 @@ const DinnerScreen = () => {
         switch (recipeName) {
             case 'Chicken Adobo':
                 navigateToRecipe('Chicken Adobo');
-                console.log('WORKING')
                 break;
             case 'Lumpiang Shanghai':
                 navigateToRecipe('Lumpiang Shanghai');
-                console.log('WORKING')
                 break;
             case 'Chicken Gising-gising':
                 navigateToRecipe('Chicken Gising-gising');
-                console.log('WORKING')
                 break;
             case 'Filipino Style Escabeche':
                 navigateToRecipe('Filipino Style Escabeche');
-                console.log('WORKING')
                 break;
             case 'Tortang Talong':
                 navigateToRecipe('Tortang Talong');
-                console.log('WORKING')
                 break;
             default:
                 break;

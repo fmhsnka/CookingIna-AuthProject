@@ -10,8 +10,11 @@ import DessertsScreen from "../Categories/Dessert";
 import DinnerScreen from "../Categories/Dinner";
 import LunchScreen from "../Categories/Lunch";
 import MainCourseScreen from "../Categories/MainCourse";
+
+// NESTED NAVS
 import AllBreakfastScreen from "./BreakfastNavigator";
 import AllDinnerScreen from "./DinnerNavigator";
+import AllLunchScreen from "./LunchNavigator";
 
 
 const Stack = createNativeStackNavigator();
@@ -65,6 +68,11 @@ const CategoriesScreen = () => {
             <Stack.Screen
                 name="BreakfastNav"
                 component={AllBreakfastScreen}
+                options={{ headerShown: false }}
+            />
+            <Stack.Screen
+                name="LunchNav"
+                component={AllLunchScreen}
                 options={{ headerShown: false }}
             />
             <Stack.Screen
