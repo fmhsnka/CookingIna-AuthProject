@@ -39,23 +39,18 @@ const BreakfastScreen = () => {
         switch (recipeName) {
             case 'Filipino Omelet':
                 navigateToRecipe('Filipino Omelet');
-                console.log('WORKING')
                 break;
             case 'Corned Beef Silog':
                 navigateToRecipe('Corned Beef Silog');
-                console.log('WORKING')
                 break;
             case 'Chicken Fried Rice':
                 navigateToRecipe('Chicken Fried Rice');
-                console.log('WORKING')
                 break;
             case 'Hotsilog':
                 navigateToRecipe('Hotsilog');
-                console.log('WORKING')
                 break;
             case 'Picadillo':
                 navigateToRecipe('Picadillo');
-                console.log('WORKING')
                 break;
             default:
                 break;

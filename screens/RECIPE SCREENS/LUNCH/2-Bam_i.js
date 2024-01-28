@@ -27,7 +27,7 @@ const Bam_I = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Bam-I</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../../img/category-recipe/LUNCH/Bam-I.png')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
