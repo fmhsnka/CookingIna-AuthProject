@@ -25,7 +25,7 @@ const Ronimaca = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <Text style={recipeStyles.recipeName}>Sweet Macaroni Salad</Text>
+                            <Text style={recipeStyles.recipeName}>Banana_bread</Text>
                             <View style={recipeStyles.recipeImageContainer}>
                                 <Image source={require('../../img/recipes/macaroni.jpg')} style={recipeStyles.recipeImage} />
                             </View>
@@ -33,11 +33,11 @@ const Ronimaca = ({ navigation }) => {
                         <View style={recipeStyles.detailsContainer}>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="time-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>20 mins</Text>
+                                <Text style={recipeStyles.detailText}>1hour hour 10minutes minutes</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="flame-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>738kcal</Text>
+                                <Text style={recipeStyles.detailText}>359kcal</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="person-outline" style={recipeStyles.detailIcon} />
@@ -53,34 +53,28 @@ const Ronimaca = ({ navigation }) => {
                         </View>
                         <View style={recipeStyles.listingreContainer}>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3/4 lb. elbow macaroni
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 pieces banana ,(large and ripe)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 pack Lady's Choice Mayonnaise 200 ml
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 10 tablespoons granulated white sugar
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 can fruit cocktail 15 oz
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 1/2 cups all purpose flour
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 12 oz. pineapple chunks
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 pieces eggs
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 can condensed milk 14 oz.
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1/2 cup cooking oil
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3/4 cup raisins
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 teaspoon salt
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3/4 cup kaong
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 teaspoon vanilla extract
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3/4 cup nata de coco
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 6 oz. cheddar chees cubed
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 quarts water
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1/2 teaspoon baking soda
                             </Text>
                         </View>
 
@@ -93,28 +87,55 @@ const Ronimaca = ({ navigation }) => {
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>1</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Cooking the macaroni by boiling water in a pot. Add the macaroni. Stir and ccok for 7 minustes.
-                                    Drain the water and arrange macaroni in a large bowl.
+                                Preheat oven at 350 degrees Fahrenheit.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>2</Text>
                                 <Text style={recipeStyles.stepText}>
-                                        Add fruit cocktail, pineapple, kaong, nata de coco, chees, and raisins.
-                                        Gently mix all the ingredients.
+                                Combine all the dry ingredients starting with the flour, sugar, salt, and baking soda. Set aside.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>3</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Pourncondensed milk and then add Lady's Choic Mayonnaisse. 
-                                    Fold unitl all ingredients are well blended. Cover the bowl and refrigrrate for at least 2 hours.
+                                Mash bananas using a fork or a potato masher.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>4</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Remove from the fridge. Share and enjoy!
+                                Add eggs, cooking oil, and vanilla extract. Mix well.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>5</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Gradually add the dry ingredients. Mix until everything is evenly distributed.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>6</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Grease the loaf pan with a cooking oil spray (Note: you may also wet a paper towel with regular cooking oil or melted butter and spread it in the loaf pan). Pour mixture into the pan.
+                               </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>7</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Bake for 1 hour (Note: check the bread as early as 40 minutes during the baking to prevent overcooking. Use the toothpick test).
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>8</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Remove from loaf pan from the oven. Let it cool down. Slice the bread and arrange on a serving plate (Note: You may put the bread in the fridge to cool or serve immediately.).
+                               </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>9</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Share and Enjoy!                                  
                                 </Text>
                             </View>
                         </View>
