@@ -4,7 +4,7 @@ import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
 import recipeStyles from '../../../styles/RecipeScreenStyles';
 
-const Chicken_Gising_Gising = ({ navigation }) => {
+const Pinoy_Chicken_Curry = ({ navigation }) => {
     return (
         <View style={recipeStyles.backgroundContainer}>
             <ScrollView contentContainerStyle={recipeStyles.scrollView}>
@@ -25,7 +25,7 @@ const Chicken_Gising_Gising = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <Text style={recipeStyles.recipeName}>Chicken Gising-gising</Text>
+                            <Text style={recipeStyles.recipeName}>Pinoy Chicken Curry</Text>
                             <View style={recipeStyles.recipeImageContainer}>
                                 <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
                             </View>
@@ -33,15 +33,15 @@ const Chicken_Gising_Gising = ({ navigation }) => {
                         <View style={recipeStyles.detailsContainer}>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="time-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>35 mins</Text>
+                                <Text style={recipeStyles.detailText}>1hr 10mins</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="flame-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>739kcal</Text>
+                                <Text style={recipeStyles.detailText}>497kcal</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="person-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>4 Servings</Text>
+                                <Text style={recipeStyles.detailText}>6 Servings</Text>
                             </View>
                         </View>
                     </View>
@@ -56,34 +56,40 @@ const Chicken_Gising_Gising = ({ navigation }) => {
                                 <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 lbs. Chicken (cut into serving pieces)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 90 grams Knorr Ginataang Gulay Mix
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 tbsp curry powder
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1/2 lb. winged bean (sigarilyas, sliced)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 piece potato (cubed)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 long green chili pepper (sliced)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 4 cloves garlic (minced)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 5 Thai chili pepper (optional)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 stalks celery (sliced)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 tbsp shrimp paste
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1pieces long green pepper
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 cups water
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 piece onion (chopped)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 onion (chopped)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 thumbs ginger (cut into strips)
                             </Text>
                             <Text style={recipeStyles.listItem}>
                                 <FontAwesome name="circle" size={18} color="#FFBA00" /> 5 cloves garlic (chopped)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 thumbs ginger (chopped)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 cups coconut milk
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 tbsp cooking oil
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1/2 cup all-purpose cream (optional)
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 cup water
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> fish sauce and ground black pepper to taste
                             </Text>
                         </View>
 
@@ -96,43 +102,55 @@ const Chicken_Gising_Gising = ({ navigation }) => {
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>1</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Heat oil in a pan. Sauté garlic, onion, and ginger.
+                                    Heat oil in a pan. Fry potato for 1 minute per side. Remove from the pan. Set aside.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>2</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add chicken pieces. Stir fry until the exterior turns light brown in color.
+                                    Using the remaining oil, saute garlic, onion, celery, and ginger until onion softens.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>3</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add 1 cup water. Let boil.
+                                    Add the chicken pieces. Saute until the outer part of the chicken turns light brown.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>4</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Combine Knorr Ginataang Gulay Mix with 2 cups water. Mix well and then pour into the pan. Cover and continue cooking between low to medium heat setting for 20 minutes.
+                                    Add 1 tbsp fish sauce. Continue sauteing for 1 minute.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>5</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add shrimp paste, long green pepper, and winged beans. Cover the pan and continue cooking for 5 minutes.
+                                    Pour-in coconut milk and water. Let boil.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>6</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add Thai chili peppers if desired. Cook for 2 minutes more.
+                                    Add curry powder. Stir until the powder is completely diluted. Cover the pot and continue cooking between loww to medium heat until the liquid reduces to half.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>7</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Transfer to a serving bowl. Serve hot with rice.. Share and enjoy!
+                                    Add the red bell pepper and pan fried-potato. Cook for 5 minutes.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>8</Text>
+                                <Text style={recipeStyles.stepText}>
+                                    Season with fish sauce and ground black pepper as needed. You can also add all-purpose cream if desired.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>9</Text>
+                                <Text style={recipeStyles.stepText}>
+                                    Transfer to a serving bowl. Serve and enjoy!
                                 </Text>
                             </View>
                         </View>
@@ -143,4 +161,4 @@ const Chicken_Gising_Gising = ({ navigation }) => {
     );
 };
 
-export default Chicken_Gising_Gising;
+export default Pinoy_Chicken_Curry;
