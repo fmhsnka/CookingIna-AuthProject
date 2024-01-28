@@ -25,7 +25,7 @@ const Ronimaca = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <Text style={recipeStyles.recipeName}>Sweet Macaroni Salad</Text>
+                            <Text style={recipeStyles.recipeName}>Buko_pandan</Text>
                             <View style={recipeStyles.recipeImageContainer}>
                                 <Image source={require('../../img/recipes/macaroni.jpg')} style={recipeStyles.recipeImage} />
                             </View>
@@ -33,15 +33,15 @@ const Ronimaca = ({ navigation }) => {
                         <View style={recipeStyles.detailsContainer}>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="time-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>20 mins</Text>
+                                <Text style={recipeStyles.detailText}>20 minutes</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="flame-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>738kcal</Text>
+                                <Text style={recipeStyles.detailText}>613kcal</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="person-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>6 Servings</Text>
+                                <Text style={recipeStyles.detailText}>4 Servings</Text>
                             </View>
                         </View>
                     </View>
@@ -53,34 +53,28 @@ const Ronimaca = ({ navigation }) => {
                         </View>
                         <View style={recipeStyles.listingreContainer}>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3/4 lb. elbow macaroni
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 1/2 cup young coconut (cut into strips)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 pack Lady's Choice Mayonnaise 200 ml
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 5 ounces condensed milk
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 can fruit cocktail 15 oz
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 8 ounces Table cream (or all-purpose cream)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 12 oz. pineapple chunks
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 ounces powdered gelatin
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 can condensed milk 14 oz.
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 1/4 cups water
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3/4 cup raisins
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 6 drops Buko Pandan flavoring
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3/4 cup kaong
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 scoops vanilla ice cream (optional)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3/4 cup nata de coco
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 6 oz. cheddar chees cubed
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 quarts water
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1/2 cup sago pearls, cooked (optional)
                             </Text>
                         </View>
 
@@ -93,28 +87,49 @@ const Ronimaca = ({ navigation }) => {
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>1</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Cooking the macaroni by boiling water in a pot. Add the macaroni. Stir and ccok for 7 minustes.
-                                    Drain the water and arrange macaroni in a large bowl.
+                                Combine water and powdered gelatin then stir using a spoon.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>2</Text>
                                 <Text style={recipeStyles.stepText}>
-                                        Add fruit cocktail, pineapple, kaong, nata de coco, chees, and raisins.
-                                        Gently mix all the ingredients.
+                                Add Buko Pandan flavoring then stir until everything is evenly distributed.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>3</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Pourncondensed milk and then add Lady's Choic Mayonnaisse. 
-                                    Fold unitl all ingredients are well blended. Cover the bowl and refrigrrate for at least 2 hours.
+                                Heat a saucepan and pour-in the mixture. Bring to a boil while continuously stirring.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>4</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Remove from the fridge. Share and enjoy!
+                                Turn off the heat and transfer the mixture to a mold. Allow the temperature to cool. The texture of the mixture should be firm once cooled. You may also place this inside the refrigerator for faster results (allow the temperature to go down before putting-in the refrigerator).
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>5</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Combine condensed milk, table cream, sago pearls, and young coconut then mix well. Allow the texture to thicken by chilling in the refrigerator or freezer for a few hours.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>6</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Slice the firm gelatin into 1 inch cubes then combine with the condensed milk-cream-young coconut-sago mixture.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>7</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Transfer to individual serving platters or cups then top with a scoop of vanilla ice-cream.
+                                </Text>
+                            </View>
+                            <View style={recipeStyles.stepContainer}>
+                                <Text style={recipeStyles.stepNumber}>8</Text>
+                                <Text style={recipeStyles.stepText}>
+                                Serve for dessert. Share and enjoy!
                                 </Text>
                             </View>
                         </View>
