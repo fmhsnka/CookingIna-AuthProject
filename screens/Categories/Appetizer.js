@@ -41,25 +41,21 @@ const AppetizerScreen = () => {
                 // navigateToRecipe('AdoboScreen');
                 console.log('WORKING')
                 break;
-            case 'Lumpiang Shanghai':
-                navigateToRecipe('LumpiaShanghaiScreen');
-                // console.log('WORKING')
+            case 'Tuna Kilawin':
+                // navigateToRecipe('LumpiaShanghaiScreen');
+                console.log('WORKING')
                 break;
-            case 'Filipino Style Beef Steak':
-                navigateToRecipe('BistekScreen');
-                // console.log('WORKING')
+            case 'Chicken Gising-gising':
+                // navigateToRecipe('BistekScreen');
+                console.log('WORKING')
                 break;
-            case 'Tortang Talong':
-                navigateToRecipe('TortalongScreen');
-                // console.log('WORKING')
+            case 'Loaded Nachos':
+                // navigateToRecipe('TortalongScreen');
+                console.log('WORKING')
                 break;
-            case 'Sweet Macaroni Salad':
-                navigateToRecipe('MacaroniScreen');
-                // console.log('WORKING')
-                break;
-            case 'Pandesal':
-                navigateToRecipe('PandesalScreen');
-                // console.log('WORKING')
+            case 'Chicken Siomai':
+                // navigateToRecipe('MacaroniScreen');
+                console.log('WORKING')
                 break;
             default:
                 break;
@@ -78,7 +74,7 @@ const AppetizerScreen = () => {
                         </TouchableOpacity>
                         <Text style={RecipeCategory.screenTitle}>Appetizer</Text>
                     </View>
-        
+
 
                     {recommendedRecipes.map((recipe) => (
                         <TouchableOpacity

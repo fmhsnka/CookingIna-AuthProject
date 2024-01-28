@@ -37,29 +37,25 @@ const LunchScreen = () => {
 
     const handleRecipePress = (recipeName) => {
         switch (recipeName) {
-            case 'Chicken Dynamite Lumpia':
+            case 'Pinoy Chicken Curry':
                 // navigateToRecipe('AdoboScreen');
                 console.log('WORKING')
                 break;
-            case 'Lumpiang Shanghai':
-                navigateToRecipe('LumpiaShanghaiScreen');
-                // console.log('WORKING')
+            case 'Bam-I (Pancit Bisaya)':
+                // navigateToRecipe('LumpiaShanghaiScreen');
+                console.log('WORKING')
                 break;
-            case 'Filipino Style Beef Steak':
-                navigateToRecipe('BistekScreen');
-                // console.log('WORKING')
+            case 'Chicken Gising-gising':
+                // navigateToRecipe('BistekScreen');
+                console.log('WORKING')
                 break;
-            case 'Tortang Talong':
-                navigateToRecipe('TortalongScreen');
-                // console.log('WORKING')
+            case 'Filipino Style Escabeche':
+                // navigateToRecipe('TortalongScreen');
+                console.log('WORKING')
                 break;
-            case 'Sweet Macaroni Salad':
-                navigateToRecipe('MacaroniScreen');
-                // console.log('WORKING')
-                break;
-            case 'Pandesal':
-                navigateToRecipe('PandesalScreen');
-                // console.log('WORKING')
+            case 'Bangus Sisig':
+                // navigateToRecipe('MacaroniScreen');
+                console.log('WORKING')
                 break;
             default:
                 break;
