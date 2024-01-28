@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
-import recipeStyles from '../../styles/RecipeScreenStyles';
+import recipeStyles from '../../../styles/RecipeScreenStyles';
 
 const Lumpiang_Shanghai = ({ navigation }) => {
     return (
@@ -27,7 +27,7 @@ const Lumpiang_Shanghai = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Lumpiang Shanghai</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/lumpia.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../../img/category-recipe/DINNER/lumpia.jpg')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>

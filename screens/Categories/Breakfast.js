@@ -30,31 +30,31 @@ const BreakfastScreen = () => {
     };
 
     const navigateToRecipe = (recipeName) => {
-        navigation.navigate('HomeRecipeNavigator', {
-            screen: `${recipeName}`,
+        navigation.navigate('BreakfastNav', {
+            screen: recipeName,
         });
     };
 
     const handleRecipePress = (recipeName) => {
         switch (recipeName) {
             case 'Filipino Omelet':
-                // navigateToRecipe('AdoboScreen');
+                navigateToRecipe('Filipino Omelet');
                 console.log('WORKING')
                 break;
             case 'Corned Beef Silog':
-                // navigateToRecipe('LumpiaShanghaiScreen');
+                navigateToRecipe('Corned Beef Silog');
                 console.log('WORKING')
                 break;
             case 'Chicken Fried Rice':
-                // navigateToRecipe('BistekScreen');
+                navigateToRecipe('Chicken Fried Rice');
                 console.log('WORKING')
                 break;
             case 'Hotsilog':
-                // navigateToRecipe('TortalongScreen');
+                navigateToRecipe('Hotsilog');
                 console.log('WORKING')
                 break;
             case 'Picadillo':
-                // navigateToRecipe('MacaroniScreen');
+                navigateToRecipe('Picadillo');
                 console.log('WORKING')
                 break;
             default:

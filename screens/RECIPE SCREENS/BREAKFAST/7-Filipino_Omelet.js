@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
-import recipeStyles from '../../styles/RecipeScreenStyles';
+import recipeStyles from '../../../styles/RecipeScreenStyles';
 
 const Filipino_Omelet = ({ navigation }) => {
     return (
@@ -27,7 +27,7 @@ const Filipino_Omelet = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Filipino Omelet</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../../img/category-recipe/BREAKFAST/omelet.jpg')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
