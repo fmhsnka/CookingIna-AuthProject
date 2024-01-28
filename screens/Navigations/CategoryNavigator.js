@@ -15,6 +15,7 @@ import MainCourseScreen from "../Categories/MainCourse";
 import AllBreakfastScreen from "./BreakfastNavigator";
 import AllDinnerScreen from "./DinnerNavigator";
 import AllLunchScreen from "./LunchNavigator";
+import AllMainCourseScreen from "./MainCourseNavigator";
 
 
 const Stack = createNativeStackNavigator();
@@ -78,6 +79,26 @@ const CategoriesScreen = () => {
             <Stack.Screen
                 name="DinnerNav"
                 component={AllDinnerScreen}
+                options={{ headerShown: false }}
+            />
+            {/* <Stack.Screen
+                name="AppetizerNav"
+                component={AllDinnerScreen}
+                options={{ headerShown: false }}
+            />
+            <Stack.Screen
+                name="DessertNav"
+                component={AllDinnerScreen}
+                options={{ headerShown: false }}
+            />
+            <Stack.Screen
+                name="BreadNav"
+                component={AllDinnerScreen}
+                options={{ headerShown: false }}
+            /> */}
+            <Stack.Screen
+                name="MainCourseNav"
+                component={AllMainCourseScreen}
                 options={{ headerShown: false }}
             />
 

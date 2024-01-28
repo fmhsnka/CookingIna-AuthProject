@@ -30,32 +30,27 @@ const MainCourseScreen = () => {
     };
 
     const navigateToRecipe = (recipeName) => {
-        navigation.navigate('HomeRecipeNavigator', {
-            screen: `${recipeName}`,
+        navigation.navigate('MainCourseNav', {
+            screen: recipeName,
         });
     };
 
     const handleRecipePress = (recipeName) => {
         switch (recipeName) {
             case 'Baby Back Ribs':
-                // navigateToRecipe('AdoboScreen');
-                console.log('WORKING')
+                navigateToRecipe('Baby Back Ribs');
                 break;
             case 'Lumpiang Shanghai':
-                // navigateToRecipe('LumpiaShanghaiScreen');
-                console.log('WORKING')
+                navigateToRecipe('Lumpiang Shanghai');
                 break;
             case 'Rellenong Manok':
-                // navigateToRecipe('BistekScreen');
-                console.log('WORKING')
+                navigateToRecipe('Rellenong Manok');
                 break;
             case 'Grilled Tuna Belly':
-                // navigateToRecipe('TortalongScreen');
-                console.log('WORKING')
+                navigateToRecipe('Grilled Tuna Belly');
                 break;
             case 'Chicken Adobo':
-                // navigateToRecipe('MacaroniScreen');
-                console.log('WORKING')
+                navigateToRecipe('Chicken Adobo');
                 break;
             default:
                 break;

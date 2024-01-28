@@ -27,7 +27,7 @@ const Lumpiang_Shanghai = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Lumpiang Shanghai</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/lumpia.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../../img/category-recipe/MAIN/lumpia.jpg')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
