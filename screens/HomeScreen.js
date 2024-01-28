@@ -248,7 +248,7 @@ const HomeScreen = () => {
                             // navigation.navigate('ViewAllRecipes')
                             console.log('VIEW ALL GOODS')
                         }>
-                            <Text style={homeStyles.viewAllText}>View All ></Text>
+                            <Text style={homeStyles.viewAllText}>View All &gt;</Text>
                         </TouchableOpacity>
                     </View>
                     {recommendedRecipes.map((recipe) => (
