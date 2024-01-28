@@ -10,11 +10,11 @@ const DessertsScreen = () => {
 
 
     const recommendedRecipes = [
-        { name: 'Sweet Macaroni Salad', time: '12 min', calories: 442, image: require('../../img/category-recipe/DESSERT/macaroni.jpg') },
-        { name: 'Bibingka', time: '35 min', calories: 734, image: require('../../img/category-recipe/DESSERT/Bibingka.png') },
-        { name: 'Banana Bread', time: '1 hr', calories: 359, image: require('../../img/category-recipe/DESSERT/BananaBread.png') },
-        { name: 'Buko Pandan', time: '10 min', calories: 613, image: require('../../img/category-recipe/DESSERT/BukoPandan.png') },
-        { name: 'Fruit Cocktail Float', time: '1 min', calories: 307, image: require('../../img/category-recipe/DESSERT/FruitCocktailFloat.png') },
+        { name: 'Sweet Macaroni Salad', time: '20min', calories: 738, image: require('../../img/category-recipe/DESSERT/macaroni.jpg') },
+        { name: 'Bibingka', time: '45min', calories: 734, image: require('../../img/category-recipe/DESSERT/Bibingka.png') },
+        { name: 'Banana Bread', time: '1hr 10min', calories: 359, image: require('../../img/category-recipe/DESSERT/BananaBread.png') },
+        { name: 'Buko Pandan', time: '20min', calories: 613, image: require('../../img/category-recipe/DESSERT/BukoPandan.png') },
+        { name: 'Fruit Cocktail Float', time: '22min', calories: 307, image: require('../../img/category-recipe/DESSERT/FruitCocktailFloat.png') },
     ];
 
     const handleHeartPress = (recipeName) => {

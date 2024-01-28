@@ -10,11 +10,11 @@ const BeverageScreen = () => {
 
 
     const recommendedRecipes = [
-        { name: 'Calamansi Juice', time: '10 min', calories: 106, image: require('../../img/category-recipe/BEVERAGE/CalamansiJuice.png') },
-        { name: 'Buko Shake', time: '10 min', calories: 292, image: require('../../img/category-recipe/BEVERAGE/BukoShake.png') },
-        { name: 'Tsokolate', time: '10 min', calories: 359, image: require('../../img/category-recipe/BEVERAGE/Tsokolate.png') },
-        { name: 'Melon Juice', time: '5 min', calories: 311, image: require('../../img/category-recipe/BEVERAGE/MelonJuice.png') },
-        { name: 'Mango Juice', time: '5 min', calories: 245, image: require('../../img/category-recipe/BEVERAGE/MangoJuice.png') },
+        { name: 'Calamansi Juice', time: '15min', calories: 106, image: require('../../img/category-recipe/BEVERAGE/CalamansiJuice.png') },
+        { name: 'Buko Shake', time: '10min', calories: 292, image: require('../../img/category-recipe/BEVERAGE/BukoShake.png') },
+        { name: 'Tsokolate', time: '15min', calories: 464, image: require('../../img/category-recipe/BEVERAGE/Tsokolate.png') },
+        { name: 'Melon Juice', time: '20min', calories: 311, image: require('../../img/category-recipe/BEVERAGE/MelonJuice.png') },
+        { name: 'Mango Juice', time: '9min', calories: 167, image: require('../../img/category-recipe/BEVERAGE/MangoJuice.png') },
     ];
 
     const handleHeartPress = (recipeName) => {

@@ -10,11 +10,11 @@ const BreadScreen = () => {
 
 
     const recommendedRecipes = [
-        { name: 'Pandesal', time: '15 min', calories: 73, image: require('../../img/category-recipe/BREAD/pandesal.jpg') },
-        { name: 'Ensaymada', time: '15 min', calories: 235, image: require('../../img/category-recipe/BREAD/Ensaymada.png') },
-        { name: 'Monay', time: '25 min', calories: 249, image: require('../../img/category-recipe/BREAD/Monay.png') },
-        { name: 'Ube Cheese Pandesal', time: '20 min', calories: 228, image: require('../../img/category-recipe/BREAD/UbeCheesePandesal.png') },
-        { name: 'Star Bread', time: '1 min', calories: 307, image: require('../../img/category-recipe/BREAD/StarBread.png') },
+        { name: 'Pandesal', time: '1hr 45min', calories: 856, image: require('../../img/category-recipe/BREAD/pandesal.jpg') },
+        { name: 'Ensaymada', time: '35min', calories: 235, image: require('../../img/category-recipe/BREAD/Ensaymada.png') },
+        { name: 'Monay', time: '2hr', calories: 249, image: require('../../img/category-recipe/BREAD/Monay.png') },
+        { name: 'Ube Cheese Pandesal', time: '3hrs 20min', calories: 228, image: require('../../img/category-recipe/BREAD/UbeCheesePandesal.png') },
+        { name: 'Star Bread', time: '2hrs 18min', calories: 307, image: require('../../img/category-recipe/BREAD/StarBread.png') },
     ];
 
     const handleHeartPress = (recipeName) => {

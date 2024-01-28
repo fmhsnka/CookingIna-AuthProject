@@ -10,11 +10,11 @@ const AppetizerScreen = () => {
 
 
     const recommendedRecipes = [
-        { name: 'Chicken Dynamite Lumpia', time: '28 min', calories: 442, image: require('../../img/category-recipe/APPETIZER/Dynamite.png') },
-        { name: 'Tuna Kilawin', time: '1 min', calories: 225, image: require('../../img/category-recipe/APPETIZER/Tuna-Kilawin.png') },
-        { name: 'Cheesy Onion Rings', time: '7 min', calories: 1388, image: require('../../img/category-recipe/APPETIZER/CheesyOnionRings.png') },
-        { name: 'Loaded Nachos', time: '15 min', calories: 729, image: require('../../img/category-recipe/APPETIZER/LoadedNachos.png') },
-        { name: 'Chicken Siomai', time: '25 min', calories: 129, image: require('../../img/category-recipe/APPETIZER/ChickenSiomai.png') },
+        { name: 'Chicken Dynamite Lumpia', time: '28min', calories: 563, image: require('../../img/category-recipe/APPETIZER/Dynamite.png') },
+        { name: 'Tuna Kilawin', time: '1hr 1min', calories: 225, image: require('../../img/category-recipe/APPETIZER/Tuna-Kilawin.png') },
+        { name: 'Cheesy Onion Rings', time: '7min', calories: 1388, image: require('../../img/category-recipe/APPETIZER/CheesyOnionRings.png') },
+        { name: 'Loaded Nachos', time: '15min', calories: 729, image: require('../../img/category-recipe/APPETIZER/LoadedNachos.png') },
+        { name: 'Chicken Siomai', time: '25min', calories: 129, image: require('../../img/category-recipe/APPETIZER/ChickenSiomai.png') },
     ];
 
     const handleHeartPress = (recipeName) => {

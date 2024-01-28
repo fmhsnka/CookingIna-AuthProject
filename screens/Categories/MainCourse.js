@@ -10,11 +10,11 @@ const MainCourseScreen = () => {
 
 
     const recommendedRecipes = [
-        { name: 'Baby Back Ribs', time: '2 hr', calories: 317, image: require('../../img/category-recipe/MAIN/BabyBackRibs.png') },
-        { name: 'Lumpiang Shanghai', time: '6 min', calories: 619, image: require('../../img/category-recipe/MAIN/lumpia.jpg') },
-        { name: 'Rellenong Manok', time: '1 hr', calories: 558, image: require('../../img/category-recipe/MAIN/RellenongManok.png') },
-        { name: 'Grilled Tuna Belly', time: '10 min', calories: 287, image: require('../../img/category-recipe/MAIN/GrilledTunaBelly.png') },
-        { name: 'Chicken Adobo', time: '35 min', calories: 607, image: require('../../img/category-recipe/MAIN/adobo.jpg') },
+        { name: 'Baby Back Ribs', time: '2hr', calories: 317, image: require('../../img/category-recipe/MAIN/BabyBackRibs.png') },
+        { name: 'Lumpiang Shanghai', time: '8min', calories: 619, image: require('../../img/category-recipe/MAIN/lumpia.jpg') },
+        { name: 'Rellenong Manok', time: '1hr', calories: 558, image: require('../../img/category-recipe/MAIN/RellenongManok.png') },
+        { name: 'Grilled Tuna Belly', time: '10min', calories: 287, image: require('../../img/category-recipe/MAIN/GrilledTunaBelly.png') },
+        { name: 'Chicken Adobo', time: '35min', calories: 607, image: require('../../img/category-recipe/MAIN/adobo.jpg') },
     ];
 
     const handleHeartPress = (recipeName) => {

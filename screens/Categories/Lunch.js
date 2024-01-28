@@ -10,11 +10,11 @@ const LunchScreen = () => {
 
 
     const recommendedRecipes = [
-        { name: 'Pinoy Chicken Curry', time: '1 hr', calories: 497, image: require('../../img/category-recipe/LUNCH/Chicken-Curry.png') },
-        { name: 'Bam-I (Pancit Bisaya)', time: '40 min', calories: 619, image: require('../../img/category-recipe/LUNCH/Bam-I.png') },
-        { name: 'Chicken Gising-gising', time: '35 min', calories: 739, image: require('../../img/category-recipe/LUNCH/Chicken-Gising.png') },
-        { name: 'Filipino Style Escabeche', time: '30 min', calories: 739, image: require('../../img/category-recipe/LUNCH/Escabeche.png') },
-        { name: 'Bangus Sisig', time: '25 min', calories: 416, image: require('../../img/category-recipe/LUNCH/Bangus-Sisig.png') },
+        { name: 'Pinoy Chicken Curry', time: '1hr 10min', calories: 497, image: require('../../img/category-recipe/LUNCH/Chicken-Curry.png') },
+        { name: 'Bam-I (Pancit Bisaya)', time: '50min', calories: 496, image: require('../../img/category-recipe/LUNCH/Bam-I.png') },
+        { name: 'Chicken Gising-gising', time: '35min', calories: 739, image: require('../../img/category-recipe/LUNCH/Chicken-Gising.png') },
+        { name: 'Filipino Style Escabeche', time: '30min', calories: 598, image: require('../../img/category-recipe/LUNCH/Escabeche.png') },
+        { name: 'Bangus Sisig', time: '35min', calories: 416, image: require('../../img/category-recipe/LUNCH/Bangus-Sisig.png') },
     ];
 
     const handleHeartPress = (recipeName) => {

@@ -10,11 +10,11 @@ const DinnerScreen = () => {
 
 
     const recommendedRecipes = [
-        { name: 'Chicken Adobo', time: '35 min', calories: 607, image: require('../../img/category-recipe/DINNER/adobo.jpg') },
-        { name: 'Lumpiang Shanghai', time: '8 min', calories: 619, image: require('../../img/category-recipe/DINNER/lumpia.jpg') },
-        { name: 'Chicken Gising-gising', time: '35 min', calories: 739, image: require('../../img/category-recipe/DINNER/Chicken-Gising.png') },
-        { name: 'Filipino Style Escabeche', time: '30 min', calories: 739, image: require('../../img/category-recipe/DINNER/Escabeche.png') },
-        { name: 'Tortang Talong', time: '12 min', calories: 187, image: require('../../img/category-recipe/DINNER/talong.png') },
+        { name: 'Chicken Adobo', time: '35min', calories: 607, image: require('../../img/category-recipe/DINNER/adobo.jpg') },
+        { name: 'Lumpiang Shanghai', time: '8min', calories: 619, image: require('../../img/category-recipe/DINNER/lumpia.jpg') },
+        { name: 'Chicken Gising-gising', time: '35min', calories: 739, image: require('../../img/category-recipe/DINNER/Chicken-Gising.png') },
+        { name: 'Filipino Style Escabeche', time: '30min', calories: 598, image: require('../../img/category-recipe/DINNER/Escabeche.png') },
+        { name: 'Tortang Talong', time: '27min', calories: 579, image: require('../../img/category-recipe/DINNER/talong.png') },
     ];
 
     const handleHeartPress = (recipeName) => {

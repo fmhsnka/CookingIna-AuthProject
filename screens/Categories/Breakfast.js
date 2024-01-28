@@ -10,11 +10,11 @@ const BreakfastScreen = () => {
 
 
     const recommendedRecipes = [
-        { name: 'Filipino Omelet', time: '8 min', calories: 113, image: require('../../img/category-recipe/BREAKFAST/omelet.jpg') },
-        { name: 'Corned Beef Silog', time: '30 min', calories: 405, image: require('../../img/category-recipe/BREAKFAST/cornsilog.jpg') },
-        { name: 'Chicken Fried Rice', time: '20 min', calories: 531, image: require('../../img/category-recipe/BREAKFAST/friedrice.jpg') },
-        { name: 'Hotsilog', time: '20 min', calories: 307, image: require('../../img/category-recipe/BREAKFAST/hotsilog.jpg') },
-        { name: 'Picadillo', time: '40 min', calories: 686, image: require('../../img/category-recipe/BREAKFAST/picadillo.jpg') },
+        { name: 'Filipino Omelet', time: '13min', calories: 113, image: require('../../img/category-recipe/BREAKFAST/omelet.jpg') },
+        { name: 'Corned Beef Silog', time: '35min', calories: 1950, image: require('../../img/category-recipe/BREAKFAST/cornsilog.jpg') },
+        { name: 'Chicken Fried Rice', time: '25min', calories: 531, image: require('../../img/category-recipe/BREAKFAST/friedrice.jpg') },
+        { name: 'Hotsilog', time: '25min', calories: 3364, image: require('../../img/category-recipe/BREAKFAST/hotsilog.jpg') },
+        { name: 'Picadillo', time: '50min', calories: 686, image: require('../../img/category-recipe/BREAKFAST/picadillo.jpg') },
     ];
 
     const handleHeartPress = (recipeName) => {
