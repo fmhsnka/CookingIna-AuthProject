@@ -4,7 +4,7 @@ import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
 import recipeStyles from '../../styles/RecipeScreenStyles';
 
-const Chicken_Gising_Gising = ({ navigation }) => {
+const Lumpiang_Shanghai = ({ navigation }) => {
     return (
         <View style={recipeStyles.backgroundContainer}>
             <ScrollView contentContainerStyle={recipeStyles.scrollView}>
@@ -25,23 +25,23 @@ const Chicken_Gising_Gising = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <Text style={recipeStyles.recipeName}>Chicken Gising-gising</Text>
+                            <Text style={recipeStyles.recipeName}>Lumpiang Shanghai</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../img/recipes/lumpia.jpg')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="time-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>35 mins</Text>
+                                <Text style={recipeStyles.detailText}>8 mins</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="flame-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>739kcal</Text>
+                                <Text style={recipeStyles.detailText}>619kcal</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="person-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>4 Servings</Text>
+                                <Text style={recipeStyles.detailText}>6 Servings</Text>
                             </View>
                         </View>
                     </View>
@@ -53,37 +53,40 @@ const Chicken_Gising_Gising = ({ navigation }) => {
                         </View>
                         <View style={recipeStyles.listingreContainer}>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 lbs. Chicken (cut into serving pieces)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1.13 kg ground pork
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 90 grams Knorr Ginataang Gulay Mix
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 piece Knorr Pork Cube
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1/2 lb. winged bean (sigarilyas, sliced)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 50 pieces lumpia wrapper
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 long green chili pepper (sliced)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 96 g carrot minced
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 5 Thai chili pepper (optional)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 piece onions minced
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 tbsp shrimp paste
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 pieces eggs
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 cups water
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 15 g parsley minced
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 onion (chopped)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 0.5 teaspoon ground pepper
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 5 cloves garlic (chopped)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 teaspoon salt
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 thumbs ginger (chopped)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 teaspoon Sesame oil
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 tbsp cooking oil
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 teaspoon garlic powder
+                            </Text>
+                            <Text style={recipeStyles.listItem}>
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 448 g cooking oil
                             </Text>
                         </View>
 
@@ -96,43 +99,37 @@ const Chicken_Gising_Gising = ({ navigation }) => {
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>1</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Heat oil in a pan. Sauté garlic, onion, and ginger.
+                                    Combine ground pork, carrot, onion, and parsley in a bowl. Mic well.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>2</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add chicken pieces. Stir fry until the exterior turns light brown in color.
+                                    Add egg, ground black pepper, salt, garlic, powder, and Sesame oil. Continue to mix until the ingredients are well blended.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>3</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add 1 cup water. Let boil.
+                                    Crush the Knorr pork cube and add it into the mixture. Blend the ingredients altogether completely.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>4</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Combine Knorr Ginataang Gulay Mix with 2 cups water. Mix well and then pour into the pan. Cover and continue cooking between low to medium heat setting for 20 minutes.
+                                    Put 1 to 1 1/2 tablespoons of meat mixture over a piece of lumpia wrapper. Wrap and roll to secure the mixture. Continue this step until the mixture is completely consumed. Note: watch the video below to see how.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>5</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add shrimp paste, long green pepper, and winged beans. Cover the pan and continue cooking for 5 minutes.
+                                    Heat oil in a cooking pot in low to medium heat. Deep fry the lumpia until it turns golden brown. Remove from the pot and place in a plate lined with paper towel.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>6</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add Thai chili peppers if desired. Cook for 2 minutes more.
-                                </Text>
-                            </View>
-                            <View style={recipeStyles.stepContainer}>
-                                <Text style={recipeStyles.stepNumber}>7</Text>
-                                <Text style={recipeStyles.stepText}>
-                                    Transfer to a serving bowl. Serve hot with rice.. Share and enjoy!
+                                    Transfer to a serving plate. Serve with sweet and sour sauce. Share and enjoy!
                                 </Text>
                             </View>
                         </View>
@@ -143,4 +140,4 @@ const Chicken_Gising_Gising = ({ navigation }) => {
     );
 };
 
-export default Chicken_Gising_Gising;
+export default Lumpiang_Shanghai;

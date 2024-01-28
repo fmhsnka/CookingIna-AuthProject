@@ -4,7 +4,7 @@ import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
 import recipeStyles from '../../styles/RecipeScreenStyles';
 
-const Filipino_Style_Escabeche = ({ navigation }) => {
+const Tortalong = ({ navigation }) => {
     return (
         <View style={recipeStyles.backgroundContainer}>
             <ScrollView contentContainerStyle={recipeStyles.scrollView}>
@@ -25,23 +25,23 @@ const Filipino_Style_Escabeche = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <Text style={recipeStyles.recipeName}>Filipino Style Escabeche</Text>
+                            <Text style={recipeStyles.recipeName}>Tortang Talong</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../img/recipes/talong.png')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="time-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>30 mins</Text>
+                                <Text style={recipeStyles.detailText}>27 mins</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="flame-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>598kcal</Text>
+                                <Text style={recipeStyles.detailText}>579kcal</Text>
                             </View>
                             <View style={recipeStyles.detailItem}>
                                 <Ionicons name="person-outline" style={recipeStyles.detailIcon} />
-                                <Text style={recipeStyles.detailText}>5 Servings</Text>
+                                <Text style={recipeStyles.detailText}>4 Servings</Text>
                             </View>
                         </View>
                     </View>
@@ -53,60 +53,16 @@ const Filipino_Style_Escabeche = ({ navigation }) => {
                         </View>
                         <View style={recipeStyles.listingreContainer}>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 lbs fish (large) sliced into serving pieces
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 4 pieces Eggplan
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3/4 cup cooking oil
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 pieces raw eggs
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 tbsp salt
-                            </Text>
-
-                        </View>
-
-                        <View style={recipeStyles.sectionTitleCont}>
-                            <Text style={recipeStyles.sectionTitle}> Sauce Ingredients</Text>
-                        </View>
-                        
-                            <View style={recipeStyles.listingreContainer}>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 onion (thinly sliced)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 teaspoon salt
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 cloves garlic (chopped)
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 thumbs ginger (julienne)
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 red bell pepper (julienne)
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 green bell pepper (julienne)
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 carrot (julienne)
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 tbsp white vinegar
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 4 tbsp banana ketchup
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 tbsp white sugar
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 cup water
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 tbsp cornstarch
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 tbsp cooking oil
-                            </Text>
-                            <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> Salt and ground black peeperto taste
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 6 tablespoon cooking oil
                             </Text>
 
                         </View>
@@ -120,55 +76,49 @@ const Filipino_Style_Escabeche = ({ navigation }) => {
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>1</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Rub salt all over the fish slices. Let it stand for 5 minutes.
+                                    Grill the eggplant unitl the color of skin turns almost black.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>2</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Heat cooking oil. Fry both sides of the fish until it turns golden brown in color. Remove the fish from the pan and arrange on a serving plate.
+                                   Let the eggplant cool for a while then peel off the skin. Set aside.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>3</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Make the escabeche sauce by heating 2 tablespoons of oil in a pan. Sauté garlic and onion until the latter softens.
+                                    Crack the eggs and place in a bowl.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>4</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Add tomato ketchup, vinegar, sugar, and water. Stir and let boil.
+                                    Add salt. and beat.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>5</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Put the bell peppers and carrots into the pan. Cook for 3 minutes.
+                                    Place the eggplant on a flat surface and flatten using a fork.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>6</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Season with salt and pepper.
+                                   Dip the flattened eggplant in the beaten egg mixture.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
                                 <Text style={recipeStyles.stepNumber}>7</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Combine cornstarch with 2 tablespoons of water. Mix well. Pour the mixture into the pan. Stir until the sauce thickens to your desired consistency.
+                                    Heat the pan and pour the cooking oil.
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
-                                <Text style={recipeStyles.stepNumber}>7</Text>
+                                <Text style={recipeStyles.stepNumber}>8</Text>
                                 <Text style={recipeStyles.stepText}>
-                                    Pour the escabeche sauce over the fried fish. Serve warm.
-                                </Text>
-                            </View>
-                            <View style={recipeStyles.stepContainer}>
-                                <Text style={recipeStyles.stepNumber}>7</Text>
-                                <Text style={recipeStyles.stepText}>
-                                    Share and enjoy!
+                                    Fry the egg plant (that ws dipped in the beaten mixture). Makes sure that both sides are cooked. Frying time will take about 3 to 4 minutes per side on medium heat.
                                 </Text>
                             </View>
                         </View>
@@ -179,4 +129,4 @@ const Filipino_Style_Escabeche = ({ navigation }) => {
     );
 };
 
-export default Filipino_Style_Escabeche;
+export default Tortalong;
