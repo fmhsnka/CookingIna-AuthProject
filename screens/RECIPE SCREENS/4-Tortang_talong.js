@@ -27,7 +27,7 @@ const Tortalong = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Tortang Talong</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../img/recipes/talong.png')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>

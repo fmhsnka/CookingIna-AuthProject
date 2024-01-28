@@ -124,6 +124,12 @@ const HomeScreen = () => {
         });
     };
 
+    const navigateToRecipe = (recipeName) => {
+        navigation.navigate('HomeRecipeNavigator', {
+            screen: `${recipeName}`,
+        });
+    };
+
     const handleCategoryPress = (categoryName) => {
         // Navigate to the corresponding screen based on the category name
         switch (categoryName) {
@@ -167,27 +173,27 @@ const HomeScreen = () => {
     const handleRecipePress = (recipeName) => {
         switch (recipeName) {
             case 'Chicken Adobo':
-                navigation.navigate('AdoboScreen');
+                navigateToRecipe('AdoboScreen');
                 // console.log('WORKING')
                 break;
             case 'Lumpiang Shanghai':
-                navigation.navigate('LumpiaShanghaiScreen');
+                navigateToRecipe('LumpiaShanghaiScreen');
                 // console.log('WORKING')
                 break;
             case 'Filipino Style Beef Steak':
-                navigation.navigate('BistekScreen');
+                navigateToRecipe('BistekScreen');
                 // console.log('WORKING')
                 break;
             case 'Tortang Talong':
-                navigation.navigate('TortalongScreen');
+                navigateToRecipe('TortalongScreen');
                 // console.log('WORKING')
                 break;
             case 'Sweet Macaroni Salad':
-                navigation.navigate('MacaroniScreen');
+                navigateToRecipe('MacaroniScreen');
                 // console.log('WORKING')
                 break;
             case 'Pandesal':
-                navigation.navigate('PandesalScreen');
+                navigateToRecipe('PandesalScreen');
                 // console.log('WORKING')
                 break;
             default:
@@ -200,7 +206,7 @@ const HomeScreen = () => {
             <ScrollView contentContainerStyle={homeStyles.scrollView}>
                 <View style={homeStyles.container}>
                     <View style={homeStyles.headerIcons}>
-                        <TouchableOpacity onPress={() => navigation.navigate('Menu')}>
+                        <TouchableOpacity onPress={() => navigateToRecipe('Menu')}>
                             <Ionicons
                                 name="menu"
                                 size={35}
@@ -238,9 +244,9 @@ const HomeScreen = () => {
                     </View>
                     <View style={homeStyles.recommendedRecipesContainer}>
                         <Text style={homeStyles.recommendedRecipesTitle}>Recommended Recipes</Text>
-                        <TouchableOpacity onPress={() => 
-                        // navigation.navigate('ViewAllRecipes')
-                        console.log('VIEW ALL GOODS')
+                        <TouchableOpacity onPress={() =>
+                            // navigation.navigate('ViewAllRecipes')
+                            console.log('VIEW ALL GOODS')
                         }>
                             <Text style={homeStyles.viewAllText}>View All ></Text>
                         </TouchableOpacity>

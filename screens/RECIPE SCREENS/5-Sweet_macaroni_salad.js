@@ -27,7 +27,7 @@ const Ronimaca = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Sweet Macaroni Salad</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../img/recipes/macaroni.jpg')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>

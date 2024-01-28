@@ -201,7 +201,7 @@ const Menu = () => {
                                 } else if (item.title === 'About') {
                                     handleHelpPress();
                                 } else if (item.title === 'Add Recipe') {
-                                    Alert.alert('Feature Not Yet Available', 'Feature will be available in the next update.');
+                                    Alert.alert('Feature Not Yet Available', 'Feature will be available in future updates.');
                                 }
                                 else {
                                 }

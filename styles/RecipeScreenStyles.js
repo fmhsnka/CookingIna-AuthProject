@@ -74,7 +74,7 @@ const recipeStyles = StyleSheet.create({
     detailsContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        padding: 25,
+        padding: 20,
         marginBottom: 10,
     },
     detailItem: {

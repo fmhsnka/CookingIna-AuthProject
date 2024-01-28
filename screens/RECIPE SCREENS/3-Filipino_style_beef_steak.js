@@ -25,7 +25,7 @@ const BISTEK = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <Text style={recipeStyles.recipeName}>Chicken Adobo</Text>
+                            <Text style={recipeStyles.recipeName}>Filipino Style Beef Steak</Text>
                             <View style={recipeStyles.recipeImageContainer}>
                                 <Image source={require('../../img/recipes/bistek.jpg')} style={recipeStyles.recipeImage} />
                             </View>

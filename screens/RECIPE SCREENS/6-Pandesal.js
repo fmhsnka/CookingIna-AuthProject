@@ -27,7 +27,7 @@ const Pandesal = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Pandesal</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../img/recipes/pandesal.jpg')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
