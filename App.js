@@ -14,6 +14,8 @@ import HomeRecipeNavigator from "./screens/Navigations/HomeRecipeNavigator";
 import DinnerScreen from "./screens/Categories/Dinner";
 import DessertsScreen from "./screens/Categories/Desserts";
 import BreadScreen from "./screens/Categories/Bread";
+import MainCourseScreen from "./screens/Categories/MainCourse";
+import BeverageScreen from "./screens/Categories/Beverage";
 
 
 const Stack = createNativeStackNavigator();
@@ -44,7 +46,7 @@ function App() {
         />
         <Stack.Screen
           name="Appetizer"
-          component={BreadScreen}
+          component={BeverageScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen
