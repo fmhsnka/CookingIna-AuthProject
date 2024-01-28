@@ -74,7 +74,7 @@ const Ronimaca = ({ navigation }) => {
                                 <FontAwesome name="circle" size={18} color="#FFBA00" /> 2 scoops vanilla ice cream (optional)
                             </Text>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1/2 cup sago pearls, cooked (optional)
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 1/2 cup sago pearls, (cooked (optional))
                             </Text>
                         </View>
 
