@@ -53,7 +53,7 @@ const Ensaymada = ({ navigation }) => {
                         </View>
                         <View style={recipeStyles.listingreContainer}>
                             <Text style={recipeStyles.listItem}>
-                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 5 cu[s all-purpose flour]
+                                <FontAwesome name="circle" size={18} color="#FFBA00" /> 5 cups all-purpose flour
                             </Text>
                             <Text style={recipeStyles.listItem}>
                                 <FontAwesome name="circle" size={18} color="#FFBA00" /> 3/4 cup butter (melted)
