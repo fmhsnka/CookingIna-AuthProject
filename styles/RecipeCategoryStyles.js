@@ -175,7 +175,6 @@ const RecipeCategory = StyleSheet.create({
         position: 'relative',
         marginTop: 30,
     },
-
     screenTitle: {
         fontSize: 30,
         fontFamily: 'Poppins_600SemiBold',

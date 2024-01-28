@@ -14,6 +14,7 @@ import Menu from "../Menu";
 import UserProfileScreen from "../UserProfile";
 import AboutScreen from "../About";
 import SettingsScreen from "../Settings";
+import FavoritesScreen from "../Favorites";
 
 const Stack = createNativeStackNavigator();
 
@@ -63,11 +64,11 @@ const HomeRecipeNavigator = () => {
                 component={UserProfileScreen}
                 options={{ headerShown: false }}
             />
-            {/* <Stack.Screen
-                name="Favorties"
-                component={SettingsScreen}
+            <Stack.Screen
+                name="Favorites"
+                component={FavoritesScreen}
                 options={{ headerShown: false }}
-            /> */}
+            />
             <Stack.Screen
                 name="Settings"
                 component={SettingsScreen}
