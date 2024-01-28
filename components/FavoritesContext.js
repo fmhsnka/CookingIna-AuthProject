@@ -1,17 +1,19 @@
+// FavoritesContext.js
+
+import React, { createContext, useContext, useState } from 'react';
+
+const FavoritesContext = createContext();
+
 export const FavoritesProvider = ({ children }) => {
     const [pressedRecipes, setPressedRecipes] = useState([]);
 
-    const toggleFavorite = async (recipeName) => {
+    const toggleFavorite = (recipeName) => {
         setPressedRecipes((prevPressedRecipes) => {
-            const isPressed = prevPressedRecipes.includes(recipeName);
-            const updatedRecipes = isPressed
-                ? prevPressedRecipes.filter((name) => name !== recipeName)
-                : [...prevPressedRecipes, recipeName];
-
-            // Update Firestore collection
-            firestore().collection('userFavorites').doc('userId').set({ recipes: updatedRecipes });
-
-            return updatedRecipes;
+            if (prevPressedRecipes.includes(recipeName)) {
+                return prevPressedRecipes.filter((name) => name !== recipeName);
+            } else {
+                return [...prevPressedRecipes, recipeName];
+            }
         });
     };
 
@@ -20,4 +22,12 @@ export const FavoritesProvider = ({ children }) => {
             {children}
         </FavoritesContext.Provider>
     );
+};
+
+export const useFavorites = () => {
+    const context = useContext(FavoritesContext);
+    if (!context) {
+        throw new Error('useFavorites must be used within a FavoritesProvider');
+    }
+    return context;
 };

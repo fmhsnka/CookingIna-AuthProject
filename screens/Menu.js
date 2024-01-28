@@ -113,7 +113,7 @@ const Menu = () => {
     };
 
     const handleFavoritesPress = () => {
-        navigation.navigate('Favorites');
+        Alert.alert('Feature Not Available', 'Feature will be available soon.');
     };
 
     const handleSettingsPress = () => {
