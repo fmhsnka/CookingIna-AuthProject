@@ -166,7 +166,7 @@ const Filipino_Style_Escabeche = ({ navigation }) => {
                                 </Text>
                             </View>
                             <View style={recipeStyles.stepContainer}>
-                                <Text style={recipeStyles.stepNumber}>7</Text>
+                                <Text style={recipeStyles.stepNumber}>8</Text>
                                 <Text style={recipeStyles.stepText}>
                                     Share and enjoy!
                                 </Text>
