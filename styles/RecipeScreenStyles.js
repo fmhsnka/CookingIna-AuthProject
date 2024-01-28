@@ -133,6 +133,9 @@ const recipeStyles = StyleSheet.create({
     sectionTitleContDirect: {
         marginTop: 20,
     },
+    saucebg: {
+        color: 'white',
+    },
 });
 
 export default recipeStyles;

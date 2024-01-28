@@ -86,9 +86,9 @@ const HomeScreen = () => {
             { name: 'Appetizer', icon: require('../img/categories/appetizer.png') },
         ],
         [
-            { name: 'Main', icon: require('../img/categories/main-course.png') },
             { name: 'Dessert', icon: require('../img/categories/cake.png') },
             { name: 'Bread', icon: require('../img/categories/bread.png') },
+            { name: 'Main', icon: require('../img/categories/main-course.png') },
             { name: 'Beverage', icon: require('../img/categories/beverage.png') },
         ],
     ];
@@ -130,39 +130,45 @@ const HomeScreen = () => {
         });
     };
 
+    const navigateToCategory = (categoryName) => {
+        navigation.navigate('CategoryScreens', {
+            screen: `${categoryName}`,
+        });
+    };
+
     const handleCategoryPress = (categoryName) => {
         // Navigate to the corresponding screen based on the category name
         switch (categoryName) {
             case 'Breakfast':
-                // navigation.navigate('BreakfastScreen');
+                navigateToCategory('Breakfast');
                 console.log('BREAKFAST WORKING')
                 break;
-            case 'Dinner':
-                // navigation.navigate('DinnerScreen');
+            case 'Lunch':
+                navigateToCategory('Lunch');
                 console.log('DINNER WORKING')
                 break;
-            case 'Lunch':
-                // navigation.navigate('DinnerScreen');
+            case 'Dinner':
+                navigateToCategory('Dinner');
                 console.log('LUNCH WORKING')
                 break;
             case 'Appetizer':
-                // navigation.navigate('DinnerScreen');
+                navigateToCategory('Appetizer');
                 console.log('APPETIZER WORKING')
                 break;
             case 'Dessert':
-                // navigation.navigate('DinnerScreen');
+                navigateToCategory('Desserts');
                 console.log('DESSERT WORKING')
                 break;
             case 'Bread':
-                // navigation.navigate('DinnerScreen');
+                navigateToCategory('Bread');
                 console.log('BREAD WORKING')
                 break;
             case 'Main':
-                // navigation.navigate('DinnerScreen');
+                navigateToCategory('Main');
                 console.log('MAIN WORKING')
                 break;
             case 'Beverage':
-                // navigation.navigate('DinnerScreen');
+                navigateToCategory('Beverage');
                 console.log('BEVERAGE WORKING')
                 break;
             default:

@@ -4,7 +4,7 @@ import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
 import recipeStyles from '../../../styles/RecipeScreenStyles';
 
-const Bngus_Sisig = ({ navigation }) => {
+const Bangus_Sisig = ({ navigation }) => {
     return (
         <View style={recipeStyles.backgroundContainer}>
             <ScrollView contentContainerStyle={recipeStyles.scrollView}>
@@ -25,9 +25,9 @@ const Bngus_Sisig = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <Text style={recipeStyles.recipeName}>Bngus Sisig</Text>
+                            <Text style={recipeStyles.recipeName}>Bangus Sisig</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../../img/category-recipe/LUNCH/Bangus-Sisig.png')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
@@ -159,4 +159,4 @@ const Bngus_Sisig = ({ navigation }) => {
     );
 };
 
-export default Bngus_Sisig;
+export default Bangus_Sisig;

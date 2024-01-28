@@ -30,32 +30,27 @@ const LunchScreen = () => {
     };
 
     const navigateToRecipe = (recipeName) => {
-        navigation.navigate('HomeRecipeNavigator', {
-            screen: `${recipeName}`,
+        navigation.navigate('LunchNav', {
+            screen: recipeName,
         });
     };
 
     const handleRecipePress = (recipeName) => {
         switch (recipeName) {
             case 'Pinoy Chicken Curry':
-                // navigateToRecipe('AdoboScreen');
-                console.log('WORKING')
+                navigateToRecipe('Pinoy Chicken Curry');
                 break;
             case 'Bam-I (Pancit Bisaya)':
-                // navigateToRecipe('LumpiaShanghaiScreen');
-                console.log('WORKING')
+                navigateToRecipe('Bam-I (Pancit Bisaya)');
                 break;
             case 'Chicken Gising-gising':
-                // navigateToRecipe('BistekScreen');
-                console.log('WORKING')
+                navigateToRecipe('Chicken Gising-gising');
                 break;
             case 'Filipino Style Escabeche':
-                // navigateToRecipe('TortalongScreen');
-                console.log('WORKING')
+                navigateToRecipe('Filipino Style Escabeche');
                 break;
             case 'Bangus Sisig':
-                // navigateToRecipe('MacaroniScreen');
-                console.log('WORKING')
+                navigateToRecipe('Bangus Sisig');
                 break;
             default:
                 break;

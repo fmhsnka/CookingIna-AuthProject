@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { Ionicons, AntDesign, FontAwesome } from 'react-native-vector-icons';
 
-import recipeStyles from '../../styles/RecipeScreenStyles';
+import recipeStyles from '../../../styles/RecipeScreenStyles';
 
 const Chicken_Fried_Rice = ({ navigation }) => {
     return (
@@ -27,7 +27,7 @@ const Chicken_Fried_Rice = ({ navigation }) => {
                             </View>
                             <Text style={recipeStyles.recipeName}>Chicken Fried Rice</Text>
                             <View style={recipeStyles.recipeImageContainer}>
-                                <Image source={require('../../img/recipes/adobo.jpg')} style={recipeStyles.recipeImage} />
+                                <Image source={require('../../../img/category-recipe/BREAKFAST/friedrice.jpg')} style={recipeStyles.recipeImage} />
                             </View>
                         </View>
                         <View style={recipeStyles.detailsContainer}>
@@ -81,13 +81,13 @@ const Chicken_Fried_Rice = ({ navigation }) => {
                         <View style={recipeStyles.sectionTitleCont}>
                             <Text style={recipeStyles.sectionTitle}>Sauce Ingredients</Text>
 
-                            <Text style={recipeStyles.listItem}>
+                            <Text style={[recipeStyles.listItem, recipeStyles.saucebg]}>
                                 <FontAwesome name="circle" size={18} color="#FFBA00" /> 1 tbsp oyster sauce
                             </Text>
-                            <Text style={recipeStyles.listItem}>
+                            <Text style={[recipeStyles.listItem, recipeStyles.saucebg]}>
                                 <FontAwesome name="circle" size={18} color="#FFBA00" /> 3 tbsp soy sauce
                             </Text>
-                            <Text style={recipeStyles.listItem}>
+                            <Text style={[recipeStyles.listItem, recipeStyles.saucebg]}>
                                 <FontAwesome name="circle" size={18} color="#FFBA00" /> 1/2 tsp sesame oil
                             </Text>
                         </View>

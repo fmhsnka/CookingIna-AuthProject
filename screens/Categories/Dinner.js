@@ -30,32 +30,27 @@ const DinnerScreen = () => {
     };
 
     const navigateToRecipe = (recipeName) => {
-        navigation.navigate('HomeRecipeNavigator', {
-            screen: `${recipeName}`,
+        navigation.navigate('DinnerNav', {
+            screen: recipeName,
         });
     };
 
     const handleRecipePress = (recipeName) => {
         switch (recipeName) {
             case 'Chicken Adobo':
-                // navigateToRecipe('AdoboScreen');
-                console.log('WORKING')
+                navigateToRecipe('Chicken Adobo');
                 break;
             case 'Lumpiang Shanghai':
-                // navigateToRecipe('LumpiaShanghaiScreen');
-                console.log('WORKING')
+                navigateToRecipe('Lumpiang Shanghai');
                 break;
             case 'Chicken Gising-gising':
-                // navigateToRecipe('BistekScreen');
-                console.log('WORKING')
+                navigateToRecipe('Chicken Gising-gising');
                 break;
             case 'Filipino Style Escabeche':
-                // navigateToRecipe('TortalongScreen');
-                console.log('WORKING')
+                navigateToRecipe('Filipino Style Escabeche');
                 break;
             case 'Tortang Talong':
-                // navigateToRecipe('MacaroniScreen');
-                console.log('WORKING')
+                navigateToRecipe('Tortang Talong');
                 break;
             default:
                 break;
