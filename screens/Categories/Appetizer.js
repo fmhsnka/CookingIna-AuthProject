@@ -76,7 +76,7 @@ const AppetizerScreen = () => {
                         <TouchableOpacity onPress={() => navigation.goBack()} style={RecipeCategory.goBackButton}>
                             <AntDesign name="leftcircle" size={46} color="#6D9773" />
                         </TouchableOpacity>
-                        <Text style={RecipeCategory.screenTitle}>Edit Profile</Text>
+                        <Text style={RecipeCategory.screenTitle}>Appetizer</Text>
                     </View>
         
 
